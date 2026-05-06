@@ -63,17 +63,33 @@
   <div class="wrap">
     <div class="card">
       <h1>Machine BOS - Mobile</h1>
-      <p class="mini">Pilotage rapide depuis téléphone. Copier-coller les blocs dans Cursor / BOS.</p>
+      <p class="mini">Pilotage rapide depuis téléphone. Copier-coller dans Cursor sur le dossier **BOS-main**.</p>
       <a class="btn" href="https://wa.me/message/MYUATUR7EZPDD1">Ouvrir WhatsApp business</a>
       <a class="btn ok" href="https://hervemengue.github.io/landing-herve/">Ouvrir la landing</a>
+    </div>
+
+    <div class="card">
+      <h2>PC — bootstrap autonomie max</h2>
+      <p class="mini">Dans le projet <strong>BOS-main</strong> : <strong>Output/2026-05-07-bootstrap-machine-autonomie-max.md</strong> → ajoute au chat Cursor. Index : fichier racine <strong>AGENTS.md</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h2>PC — aucune capture</h2>
+      <p class="mini"><strong>Output/2026-05-07-run-zero-input-one-liner.md</strong> ou :</p>
+      <pre>ZERO_INPUT_RUN
+@CLAUDE.md
+@Output/2026-05-07-bootstrap-machine-autonomie-max.md
+LEADS_BRUTS: VIDE
+REPONSES_RECUES: VIDE</pre>
     </div>
 
     <div class="card">
       <h2>RUN matin</h2>
       <pre>RUN MACHINE
 OBJECTIF: encaissement 49
-LEADS: [capture du jour]
-REPONSES: [vide si rien]</pre>
+MODE: matin_autonome
+LEADS: [capture du jour OU VIDE]
+REPONSES: [vide ou colle]</pre>
     </div>
 
     <div class="card">
