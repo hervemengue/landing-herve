@@ -1,166 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Assistant IA Client Pro | Hervé</title>
+  <meta name="description" content="Prospection et réponses clients prêtes en 24h pour indépendants, freelances, auto-entrepreneurs et petites entreprises.">
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --primary: #0f62fe;
+      --primary-hover: #0043ce;
+      --card: #f9fafb;
+      --border: #e5e7eb;
+      --max: 880px;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f6f8;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
     }
-    header {
-      background: linear-gradient(135deg, #111, #333);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 20px;
     }
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+    header, section, footer {
+      margin-bottom: 28px;
     }
-    header p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
-    section {
-      padding: 30px;
-      background: white;
-      margin: 25px auto;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    }
-    h2 {
+    h1, h2, h3 {
+      line-height: 1.25;
       margin-top: 0;
-      color: #111;
     }
-    ul, ol {
-      padding-left: 20px;
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.45rem; margin-bottom: 10px; }
+    p { margin: 0 0 12px; }
+    .lead { font-size: 1.1rem; color: var(--muted); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
     }
-    li {
-      margin-bottom: 8px;
+    ul, ol { padding-left: 22px; margin: 10px 0; }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 14px;
     }
     .btn {
       display: inline-block;
-      background: #111;
-      color: white !important;
-      padding: 15px 25px;
-      border-radius: 6px;
-      text-decoration: none !important;
-      font-size: 16px;
-      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 12px 16px;
+      border: 2px solid var(--primary);
+      color: #fff;
+      background: var(--primary);
     }
-    .btn:hover {
-      opacity: 0.85;
+    .btn:hover, .btn:focus { background: var(--primary-hover); border-color: var(--primary-hover); }
+    .btn.secondary {
+      color: var(--primary);
+      background: #fff;
     }
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #777;
+    .small { color: var(--muted); font-size: 0.95rem; }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin: 4px 6px 0 0;
+      background: #fff;
+      font-size: 0.92rem;
+    }
+    pre {
+      white-space: pre-wrap;
+      background: #111827;
+      color: #f9fafb;
+      border-radius: 8px;
+      padding: 12px;
+      overflow-x: auto;
+    }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0;
+    }
+    @media (max-width: 640px) {
+      h1 { font-size: 1.65rem; }
+      h2 { font-size: 1.3rem; }
+      .wrap { padding: 16px; }
     }
   </style>
 </head>
 <body>
+  <main class="wrap" id="top">
+    <header>
+      <h1>Prospection et réponses clients prêtes en 24h</h1>
+      <p class="lead">
+        Tu veux gagner du temps sans te noyer dans les messages ?<br>
+        Je te livre un système simple : messages prêts, relances prêtes, suivi clair.
+      </p>
+      <div>
+        <span class="badge">Livraison en 24h</span>
+        <span class="badge">Adapté à ton activité</span>
+        <span class="badge">Zéro jargon technique</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="#cta-final">Je veux mon pack test (49 EUR)</a>
+        <a class="btn secondary" href="#faq">Voir les détails</a>
+      </div>
+    </header>
 
-<header>
-  <h1>Vous perdez du temps à répondre aux emails ? Automatisez vos réponses et gagnez plusieurs heures par semaine</h1>
-  <p>Une solution simple pour répondre à vos clients plus vite, avec des messages clairs, professionnels et adaptés à votre activité.</p>
-</header>
+    <section aria-labelledby="probleme">
+      <h2 id="probleme">Tu perds du temps ici</h2>
+      <div class="card">
+        <ul>
+          <li>Répondre aux mêmes demandes encore et encore</li>
+          <li>Improviser les messages à chaque fois</li>
+          <li>Relancer trop tard (ou pas du tout)</li>
+          <li>Perdre des opportunités par manque de cadence</li>
+        </ul>
+      </div>
+    </section>
 
-<section>
-  <h2>À qui s’adresse ce service ?</h2>
-  <p>Ce service est conçu pour les :</p>
-  <ul>
-    <li>Indépendants et freelances</li>
-    <li>Auto-entrepreneurs</li>
-    <li>Petites entreprises</li>
-    <li>Professionnels qui manquent de temps pour gérer leurs clients</li>
-  </ul>
-</section>
+    <section aria-labelledby="solution">
+      <h2 id="solution">Ce que je fais pour toi</h2>
+      <p>Je mets en place un pack concret et utilisable tout de suite :</p>
+      <div class="card">
+        <ul>
+          <li>Messages d'approche prêts à envoyer</li>
+          <li>Réponses clients prêtes</li>
+          <li>Relance prête (J+2)</li>
+          <li>Mini-plan d'exécution sur 7 jours</li>
+          <li>Trame simple de suivi prospects</li>
+        </ul>
+      </div>
+    </section>
 
-<section>
-  <h2>Ce que fait votre assistant IA</h2>
-  <ul>
-    <li>Rédige des réponses professionnelles aux clients</li>
-    <li>Génère des emails d’accueil, de suivi et de relance</li>
-    <li>Aide à structurer vos offres et devis</li>
-    <li>S’adapte à votre activité et à votre ton</li>
-    <li>Vous fait gagner du temps au quotidien</li>
-  </ul>
-</section>
+    <section aria-labelledby="cible">
+      <h2 id="cible">Pour qui</h2>
+      <div class="card">
+        <ul>
+          <li>Indépendants</li>
+          <li>Freelances B2B</li>
+          <li>Auto-entrepreneurs</li>
+          <li>Petites entreprises de service</li>
+        </ul>
+      </div>
+      <p class="small">Si tu veux des conversations clients sans passer ta journée dans la messagerie, c'est pour toi.</p>
+    </section>
 
-<section>
-  <h2>Inclus dans l’offre</h2>
-  <ul>
-    <li>Assistant IA personnalisé selon votre activité</li>
-    <li>Pack d’emails professionnels prêts à l’emploi</li>
-    <li>Accompagnement pour la prise en main</li>
-  </ul>
-</section>
+    <section aria-labelledby="offres">
+      <h2 id="offres">Offres : test, mensuel, annuel</h2>
+      <div class="card">
+        <h3>Offre test (entrée) : 49 EUR</h3>
+        <ul>
+          <li>Cadrage niche + zone</li>
+          <li>Messages + relance</li>
+          <li>Plan simple d'exécution</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-top:10px;">
+        <h3>Si c'est utile pour toi</h3>
+        <ul>
+          <li><strong>Mensuel :</strong> accompagnement continu + optimisations hebdo</li>
+          <li><strong>Annuel :</strong> système complet + priorité support + évolution internationale</li>
+        </ul>
+      </div>
+    </section>
 
-<section>
-  <h2>Pourquoi ce service peut vraiment vous aider</h2>
-  <p>Beaucoup d’indépendants perdent du temps chaque jour à répondre aux mêmes questions, rédiger des emails ou structurer leurs échanges clients.</p>
-  <p>Mon rôle est de vous fournir un assistant IA simple, compréhensible et utile, pensé pour un usage concret au quotidien.</p>
-  <ul>
-    <li>Pas besoin de compétences techniques</li>
-    <li>Un assistant adapté à votre activité, pas l’inverse</li>
-    <li>Des réponses prêtes à l’emploi, faciles à utiliser</li>
-    <li>Un accompagnement clair pour bien démarrer</li>
-  </ul>
-</section>
+    <section aria-labelledby="process">
+      <h2 id="process">Comment ça se passe</h2>
+      <div class="card">
+        <ol>
+          <li>Brief rapide : niche, zone, offre</li>
+          <li>Préparation de ton pack</li>
+          <li>Livraison en 24h</li>
+          <li>Ajustements selon tes retours terrain</li>
+        </ol>
+      </div>
+    </section>
 
-<section>
-  <h2>Comment ça se passe ?</h2>
-  <ol>
-    <li>Échange rapide pour comprendre votre activité et vos besoins</li>
-    <li>Création de votre assistant IA personnalisé</li>
-    <li>Intégration du pack d’emails adaptés à votre activité</li>
-    <li>Explication simple pour une prise en main immédiate</li>
-  </ol>
-</section>
+    <section aria-labelledby="cadre">
+      <h2 id="cadre">Engagement de sérieux</h2>
+      <div class="card">
+        <ul>
+          <li>Zéro promesse de ventes garanties</li>
+          <li>Zéro invention de données</li>
+          <li>Que du concret, utilisable dès réception</li>
+        </ul>
+      </div>
+    </section>
 
-<section>
-  <h2>Ce que cela change concrètement pour vous</h2>
-  <ul>
-    <li>Moins de temps passé à rédiger et répondre aux messages</li>
-    <li>Des échanges clients plus fluides et plus professionnels</li>
-    <li>Une communication cohérente et rassurante</li>
-    <li>Plus de sérénité dans la gestion quotidienne</li>
-  </ul>
-</section>
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ rapide</h2>
+      <div class="card">
+        <p><strong>Est-ce un logiciel ?</strong><br>Non. C'est un service opérationnel "prêt à envoyer".</p>
+        <p><strong>Est-ce technique ?</strong><br>Non. Tout est simplifié pour exécuter vite.</p>
+        <p><strong>Disponible hors France ?</strong><br>Oui, extension progressive sur les pays francophones.</p>
+        <p><strong>Vous garantissez des ventes ?</strong><br>Non. Je garantis un livrable clair et actionnable. Les résultats dépendent aussi de l'offre, du timing et du suivi.</p>
+      </div>
+    </section>
 
-<section>
-  <h2>Exemple concret</h2>
-  <p><strong>Message client :</strong> Bonjour, avez-vous encore des disponibilités ?</p>
-  <p><strong>Réponse générée :</strong> Bonjour, merci pour votre message. Oui, il reste des disponibilités cette semaine. N’hésitez pas à me préciser vos besoins afin que je puisse vous proposer un créneau adapté.</p>
-</section>
+    <div class="divider" role="separator" aria-hidden="true"></div>
 
-<section>
-  <h2>Offre de lancement</h2>
-  <p>Je vous propose la mise en place complète de votre assistant IA + pack d’emails personnalisés.</p>
-  <ul>
-    <li>Configuration complète</li>
-    <li>Emails prêts à l’emploi</li>
-    <li>Adapté à votre activité</li>
-  </ul>
-  <p><strong>Offre de lancement : 50€</strong></p>
-</section>
+    <section id="cta-final" aria-labelledby="cta-title">
+      <h2 id="cta-title">Tu veux tester ?</h2>
+      <p>Envoie ce format :</p>
+      <pre>NICHE:
+ZONE:
+OFFRE:</pre>
+      <p>Je confirme la prise en charge et je livre ton pack en 24h.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/" aria-label="Contacter sur WhatsApp">Me contacter sur WhatsApp</a>
+        <a class="btn secondary" href="#top">Revenir en haut</a>
+      </div>
+      <p class="small">Remplace le lien WhatsApp par ton lien direct avant publication.</p>
+    </section>
 
-<section>
-  <h2>Vous souhaitez en savoir plus ?</h2>
-  <p>Si vous passez trop de temps à répondre aux messages, à rédiger des emails ou à organiser vos échanges clients, ce service est probablement fait pour vous.</p>
-  <p>Je vous explique simplement le fonctionnement et vois avec vous si cette solution correspond à votre activité.</p>
-  <a href="mailto:herve.mengue@gmail.com" class="btn">Me contacter</a>
-</section>
-
-<footer>
-  © 2026 – Hervé | Services IA & Automatisation
-</footer>
-
+    <footer class="small">
+      © 2026 — Hervé | Services IA & Automatisation
+    </footer>
+  </main>
 </body>
 </html>
