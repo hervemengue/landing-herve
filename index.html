@@ -12,6 +12,7 @@
       --muted: #4b5563;
       --primary: #0f62fe;
       --primary-hover: #0043ce;
+      --primary-soft: #eaf1ff;
       --card: #f9fafb;
       --border: #e5e7eb;
       --max: 880px;
@@ -45,6 +46,26 @@
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 16px;
+    }
+    .hero {
+      background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .proof-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .proof {
+      background: var(--primary-soft);
+      color: #0b3ea9;
+      border: 1px solid #cfe0ff;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      padding: 5px 10px;
     }
     ul, ol { padding-left: 22px; margin: 10px 0; }
     .cta-row {
@@ -91,29 +112,72 @@
       background: var(--border);
       margin: 24px 0;
     }
+    .grid-3 {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .offer-card {
+      position: relative;
+      background: #fff;
+    }
+    .offer-card .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #0b3ea9;
+      margin-bottom: 8px;
+    }
+    .offer-card.featured {
+      border: 2px solid var(--primary);
+      box-shadow: 0 6px 16px rgba(15, 98, 254, 0.12);
+    }
+    .offer-card .tag {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      padding: 4px 8px;
+    }
+    .for-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .ok-list li::marker { color: #0b7a3e; }
+    .no-list li::marker { color: #b91c1c; }
     @media (max-width: 640px) {
       h1 { font-size: 1.65rem; }
       h2 { font-size: 1.3rem; }
       .wrap { padding: 16px; }
+      .grid-3, .for-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <main class="wrap" id="top">
     <header>
-      <h1>Prospection et réponses clients prêtes en 24h</h1>
-      <p class="lead">
-        Tu veux gagner du temps sans te noyer dans les messages ?<br>
-        Je te livre un système simple : messages prêts, relances prêtes, suivi clair.
-      </p>
-      <div>
-        <span class="badge">Livraison en 24h</span>
-        <span class="badge">Adapté à ton activité</span>
-        <span class="badge">Zéro jargon technique</span>
-      </div>
-      <div class="cta-row">
-        <a class="btn" href="https://wa.me/message/MYUATUR7EZPDD1" aria-label="Contacter sur WhatsApp">Je veux mon pack test (49 EUR)</a>
-        <a class="btn secondary" href="#faq">Voir les détails</a>
+      <div class="hero">
+        <h1>Réponses clients prêtes en 24h, sans te noyer dans les messages</h1>
+        <p class="lead">
+          Tu gardes le contrôle, je te livre un système concret prêt à utiliser : messages, relances et suivi.
+        </p>
+        <div>
+          <span class="badge">Livraison en 24h</span>
+          <span class="badge">Format simple, actionnable</span>
+          <span class="badge">Zéro promesse bullshit</span>
+        </div>
+        <div class="proof-row">
+          <span class="proof">Entrée test: 49 EUR</span>
+          <span class="proof">Aucun setup technique complexe</span>
+          <span class="proof">CTA direct vers paiement ou WhatsApp</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer l'offre 49 EUR">Tester maintenant (49 EUR)</a>
+          <a class="btn secondary" href="https://wa.me/message/MYUATUR7EZPDD1" aria-label="Contacter sur WhatsApp">Poser une question sur WhatsApp</a>
+        </div>
       </div>
     </header>
 
@@ -158,37 +222,65 @@
 
     <section aria-labelledby="offres">
       <h2 id="offres">Offres : 49 EUR, 99 EUR, 149 EUR/mois</h2>
-      <div class="card">
-        <h3>1) Audit Messagerie 45 min — 49 EUR</h3>
-        <ul>
-          <li>Cadrage niche + zone</li>
-          <li>Messages + relance</li>
-          <li>Plan simple d'exécution</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer l'offre 49 EUR">Prendre l'offre 49 EUR</a>
+      <div class="grid-3">
+        <div class="card offer-card featured">
+          <span class="tag">Le plus simple</span>
+          <h3>Audit Messagerie 45 min</h3>
+          <p class="price">49 EUR</p>
+          <ul>
+            <li>Cadrage niche + zone</li>
+            <li>Messages + relance</li>
+            <li>Plan simple d'exécution</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer l'offre 49 EUR">Prendre l'offre 49 EUR</a>
+          </div>
+        </div>
+        <div class="card offer-card">
+          <h3>Pack 10 templates</h3>
+          <p class="price">99 EUR</p>
+          <ul>
+            <li>10 templates prêts à adapter</li>
+            <li>TikTok, Reels et Shorts</li>
+            <li>Production plus rapide</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn" href="https://buy.stripe.com/eVq00j7Dl4Kpegw7xGfEk02" aria-label="Payer l'offre 99 EUR">Prendre l'offre 99 EUR</a>
+          </div>
+        </div>
+        <div class="card offer-card">
+          <h3>Machine Mensuelle</h3>
+          <p class="price">149 EUR/mois</p>
+          <ul>
+            <li>Accompagnement continu</li>
+            <li>Optimisations hebdomadaires</li>
+            <li>Suivi de la machine</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn" href="https://buy.stripe.com/fZu6oH1eX1yda0g19ifEk03" aria-label="Souscrire l'offre 149 EUR par mois">Activer 149 EUR/mois</a>
+          </div>
         </div>
       </div>
-      <div class="card" style="margin-top:10px;">
-        <h3>2) Pack 10 templates monétisables — 99 EUR</h3>
-        <ul>
-          <li>10 templates prêts à adapter</li>
-          <li>Utilisables sur TikTok, Reels et Shorts</li>
-          <li>Accélère la production de contenu</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn" href="https://buy.stripe.com/eVq00j7Dl4Kpegw7xGfEk02" aria-label="Payer l'offre 99 EUR">Prendre l'offre 99 EUR</a>
+    </section>
+
+    <section aria-labelledby="fit">
+      <h2 id="fit">Pour qui / pas pour qui</h2>
+      <div class="for-row">
+        <div class="card">
+          <h3>Pour qui</h3>
+          <ul class="ok-list">
+            <li>Artisans et petites boîtes de service</li>
+            <li>Tu veux répondre vite sans t'épuiser</li>
+            <li>Tu veux un plan concret, pas du blabla</li>
+          </ul>
         </div>
-      </div>
-      <div class="card" style="margin-top:10px;">
-        <h3>3) Machine Prospection Mensuelle — 149 EUR/mois</h3>
-        <ul>
-          <li>Accompagnement continu</li>
-          <li>Optimisations hebdomadaires</li>
-          <li>Suivi et pilotage de la machine</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn" href="https://buy.stripe.com/fZu6oH1eX1yda0g19ifEk03" aria-label="Souscrire l'offre 149 EUR par mois">Activer 149 EUR/mois</a>
+        <div class="card">
+          <h3>Pas pour qui</h3>
+          <ul class="no-list">
+            <li>Tu cherches une garantie de ventes</li>
+            <li>Tu veux une solution 100% magique sans action</li>
+            <li>Tu refuses d'appliquer les messages proposés</li>
+          </ul>
         </div>
       </div>
     </section>
