@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prospection B2B en 24h | Hervé</title>
+  <title>Prospection clients en 24h | Hervé</title>
   <meta name="description" content="Prospection et réponses clients prêtes en 24h pour indépendants, freelances, auto-entrepreneurs et petites entreprises.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Prospection B2B en 24h | Hervé">
+  <meta property="og:title" content="Prospection clients en 24h | Hervé">
   <meta property="og:description" content="Prospection et réponses clients prêtes en 24h pour indépendants, freelances, auto-entrepreneurs et petites entreprises.">
   <meta property="og:url" content="https://hervemengue.github.io/landing-herve/">
-  <meta property="og:site_name" content="Hervé - Prospection B2B en 24h">
+  <meta property="og:site_name" content="Hervé - Prospection clients en 24h">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Prospection B2B en 24h | Hervé">
+  <meta name="twitter:title" content="Prospection clients en 24h | Hervé">
   <meta name="twitter:description" content="Prospection et réponses clients prêtes en 24h pour indépendants, freelances, auto-entrepreneurs et petites entreprises.">
   <link rel="canonical" href="https://hervemengue.github.io/landing-herve/">
   <style>
     :root {
-      --bg: #ffffff;
+      --bg: #f6f8fc;
       --text: #111827;
       --muted: #4b5563;
-      --primary: #0f62fe;
-      --primary-hover: #0043ce;
-      --primary-soft: #eaf1ff;
-      --card: #f9fafb;
-      --border: #e5e7eb;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-soft: #e0eaff;
+      --card: #ffffff;
+      --border: #dbe4f4;
       --max: 880px;
     }
     * { box-sizing: border-box; }
@@ -38,7 +38,7 @@
     .wrap {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 20px;
+      padding: 24px 20px 30px;
     }
     header, section, footer {
       margin-bottom: 28px;
@@ -54,14 +54,16 @@
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 14px;
       padding: 16px;
+      box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
     }
     .hero {
-      background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      background: linear-gradient(180deg, #f2f7ff 0%, #ffffff 100%);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 12px 28px rgba(29, 78, 216, 0.08);
     }
     .proof-row {
       display: flex;
@@ -88,13 +90,19 @@
       display: inline-block;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 12px 16px;
       border: 2px solid var(--primary);
       color: #fff;
       background: var(--primary);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
     }
-    .btn:hover, .btn:focus { background: var(--primary-hover); border-color: var(--primary-hover); }
+    .btn:hover, .btn:focus {
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(30, 64, 175, 0.22);
+    }
     .btn.secondary {
       color: var(--primary);
       background: #fff;
@@ -139,7 +147,7 @@
     }
     .offer-card.featured {
       border: 2px solid var(--primary);
-      box-shadow: 0 6px 16px rgba(15, 98, 254, 0.12);
+      box-shadow: 0 12px 24px rgba(29, 78, 216, 0.16);
     }
     .offer-card .tag {
       position: absolute;
@@ -161,7 +169,8 @@
     @media (max-width: 640px) {
       h1 { font-size: 1.65rem; }
       h2 { font-size: 1.3rem; }
-      .wrap { padding: 16px; }
+      .wrap { padding: 16px 14px 24px; }
+      .hero { padding: 18px; }
       .grid-3, .for-row { grid-template-columns: 1fr; }
     }
   </style>
@@ -210,7 +219,7 @@
         <ul>
           <li>Messages d'approche prêts à envoyer</li>
           <li>Réponses clients prêtes</li>
-          <li>Relance prête (J+2)</li>
+          <li>Relance prête (2 jours après)</li>
           <li>Mini-plan d'exécution sur 7 jours</li>
           <li>Trame simple de suivi prospects</li>
         </ul>
@@ -222,7 +231,7 @@
       <div class="card">
         <ul>
           <li>Indépendants</li>
-          <li>Freelances B2B</li>
+          <li>Freelances qui vendent a d'autres entreprises</li>
           <li>Auto-entrepreneurs</li>
           <li>Petites entreprises de service</li>
         </ul>
@@ -305,8 +314,8 @@
           <li>Ajustements selon tes retours terrain</li>
         </ol>
       </div>
-      <p class="small"><strong>Temps estimé côté client :</strong> 10 minutes de brief, puis exécution guidée.</p>
-      <p class="small"><strong>Exemple 24h :</strong> 20 leads qualifiés + 20 messages personnalisés prêts à envoyer + 3 relances (J+2/J+5/J+10) + tableau de suivi.</p>
+      <p class="small"><strong>Temps estimé côté client :</strong> 10 minutes pour expliquer ton besoin, puis exécution guidée.</p>
+      <p class="small"><strong>Exemple 24h :</strong> 20 prospects qualifiés + 20 messages personnalisés prêts à envoyer + 3 relances (2, 5 et 10 jours après) + tableau de suivi.</p>
       <p class="small"><strong>Important :</strong> aucun rendez-vous ou vente garanti, et les envois sont réalisés par toi (ou ton équipe), pas automatiquement à ta place.</p>
     </section>
 
@@ -335,9 +344,9 @@
       <h2 id="ressources-seo">Ressources utiles</h2>
       <div class="card">
         <ul>
-          <li><a href="./prospection-b2b-24h.html">Prospection B2B prete en 24h</a></li>
+          <li><a href="./prospection-b2b-24h.html">Prospection clients prete en 24h</a></li>
           <li><a href="./audit-messagerie-whatsapp-49.html">Audit messagerie WhatsApp a 49 EUR</a></li>
-          <li><a href="./modele-relance-client-j2.html">Modele relance client J+2</a></li>
+          <li><a href="./modele-relance-client-j2.html">Modele relance client (2 jours apres)</a></li>
         </ul>
       </div>
     </section>
