@@ -15,24 +15,28 @@
   <meta name="twitter:title" content="Prospection clients en 24h | Hervé">
   <meta name="twitter:description" content="Prospection et réponses clients prêtes en 24h pour indépendants, freelances, auto-entrepreneurs et petites entreprises.">
   <link rel="canonical" href="https://hervemengue.github.io/landing-herve/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f6f8fc;
+      --bg: #f7f5f2;
       --text: #111827;
       --muted: #4b5563;
       --primary: #1d4ed8;
       --primary-hover: #1e40af;
       --primary-soft: #e0eaff;
       --card: #ffffff;
-      --border: #dbe4f4;
+      --border: #e2e8f4;
       --max: 880px;
+      --shadow-soft: 0 1px 2px rgba(17, 24, 39, 0.06), 0 8px 22px rgba(17, 24, 39, 0.06);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--text);
-      background: var(--bg);
+      background: linear-gradient(180deg, #f7f5f2 0%, #f2efe9 50%, #f7f5f2 100%);
       line-height: 1.6;
     }
     .wrap {
@@ -40,15 +44,22 @@
       margin: 0 auto;
       padding: 24px 20px 30px;
     }
-    header, section, footer {
+    header, footer {
       margin-bottom: 28px;
     }
     h1, h2, h3 {
       line-height: 1.25;
       margin-top: 0;
     }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.45rem; margin-bottom: 10px; }
+    h1 { font-size: 2rem; letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+    }
+    main > section > h2 {
+      padding-left: 12px;
+      border-left: 4px solid var(--primary);
+    }
     p { margin: 0 0 12px; }
     .lead { font-size: 1.1rem; color: var(--muted); }
     .card {
@@ -56,14 +67,41 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 16px;
-      box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
+      box-shadow: var(--shadow-soft);
     }
     .hero {
-      background: linear-gradient(180deg, #f2f7ff 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #f5f2ee 0%, #f8fbff 42%, #ffffff 100%);
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 24px;
       box-shadow: 0 12px 28px rgba(29, 78, 216, 0.08);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), #93c5fd);
+      opacity: 0.45;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: min(320px, 90vw);
+      height: min(320px, 90vw);
+      right: -18%;
+      top: 8%;
+      background: radial-gradient(circle at 30% 30%, rgba(29, 78, 216, 0.12) 0%, transparent 62%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero > * {
+      position: relative;
+      z-index: 1;
     }
     .proof-row {
       display: flex;
@@ -78,8 +116,34 @@
       border-radius: 999px;
       font-size: 0.88rem;
       padding: 5px 10px;
+      box-shadow: 0 1px 2px rgba(29, 78, 216, 0.08);
     }
     ul, ol { padding-left: 22px; margin: 10px 0; }
+    .card > ul > li,
+    .card > ol > li {
+      position: relative;
+      padding-left: 6px;
+      margin-bottom: 6px;
+    }
+    .card > ul > li::marker {
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .offer-card ul > li::marker {
+      color: var(--primary);
+    }
+    main > section {
+      margin-bottom: 18px;
+      padding: 14px 16px 18px;
+      margin-left: -8px;
+      margin-right: -8px;
+      border-radius: 18px;
+    }
+    main > section:nth-of-type(even) {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 255, 0.65) 100%);
+      border: 1px solid rgba(226, 232, 244, 0.85);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
     .cta-row {
       display: flex;
       gap: 12px;
@@ -103,9 +167,23 @@
       transform: translateY(-1px);
       box-shadow: 0 8px 18px rgba(30, 64, 175, 0.22);
     }
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
     .btn.secondary {
       color: var(--primary);
       background: #fff;
+    }
+    .btn.secondary:hover, .btn.secondary:focus {
+      background: #f8fafc;
+      border-color: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(17, 24, 39, 0.08);
+    }
+    .btn.secondary:active {
+      transform: translateY(0);
+      box-shadow: none;
     }
     .small { color: var(--muted); font-size: 0.95rem; }
     .badge {
@@ -116,6 +194,7 @@
       margin: 4px 6px 0 0;
       background: #fff;
       font-size: 0.92rem;
+      box-shadow: 0 1px 2px rgba(17, 24, 39, 0.04);
     }
     pre {
       white-space: pre-wrap;
