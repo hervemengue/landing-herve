@@ -376,10 +376,61 @@
         transform: none;
       }
     }
+    .demo-eyebrow {
+      margin: 0 0 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+    }
+    .demo-punch {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1e293b;
+      max-width: 52ch;
+    }
+    .demo-snapshot {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .demo-snap {
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      border: 1px solid var(--border);
+    }
+    .demo-snap.before {
+      background: #fff5f5;
+      border-color: rgba(248, 113, 113, 0.35);
+    }
+    .demo-snap.after {
+      background: #ecfdf5;
+      border-color: rgba(52, 211, 153, 0.4);
+    }
+    .demo-snap strong {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .demo-snap.before strong { color: #b91c1c; }
+    .demo-snap.after strong { color: #047857; }
     .demo-intro {
       margin: 0 0 16px;
       color: var(--muted);
       max-width: 58ch;
+    }
+    .task-removed-lead {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #334155;
     }
     .day-compare {
       display: grid;
@@ -445,7 +496,7 @@
       h2 { font-size: 1.25rem; }
       .wrap { padding: 16px 14px 28px; }
       .hero { padding: 18px; }
-      .grid-3, .for-row, .day-compare, .task-removed { grid-template-columns: 1fr; }
+      .grid-3, .for-row, .day-compare, .task-removed, .demo-snapshot { grid-template-columns: 1fr; }
       .offer-card:hover { transform: none; }
     }
   </style>
@@ -478,12 +529,18 @@
     </header>
 
     <section aria-labelledby="demo-journee" id="demo">
+      <p class="demo-eyebrow">Réduction de charge mentale en action</p>
       <h2 id="demo-journee">Une journée sans surcharge mentale</h2>
-      <p class="demo-intro">En 5 secondes : ce qui t'épuise aujourd'hui — et ce qui peut disparaître de ta charge (messages, relances, tri).</p>
+      <p class="demo-punch">Tu ne gagnes pas seulement du temps. Tu récupères de l’énergie mentale.</p>
+      <div class="demo-snapshot">
+        <div class="demo-snap before"><strong>Avant</strong> Messages en retard, interruptions, surcharge dans la tête</div>
+        <div class="demo-snap after"><strong>Après</strong> Moins à porter, journée plus fluide, relances sous contrôle</div>
+      </div>
+      <p class="demo-intro">En 5 secondes : ce que tu arrêtes de subir — pas une démo « outil IA », une projection de ta journée.</p>
       <div class="card">
         <div class="day-compare">
           <div class="day-col before">
-            <h3>Avant</h3>
+            <h3>Avant — la charge que tu portes</h3>
             <ul>
               <li><strong>9h</strong> — messages clients en retard</li>
               <li><strong>11h</strong> — interruptions, « tu peux me rappeler ? »</li>
@@ -492,7 +549,7 @@
             </ul>
           </div>
           <div class="day-col after">
-            <h3>Après (pack clair)</h3>
+            <h3>Après — ce que tu ne subis plus</h3>
             <ul>
               <li><strong>9h</strong> — modèles prêts, tu sais quoi envoyer</li>
               <li><strong>11h</strong> — seulement les vraies urgences</li>
@@ -501,12 +558,13 @@
             </ul>
           </div>
         </div>
+        <p class="task-removed-lead">Ce que tu arrêtes de faire au quotidien</p>
         <div class="task-removed">
-          <div class="task-card">Réponses répétitives<span>→ textes prêts</span></div>
-          <div class="task-card">Tri des demandes<span>→ cadre simple</span></div>
-          <div class="task-card">Relances oubliées<span>→ relance prête J+2</span></div>
+          <div class="task-card">Tu ne réécris plus les mêmes réponses<span>textes prêts à envoyer</span></div>
+          <div class="task-card">Tu ne tries plus tout dans ta tête<span>cadre simple de suivi</span></div>
+          <div class="task-card">Tu ne repousses plus les relances<span>relance prête J+2</span></div>
         </div>
-        <p class="demo-foot">Pas une « usine à IA » : tu récupères du souffle sur ce qui bouffe ton énergie hors chantier.</p>
+        <p class="demo-foot">Pas une « usine à IA » : moins de gestion mentale hors chantier, plus de souffle pour l’essentiel.</p>
       </div>
     </section>
 
