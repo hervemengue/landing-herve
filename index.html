@@ -192,23 +192,40 @@
       gap: 8px;
       margin: 0;
     }
-    .hero-checks li::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #16a34a;
-      flex-shrink: 0;
+    .hero-checks-head {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #334155;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
     .hero-trust {
-      margin: 14px 0 0;
+      margin: 16px 0 0;
       font-size: 0.8rem;
       color: var(--muted);
       max-width: 52ch;
-      line-height: 1.45;
+      line-height: 1.55;
+    }
+    .hero-trust a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .hero-trust a:hover, .hero-trust a:focus {
+      text-decoration: underline;
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--primary);
+      margin: 0 0 10px;
+      line-height: 1.35;
+      max-width: 50ch;
     }
     .hero-copy { min-width: 0; }
-    .hero-bio {
       font-size: 0.93rem;
       color: var(--muted);
       max-width: 58ch;
@@ -281,19 +298,6 @@
       width: 100%;
       max-width: 320px;
       text-align: center;
-    }
-    .hero-cta-secondary {
-      margin-top: 12px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-    .hero-cta-secondary a {
-      color: var(--primary);
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .hero-cta-secondary a:hover, .hero-cta-secondary a:focus {
-      text-decoration: underline;
     }
     .btn {
       font-family: var(--font-display);
@@ -617,7 +621,7 @@
         display: flex;
         justify-content: center;
       }
-      .hero-bio, .hero-value, .lead, .strap, .hero-checks, .hero-trust { text-align: center; max-width: 100%; }
+      .hero-bio, .hero-value, .lead, .strap, .hero-checks, .hero-trust, .hero-eyebrow, .hero-checks-head { text-align: center; max-width: 100%; }
       .hero-cta-main .btn { max-width: 100%; }
       .grid-3, .for-row, .day-compare, .task-removed, .demo-snapshot { grid-template-columns: 1fr; }
       .offer-card:hover { transform: none; }
@@ -631,26 +635,27 @@
         <div class="hero-inner">
           <div class="hero-photo-block hero-photo">
             <img src="herve-photo.png" width="140" height="140" alt="Hervé MENGUE — accompagnement messagerie pour artisans et TPE terrain">
-            <p class="hero-photo-caption">Hervé MENGUE · Pack livré en 24 h</p>
+            <p class="hero-photo-caption">Messagerie terrain · 24 h</p>
           </div>
           <div class="hero-copy">
-            <h1>Ta messagerie client ne doit plus finir la journée dans ta tête.</h1>
+            <p class="hero-eyebrow">Pour artisans, dépannage & petites équipes — priorité Île-de-France (même profil : on adapte le brief)</p>
+            <h1>5 textes prêts + relance J+2 + plan 7 jours chez toi en 24 h — pour 49 €.</h1>
             <p class="lead">
-              <strong>Bénéfice :</strong> en 24 h tu reçois les textes pour répondre et relancer sans repartir d'une page blanche — pensé pour <strong>artisans, dépannage et indépendants</strong> sous flux WhatsApp, appels et demandes qui s'empilent.
+              <strong>Bénéfice :</strong> tu arrêtes d'improviser entre deux coups de fil — réponses et relance structurées, à copier-coller puis à ajuster. Tu gardes la main sur l'envoi.
             </p>
-            <p class="strap"><strong>49 €</strong> tout compris pour démarrer · tu envoies toi-même · pas d'outil à brancher.</p>
-            <ul class="hero-checks" aria-label="Inclus dans le pack à 49 €">
-              <li>5 messages (approche + réponses + relance)</li>
-              <li>Mini-plan sur 7 jours</li>
-              <li>Sous 24 h chez toi</li>
+            <p class="strap">Pas d'outil à installer · paiement Stripe · zéro promesse de ventes ou de RDV magiques.</p>
+            <p class="hero-checks-head">Dans le pack (résumé)</p>
+            <ul class="hero-checks" aria-label="Contenu livré à 49 €">
+              <li>5 messages structurés (approche, réponses, relance)</li>
+              <li>Mini-plan d'exécution 7 jours</li>
+              <li>Livraison sous 24 h</li>
             </ul>
             <div class="hero-cta-main">
-              <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer le pack messagerie express 49 EUR">Recevoir mon pack à 49 €</a>
+              <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Commander le pack messagerie express 49 EUR">Commander le pack à 49 €</a>
             </div>
-            <p class="hero-cta-secondary">
-              <a href="#demo">Voir avant / après (30 s)</a> &nbsp;·&nbsp; <a href="https://wa.me/message/MYUATUR7EZPDD1">Question sur WhatsApp</a>
+            <p class="hero-trust">
+              Paiement sécurisé · micro-entrepreneur (SIRET en mentions légales). Pas convaincu visuellement ? <a href="#demo">Avant / après journée type</a>. Une question avant ? <a href="https://wa.me/message/MYUATUR7EZPDD1">WhatsApp</a>.
             </p>
-            <p class="hero-trust">Paiement sécurisé Stripe. Aucune promesse de ventes ni de RDV — livrable clair, exploitable tout de suite. Micro-entrepreneur — mentions légales avec SIRET.</p>
           </div>
         </div>
       </div>
