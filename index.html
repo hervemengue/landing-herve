@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prospection clients en 24h | Hervé</title>
-  <meta name="description" content="Prospection et réponses clients prêtes en 24h pour indépendants, freelances, auto-entrepreneurs et petites entreprises.">
+  <title>Moins de stress sur les messages clients | Hervé</title>
+  <meta name="description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Projection concrète — packs prêts en 24h, audit messagerie dès 49 EUR.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Prospection clients en 24h | Hervé">
-  <meta property="og:description" content="Prospection et réponses clients prêtes en 24h pour indépendants, freelances, auto-entrepreneurs et petites entreprises.">
+  <meta property="og:title" content="Moins de stress sur les messages clients | Hervé">
+  <meta property="og:description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Projection concrète — packs prêts en 24h, audit messagerie dès 49 EUR.">
   <meta property="og:url" content="https://hervemengue.github.io/landing-herve/">
-  <meta property="og:site_name" content="Hervé - Prospection clients en 24h">
+  <meta property="og:site_name" content="Hervé — clarté &amp; messages clients">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Prospection clients en 24h | Hervé">
-  <meta name="twitter:description" content="Prospection et réponses clients prêtes en 24h pour indépendants, freelances, auto-entrepreneurs et petites entreprises.">
+  <meta name="twitter:title" content="Moins de stress sur vos messages clients | Hervé">
+  <meta name="twitter:description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Projection concrète — packs prêts en 24h, audit messagerie dès 49 EUR.">
   <link rel="canonical" href="https://hervemengue.github.io/landing-herve/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -376,11 +376,76 @@
         transform: none;
       }
     }
+    .demo-intro {
+      margin: 0 0 16px;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+    .day-compare {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .day-col {
+      border-radius: 14px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+    }
+    .day-col.before {
+      background: linear-gradient(180deg, #fff5f5 0%, #ffffff 100%);
+      border-color: rgba(248, 113, 113, 0.35);
+    }
+    .day-col.after {
+      background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%);
+      border-color: rgba(52, 211, 153, 0.4);
+    }
+    .day-col h3 {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .day-col.before h3 { color: #b91c1c; }
+    .day-col.after h3 { color: #047857; }
+    .day-col ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 0.95rem;
+    }
+    .day-col li { margin-bottom: 8px; }
+    .task-removed {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .task-card {
+      text-align: center;
+      padding: 14px 12px;
+      border-radius: 12px;
+      border: 1px dashed rgba(37, 99, 235, 0.35);
+      background: #f8fafc;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    .task-card span {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #047857;
+    }
+    .demo-foot {
+      margin: 14px 0 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
     @media (max-width: 640px) {
       h2 { font-size: 1.25rem; }
       .wrap { padding: 16px 14px 28px; }
       .hero { padding: 18px; }
-      .grid-3, .for-row { grid-template-columns: 1fr; }
+      .grid-3, .for-row, .day-compare, .task-removed { grid-template-columns: 1fr; }
       .offer-card:hover { transform: none; }
     }
   </style>
@@ -389,11 +454,11 @@
   <main class="wrap" id="top">
     <header>
       <div class="hero">
-        <h1>Tu perds des clients quand tu réponds trop tard — corrige ça en 24h</h1>
+        <h1>Moins de tâches répétitives. Plus de temps pour ce qui compte vraiment.</h1>
         <p class="lead">
-          Tu gardes le contrôle, je te livre un système concret prêt à utiliser : messages, relances et suivi pour répondre vite et proprement.
+          J'aide les indépendants et petites équipes terrain à réduire la charge mentale sur les messages clients — avec du concret livré en 24h.
         </p>
-        <p class="strap">Moins de décisions à prendre, plus de temps utile : messages et relances prêts, sans prise de tête.</p>
+        <p class="strap">Moins de stress. Plus de contrôle sur ta journée. Pas de jargon « IA » : tu vois ce qui disparaît de ta tête.</p>
         <div>
           <span class="badge">Livraison en 24h</span>
           <span class="badge">Format simple, actionnable</span>
@@ -411,15 +476,36 @@
       </div>
     </header>
 
-    <section aria-labelledby="probleme">
-      <h2 id="probleme">Tu perds du temps ici</h2>
+    <section aria-labelledby="demo-journee" id="demo">
+      <h2 id="demo-journee">Une journée sans surcharge mentale</h2>
+      <p class="demo-intro">En 5 secondes : ce qui t’épuise aujourd’hui — et ce qui peut disparaître de ta charge (messages, relances, tri).</p>
       <div class="card">
-        <ul>
-          <li>Répondre aux mêmes demandes encore et encore</li>
-          <li>Improviser les messages à chaque fois</li>
-          <li>Relancer trop tard (ou pas du tout)</li>
-          <li>Perdre des opportunités par manque de cadence</li>
-        </ul>
+        <div class="day-compare">
+          <div class="day-col before">
+            <h3>Avant</h3>
+            <ul>
+              <li><strong>9h</strong> — messages clients en retard</li>
+              <li><strong>11h</strong> — interruptions, « tu peux me rappeler ? »</li>
+              <li><strong>14h</strong> — tri des demandes à la main</li>
+              <li><strong>17h</strong> — fatigue, relances repoussées</li>
+            </ul>
+          </div>
+          <div class="day-col after">
+            <h3>Après (pack clair)</h3>
+            <ul>
+              <li><strong>9h</strong> — modèles prêts, tu sais quoi envoyer</li>
+              <li><strong>11h</strong> — seulement les vraies urgences</li>
+              <li><strong>14h</strong> — suivi structuré, pas dans la tête</li>
+              <li><strong>17h</strong> — journée plus légère</li>
+            </ul>
+          </div>
+        </div>
+        <div class="task-removed">
+          <div class="task-card">Réponses répétitives<span>→ textes prêts</span></div>
+          <div class="task-card">Tri des demandes<span>→ cadre simple</span></div>
+          <div class="task-card">Relances oubliées<span>→ relance prête J+2</span></div>
+        </div>
+        <p class="demo-foot">Pas une « usine à IA » : tu récupères du souffle sur ce qui bouffe ton énergie hors chantier.</p>
       </div>
     </section>
 
