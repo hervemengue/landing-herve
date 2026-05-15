@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moins de stress sur les messages clients | Hervé</title>
-  <meta name="description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Projection concrète — packs prêts en 24h, audit messagerie dès 49 EUR.">
+  <meta name="description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Packs prêts en 24h — pack messagerie express dès 49 EUR.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Moins de stress sur les messages clients | Hervé">
-  <meta property="og:description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Projection concrète — packs prêts en 24h, audit messagerie dès 49 EUR.">
+  <meta property="og:description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Packs prêts en 24h — pack messagerie express dès 49 EUR.">
   <meta property="og:url" content="https://hervemengue.github.io/landing-herve/">
   <meta property="og:site_name" content="Hervé — clarté &amp; messages clients">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Moins de stress sur vos messages clients | Hervé">
-  <meta name="twitter:description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Projection concrète — packs prêts en 24h, audit messagerie dès 49 EUR.">
+  <meta name="twitter:title" content="Moins de stress sur tes messages clients | Hervé">
+  <meta name="twitter:description" content="Indépendants et TPE : moins de charge mentale sur messages et relances. Packs prêts en 24h — pack messagerie express dès 49 EUR.">
   <link rel="canonical" href="https://hervemengue.github.io/landing-herve/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,6 +138,39 @@
     .hero > * {
       position: relative;
       z-index: 1;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: clamp(18px, 3vw, 32px);
+      align-items: start;
+    }
+    .hero-photo img {
+      display: block;
+      width: clamp(100px, 22vw, 128px);
+      height: clamp(100px, 22vw, 128px);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(37, 99, 235, 0.28);
+      box-shadow: var(--shadow-soft);
+      background: #e2e8f0;
+    }
+    .hero-copy { min-width: 0; }
+    .hero-bio {
+      font-size: 0.93rem;
+      color: var(--muted);
+      max-width: 58ch;
+      margin: 0 0 12px;
+      line-height: 1.55;
+    }
+    .hero-value {
+      font-size: 0.9rem;
+      color: #475569;
+      max-width: 56ch;
+      margin: 0 0 14px;
+      padding: 10px 0 10px 14px;
+      border-left: 3px solid var(--primary);
+      line-height: 1.5;
     }
     .proof-row {
       display: flex;
@@ -496,6 +529,18 @@
       h2 { font-size: 1.25rem; }
       .wrap { padding: 16px 14px 28px; }
       .hero { padding: 18px; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-bio, .hero-value, .lead, .strap { text-align: center; max-width: 100%; }
+      .hero-value { border-left: none; border-top: 3px solid var(--primary); padding: 12px 8px 0 8px; }
       .grid-3, .for-row, .day-compare, .task-removed, .demo-snapshot { grid-template-columns: 1fr; }
       .offer-card:hover { transform: none; }
     }
@@ -505,25 +550,34 @@
   <main class="wrap" id="top">
     <header>
       <div class="hero">
-        <h1>Moins de tâches répétitives. Plus de temps pour ce qui compte vraiment.</h1>
-        <p class="lead">
-          J'aide les indépendants et petites équipes terrain à réduire la charge mentale sur les messages clients — avec du concret livré en 24h.
-        </p>
-        <p class="strap">Moins de stress. Plus de contrôle sur ta journée. Pas de jargon « IA » : tu vois ce qui disparaît de ta tête.</p>
-        <div>
-          <span class="badge">Livraison en 24h</span>
-          <span class="badge">Format simple, actionnable</span>
-          <span class="badge">Zéro promesse irréaliste</span>
-        </div>
-        <div class="proof-row">
-          <span class="proof">Offre test : 49 EUR</span>
-          <span class="proof">Aucune installation technique complexe</span>
-          <span class="proof">Paiement direct Stripe + WhatsApp</span>
-        </div>
-        <div class="cta-row">
-          <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer l'offre 49 EUR">Tester maintenant (49 EUR)</a>
-          <a class="btn secondary" href="https://wa.me/message/MYUATUR7EZPDD1" aria-label="Contacter sur WhatsApp">Poser une question sur WhatsApp</a>
-          <a class="btn secondary" href="#demo" aria-label="Voir la démonstration avant après">Voir la démo</a>
+        <div class="hero-inner">
+          <div class="hero-photo">
+            <img src="herve-photo.jpg" width="128" height="128" alt="Portrait de Hervé MENGUE">
+          </div>
+          <div class="hero-copy">
+            <h1>Moins de tâches répétitives. Plus de temps pour ce qui compte vraiment.</h1>
+            <p class="lead">
+              J'aide les indépendants et petites équipes terrain à réduire la charge mentale sur les messages clients — avec du concret livré en 24h.
+            </p>
+            <p class="strap">Moins de stress. Plus de contrôle sur ta journée. Pas de jargon « IA » : tu vois ce qui disparaît de ta tête.</p>
+            <p class="hero-bio">Je m'appelle Hervé. J'accompagne les indépendants et petites équipes terrain sur la messagerie client et les relances. Tu reçois des textes prêts à envoyer et un cadre clair — sans jargon ni usine à IA.</p>
+            <p class="hero-value">Quand une réponse ou une relance traîne, tu perds surtout du temps et de l'énergie — parfois aussi une opportunité. Ici : messages ordonnés et relance prête, sans promesse de chiffre d'affaires ni de rendez-vous garantis.</p>
+            <div>
+              <span class="badge">Livraison en 24h</span>
+              <span class="badge">Format simple, actionnable</span>
+              <span class="badge">Zéro promesse irréaliste</span>
+            </div>
+            <div class="proof-row">
+              <span class="proof">Offre test : 49 EUR</span>
+              <span class="proof">Aucune installation technique complexe</span>
+              <span class="proof">Paiement direct Stripe + WhatsApp</span>
+            </div>
+            <div class="cta-row">
+              <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer le pack messagerie express 49 EUR">Tester maintenant (49 EUR)</a>
+              <a class="btn secondary" href="https://wa.me/message/MYUATUR7EZPDD1" aria-label="Contacter sur WhatsApp">Poser une question sur WhatsApp</a>
+              <a class="btn secondary" href="#demo" aria-label="Voir la démonstration avant après">Voir la démo</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -593,7 +647,7 @@
       <div class="grid-3">
         <div class="card offer-card featured">
           <span class="tag">Le plus simple</span>
-          <h3>Audit Messagerie 45 min</h3>
+          <h3>Pack messagerie express (45 min)</h3>
           <p class="price">49 EUR</p>
           <ul>
             <li>Cadrage niche + zone + cible</li>
@@ -602,7 +656,7 @@
           </ul>
           <p class="small">Service déclaré en micro-entreprise — SIRET disponible en mentions légales.</p>
           <div class="cta-row">
-            <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer l'offre 49 EUR">Prendre l'offre 49 EUR</a>
+            <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer le pack messagerie express 49 EUR">Prendre le pack 49 EUR</a>
           </div>
         </div>
         <div class="card offer-card">
@@ -664,7 +718,7 @@
           <li>Ajustements selon tes retours terrain</li>
         </ol>
       </div>
-      <p class="small"><strong>Temps estimé côté client :</strong> 10 minutes pour expliquer ton besoin, puis exécution guidée.</p>
+      <p class="small"><strong>Temps estimé de ton côté :</strong> 10 minutes pour expliquer ton besoin, puis exécution guidée.</p>
       <p class="small"><strong>Exemple 24h :</strong> 3 à 5 pistes vérifiées avec preuve, canal confirmé si disponible, message humain prêt à envoyer et prochaine relance notée.</p>
       <p class="small"><strong>Important :</strong> aucun rendez-vous ni aucune vente ne sont garantis, et les envois sont réalisés par toi (ou ton équipe), pas automatiquement à ta place.</p>
     </section>
@@ -686,7 +740,7 @@
         <p><strong>Est-ce un logiciel ?</strong><br>Non. C'est un service opérationnel "prêt à envoyer".</p>
         <p><strong>Est-ce technique ?</strong><br>Non. Tout est simplifié pour exécuter vite.</p>
         <p><strong>Disponible hors France ?</strong><br>Oui, extension progressive sur les pays francophones.</p>
-        <p><strong>Vous garantissez des ventes ?</strong><br>Non. Je garantis un livrable clair et actionnable. Les résultats dépendent aussi de l'offre, du timing et du suivi.</p>
+        <p><strong>Les ventes sont garanties ?</strong><br>Non. Je garantis un livrable clair et actionnable. Les résultats dépendent aussi de l'offre, du timing et du suivi.</p>
       </div>
     </section>
 
@@ -695,7 +749,7 @@
       <div class="card">
         <ul>
           <li><a href="./prospection-b2b-24h.html">Prospection clients prête en 24h</a></li>
-          <li><a href="./audit-messagerie-whatsapp-49.html">Audit messagerie WhatsApp à 49 EUR</a></li>
+          <li><a href="./audit-messagerie-whatsapp-49.html">Pack messagerie WhatsApp à 49 EUR</a></li>
           <li><a href="./modele-relance-client-j2.html">Modèle relance client (2 jours après)</a></li>
         </ul>
       </div>
@@ -705,17 +759,16 @@
 
     <section id="cta-final" aria-labelledby="cta-title">
       <h2 id="cta-title">Passe en mode test aujourd'hui</h2>
-      <p>Le plus simple pour démarrer : offre test à 49 EUR.</p>
+      <p>Le plus simple pour démarrer : pack messagerie express à 49 EUR.</p>
       <div class="cta-row">
-        <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer l'offre 49 EUR">Je prends l'offre test 49 EUR</a>
+        <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer le pack messagerie express 49 EUR">Je prends le pack test 49 EUR</a>
         <a class="btn secondary" href="https://wa.me/message/MYUATUR7EZPDD1" aria-label="Poser une question sur WhatsApp">J'ai une question avant de payer</a>
       </div>
       <p class="small">Zéro promesse de ventes garanties. Livrable clair et actionnable, livré en 24h.</p>
-      <p class="small"><a href="./mobile-hub.html">Pilotage rapide téléphone → hub mobile BOS</a></p>
     </section>
 
     <footer class="small">
-      © 2026 — Hervé MENGUE | Micro-entrepreneur — SIRET 10458821500012 — <a href="./mentions-legales.html">Mentions légales</a> — <a href="./mobile-hub.html">Hub mobile</a>
+      © 2026 — Hervé MENGUE | Micro-entrepreneur — SIRET 10458821500012 — <a href="./mentions-legales.html">Mentions légales</a>
     </footer>
   </main>
 </body>
