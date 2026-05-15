@@ -221,6 +221,28 @@
       flex-wrap: wrap;
       margin-top: 14px;
     }
+    .hero-cta-main {
+      margin-top: 16px;
+      width: 100%;
+    }
+    .hero-cta-main .btn {
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .hero-cta-secondary {
+      margin-top: 12px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .hero-cta-secondary a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .hero-cta-secondary a:hover, .hero-cta-secondary a:focus {
+      text-decoration: underline;
+    }
     .btn {
       font-family: var(--font-display);
       display: inline-block;
@@ -539,8 +561,12 @@
         flex-direction: column;
         align-items: center;
       }
+      .hero-cta-main {
+        display: flex;
+        justify-content: center;
+      }
       .hero-bio, .hero-value, .lead, .strap { text-align: center; max-width: 100%; }
-      .hero-value { border-left: none; border-top: 3px solid var(--primary); padding: 12px 8px 0 8px; }
+      .hero-cta-main .btn { max-width: 100%; }
       .grid-3, .for-row, .day-compare, .task-removed, .demo-snapshot { grid-template-columns: 1fr; }
       .offer-card:hover { transform: none; }
     }
@@ -555,13 +581,13 @@
             <img src="herve-photo.png" width="128" height="128" alt="Portrait de Hervé MENGUE">
           </div>
           <div class="hero-copy">
-            <h1>Moins de tâches répétitives. Plus de temps pour ce qui compte vraiment.</h1>
+            <h1>Moins de messagerie dans la tête. Des textes prêts à envoyer vite.</h1>
             <p class="lead">
-              J'aide les indépendants et petites équipes terrain à réduire la charge mentale sur les messages clients — avec du concret livré en 24h.
+              Pourquoi passer à l'acte : tu reçois en 24 h un pack clair — premiers messages, réponses et relance J+2 — adapté aux indépendants et petites équipes terrain. Tu sais quoi envoyer ; tu envoies toi-même.
             </p>
-            <p class="strap">Moins de stress. Plus de contrôle sur ta journée. Pas de jargon « IA » : tu vois ce qui disparaît de ta tête.</p>
-            <p class="hero-bio">Je m'appelle Hervé. J'accompagne les indépendants et petites équipes terrain sur la messagerie client et les relances. Tu reçois des textes prêts à envoyer et un cadre clair — sans jargon ni usine à IA.</p>
-            <p class="hero-value">Quand une réponse ou une relance traîne, tu perds surtout du temps et de l'énergie — parfois aussi une opportunité. Ici : messages ordonnés et relance prête, sans promesse de chiffre d'affaires ni de rendez-vous garantis.</p>
+            <p class="strap">À partir de 49 €. Simple, humain, sans usine à IA ni installation lourde.</p>
+            <p class="hero-bio">Je m'appelle Hervé — j'accompagne sur le concret (messagerie, relances), pas sur la techno.</p>
+            <p class="hero-value">Tu payes pour gagner du temps et de la clarté — pas pour un outil magique. Zéro promesse de ventes ou de rendez-vous garantis.</p>
             <div>
               <span class="badge">Livraison en 24h</span>
               <span class="badge">Format simple, actionnable</span>
@@ -572,11 +598,12 @@
               <span class="proof">Aucune installation technique complexe</span>
               <span class="proof">Paiement direct Stripe + WhatsApp</span>
             </div>
-            <div class="cta-row">
-              <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer le pack messagerie express 49 EUR">Tester maintenant (49 EUR)</a>
-              <a class="btn secondary" href="https://wa.me/message/MYUATUR7EZPDD1" aria-label="Contacter sur WhatsApp">Poser une question sur WhatsApp</a>
-              <a class="btn secondary" href="#demo" aria-label="Voir la démonstration avant après">Voir la démo</a>
+            <div class="hero-cta-main">
+              <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Payer le pack messagerie express 49 EUR">Obtenir le pack à 49 €</a>
             </div>
+            <p class="hero-cta-secondary">
+              <a href="#demo">Voir la démo (30 s)</a> &nbsp;·&nbsp; <a href="https://wa.me/message/MYUATUR7EZPDD1">Question sur WhatsApp</a>
+            </p>
           </div>
         </div>
       </div>
