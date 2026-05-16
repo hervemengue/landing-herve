@@ -7,7 +7,7 @@
   <meta name="description" content="Artisans et petits pros : réponses et relances prêtes à envoyer, livrées en 24 h. Vous gardez la main sur l'envoi — échange simple si besoin.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Textes clients prêts pour artisans | Hervé">
+  <meta property="og:title" content="Ce soir vous savez quoi répondre — pack 49 € | Hervé">
   <meta property="og:description" content="Réponses et relances prêtes, livrées en 24 h. Vous envoyez vous-même — pas de bot.">
   <meta property="og:url" content="https://hervemengue.github.io/landing-herve/">
   <meta property="og:site_name" content="Hervé — clarté &amp; quotidien pro">
@@ -190,6 +190,68 @@
       color: #b45309;
       line-height: 1.35;
     }
+    .hero-wow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 0 0 16px;
+    }
+    .hero-wow > div {
+      padding: 14px 12px;
+      border-radius: 12px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .hero-wow .wow-before {
+      background: linear-gradient(180deg, #fff1f2 0%, #fff 100%);
+      border: 1px solid rgba(244, 63, 94, 0.35);
+      color: #9f1239;
+    }
+    .hero-wow .wow-after {
+      background: linear-gradient(180deg, #ecfdf5 0%, #fff 100%);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #047857;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+    }
+    .hero-wow span.lbl {
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+      opacity: 0.9;
+    }
+    .hero-wow .wow-arrow {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: -4px 0;
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 14px;
+    }
+    .hero-chip {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      color: #1e40af;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+    }
+    .hero-chip.accent {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+      border: none;
+    }
     .hero-promise {
       margin: 0 0 14px;
       padding: 10px 14px;
@@ -202,6 +264,13 @@
       line-height: 1.5;
     }
     .hero-promise strong { color: #1d4ed8; }
+    .hero-cta-note {
+      margin: 10px 0 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #047857;
+      line-height: 1.4;
+    }
     .hero-what {
       margin: 0 0 12px;
       padding: 12px 14px;
@@ -233,9 +302,12 @@
     .hero-cta-row .btn {
       flex: 1 1 auto;
       min-width: min(220px, 100%);
-      max-width: 320px;
+      max-width: 100%;
       text-align: center;
       justify-content: center;
+      font-size: 1.02rem;
+      padding: 16px 22px;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
     }
     .hero-cta-single {
       justify-content: flex-start;
@@ -744,23 +816,34 @@
       <div class="hero">
         <div class="hero-inner">
           <div class="hero-copy">
-            <p class="hero-eyebrow">Vous perdez du temps sur les messages clients ?</p>
-            <h1>Des réponses prêtes à envoyer — livrées chez vous en 24&nbsp;h</h1>
-            <p class="hero-promise"><strong>5 textes</strong> + relance J+2 + mini-plan 7 jours · <strong>49&nbsp;€</strong> · vous copiez, vous envoyez (pas de bot)</p>
+            <p class="hero-eyebrow">Artisan ou petit pro : vos messages vous mangent votre journée ?</p>
+            <h1>Ce soir, vous savez quoi répondre — demain, vous avancez.</h1>
+            <div class="hero-wow" role="group" aria-label="Avant et après en une journée">
+              <motion class="wow-before"><span class="lbl">Avant</span>Vous improvisez entre deux coups de fil. Les relances traînent. Tout est dans la tête.</div>
+              <div class="wow-after"><span class="lbl">Après (24 h)</span>5 textes prêts + relance J+2. Vous copiez, vous envoyez. La tête est plus légère.</div>
+              <p class="wow-arrow">↓ C’est exactement ce que livre le pack</p>
+            </div>
+            <div class="hero-chips">
+              <span class="hero-chip accent">49&nbsp;€</span>
+              <span class="hero-chip">Livré en 24&nbsp;h</span>
+              <span class="hero-chip">Vous envoyez</span>
+              <span class="hero-chip">Pas de bot</span>
+            </div>
+            <p class="hero-promise"><strong>Pack messagerie express :</strong> approche, réponses clients, relance, mini-plan 7 jours — adapté à votre métier.</p>
             <div class="hero-head">
               <div class="hero-photo-block hero-photo">
                 <img src="herve-photo.png" width="140" height="140" alt="Hervé — textes clients pour artisans">
               </div>
               <div class="hero-identity">
-                <p class="hero-name">Hervé</p>
-                <p class="hero-tagline">Artisans &amp; petits pros · Île-de-France</p>
+                <p class="hero-name">Hervé — à votre place, pas un robot</p>
+                <p class="hero-tagline">Un humain qui prépare vos messages · Île-de-France</p>
               </div>
             </div>
-            <p class="lead">Je prépare vos textes pour que vous arrêtiez d’improviser entre deux chantiers — clair, humain, sans usine à IA.</p>
             <div class="hero-cta-row hero-cta-single">
-              <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Commander le pack messages 49 euros">Commander le pack — 49&nbsp;€</a>
+              <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Commander le pack messages 49 euros">Oui — je veux mes textes prêts (49&nbsp;€)</a>
             </div>
-            <p class="hero-trust">Pas convaincu ? <a href="#situations">Voir si c’est pour vous</a> · SIRET en <a href="mentions-legales.html">mentions légales</a>.</p>
+            <p class="hero-cta-note">Demain vous avez quelque chose de concret à utiliser — pas une usine à promesses.</p>
+            <p class="hero-trust">Pas sûr ? <a href="#situations">Voir si c’est pour vous</a> · <a href="https://wa.me/message/MYUATUR7EZPDD1">Poser une question</a> · <a href="mentions-legales.html">Mentions légales</a></p>
           </div>
         </div>
       </div>
