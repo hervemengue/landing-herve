@@ -814,6 +814,44 @@
       .offer-card:hover { transform: none; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://hervemengue.github.io/landing-herve/#website",
+        "url": "https://hervemengue.github.io/landing-herve/",
+        "name": "Hervé — messages clients pour artisans",
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://hervemengue.github.io/landing-herve/#person",
+        "name": "Hervé Mengue",
+        "url": "https://hervemengue.github.io/landing-herve/",
+        "jobTitle": "Aide messagerie clients pour artisans et TPE"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://hervemengue.github.io/landing-herve/#service",
+        "name": "Pack messagerie clients — artisans et TPE",
+        "description": "Pack de 5 textes prêts à copier pour vos messages clients (premier message, réponse devis, relance J+2, message pas dispo, clôture polie). Livré en 24 h, adapté à votre métier. Vous envoyez vous-même, pas de bot.",
+        "provider": { "@id": "https://hervemengue.github.io/landing-herve/#person" },
+        "areaServed": { "@type": "Country", "name": "France" },
+        "serviceType": "Aide à la communication client pour artisans et petites structures",
+        "offers": {
+          "@type": "Offer",
+          "price": "49",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://hervemengue.github.io/landing-herve/",
+          "priceValidUntil": "2026-12-31"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <main class="wrap" id="top">
