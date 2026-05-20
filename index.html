@@ -266,9 +266,44 @@
       line-height: 1;
     }
     .hero-first .hero-chips,
-    .hero-first .hero-promise,
-    .hero-first .hero-head {
+    .hero-first .hero-promise {
       display: none;
+    }
+    .hero-human {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 16px auto 0;
+      max-width: 420px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-soft);
+      text-align: left;
+    }
+    .hero-human img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(37, 99, 235, 0.35);
+      flex-shrink: 0;
+    }
+    .hero-human-name {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.25;
+    }
+    .hero-human-tag {
+      margin: 4px 0 0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #475569;
+      line-height: 1.35;
     }
     .hero-cta-first {
       margin-top: 0;
@@ -980,6 +1015,14 @@
                 <a class="btn" href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01" aria-label="Commander le pack messages 49 euros">Mes 5 textes prêts — 49&nbsp;€</a>
               </div>
               <p class="hero-cta-note-short">Livré en 24&nbsp;h · vous envoyez · pas de bot</p>
+
+              <div class="hero-human">
+                <img src="herve-photo.png" width="112" height="112" alt="Hervé Mengue">
+                <div>
+                  <p class="hero-human-name">Hervé — c’est moi qui écris vos textes</p>
+                  <p class="hero-human-tag">Contact humain · adapté à votre métier · <strong>vous</strong> envoyez à vos clients</p>
+                </div>
+              </div>
             </div>
             <div class="hero-wow" role="group" aria-label="Avant et après en une journée" hidden>
               <div class="wow-before"><span class="lbl">Avant</span>Vous improvisez entre deux coups de fil. Les relances traînent. Tout est dans la tête.</div>
