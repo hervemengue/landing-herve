@@ -12,7 +12,7 @@
     gtag('config', 'G-MN5ZZ8T2Q3');
   </script>
   <title>2 minutes pour répondre — pas 25 | Pack messages artisans 49 €</title>
-  <meta name="description" content="Artisan : 25 min à chercher quoi écrire le soir, ou 2 min avec 5 textes prêts (devis, relance, premier contact). Pack 49 €, livré en 24 h. Vous copiez, vous envoyez — pas de bot.">
+  <meta name="description" content="Artisan : 25 min le soir sur un message, ou 2 min avec 5 textes prêts. 23 min retrouvées pour votre vie perso. Pack 49 €, livré en 24 h. Vous copiez, vous envoyez — pas de bot.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Ce soir vous savez quoi répondre — pack 49 € | Hervé">
@@ -377,6 +377,118 @@
       font-weight: 700;
       color: #334155;
       text-align: center;
+    }
+    .temps-gagne-section {
+      margin-bottom: 22px;
+    }
+    .temps-gagne-section h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      margin-bottom: 12px;
+    }
+    .temps-math {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .temps-math-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .temps-math-row .lbl {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .temps-math-row .arrow {
+      color: #047857;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .temps-math-row .win {
+      color: #047857;
+      font-size: 0.95rem;
+    }
+    .temps-vie-title {
+      margin: 0 0 10px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .temps-vie-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      font-weight: 600;
+      color: #334155;
+    }
+    .temps-vie-list li { margin-bottom: 8px; }
+    .temps-vie-punch {
+      margin: 14px 0 0;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #ecfdf5;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #065f46;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .hero-test-note {
+      margin: 10px 0 0;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: #eff6ff;
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #1e3a8a;
+      line-height: 1.45;
+    }
+    .hero-test-note strong { color: #1e40af; }
+    .hero-life-note {
+      margin: 10px 0 0;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #ecfdf5;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #065f46;
+      text-align: center;
+      line-height: 1.35;
+    }
+    .concret-intro {
+      margin: 0 0 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .concret-test-note {
+      margin: 12px 0 0;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #f8fafc;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #475569;
+      line-height: 1.4;
     }
     .hero-cta-first {
       margin-top: 0;
@@ -985,6 +1097,8 @@
       .grid-3, .for-row, .day-compare, .task-removed, .demo-snapshot { grid-template-columns: 1fr; }
       .demo-punch { flex-direction: column; gap: 6px; }
       .concret-compare { grid-template-columns: 1fr; }
+      .temps-math-row { grid-template-columns: 1fr; text-align: center; }
+      .temps-math-row .arrow { transform: rotate(90deg); }
       .offer-card:hover { transform: none; }
     }
   </style>
@@ -1082,8 +1196,9 @@
               <div class="demo-punch">
                 <span class="demo-punch-part before">25 min · vous réfléchissez</span>
                 <span class="demo-punch-arrow" aria-hidden="true">→</span>
-                <span class="demo-punch-part after">2 min · vous modifiez · vous envoyez</span>
+                <span class="demo-punch-part after">2 min · vous envoyez · vous fermez le tel</span>
               </div>
+              <p class="hero-life-note"><strong>23 minutes ce soir</strong> — pour votre vie perso, pas pour un message client.</p>
 
               <div class="hero-human">
                 <img src="herve-photo.png" width="160" height="160" alt="Hervé Mengue — contact humain">
@@ -1109,32 +1224,37 @@
               <span class="hero-chip">Vous envoyez</span>
               <span class="hero-chip">Pas de bot</span>
             </div>
-            <p class="hero-promise"><strong>Je vous écris 5 textes prêts à copier.</strong> Adapté à votre métier. Vous n’avez plus à réfléchir — vous modifiez, vous envoyez.</p>
-            <p class="hero-cta-note" style="color:#1e40af;background:#eff6ff;padding:10px 12px;border-radius:8px;border:1px solid rgba(37,99,235,0.25);margin-top:10px;">Si le pack ne vous est pas utile, je rembourse — sans débat.</p>
-            <p class="hero-trust">Pas sûr ? <a href="#situations">Voir si c’est pour vous</a> · <a href="https://wa.me/message/MYUATUR7EZPDD1">Poser une question</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+            <p class="hero-promise"><strong>Je vous écris 5 textes prêts à copier.</strong> Adapté à votre métier. Vous n’avez plus à réfléchir le soir — vous modifiez, vous envoyez, <strong>vous retrouvez du temps pour vous et votre famille</strong>.</p>
+            <p class="hero-test-note"><strong>Test gratuit — sans abus :</strong> sur cette page, <a href="#concret">comparatif IA vs moi</a> + extrait réel (0 €). Sur WhatsApp : votre métier + 1 message qui vous bloque → <strong>1 extrait pour vous</strong> — pas les 5 textes avant paiement.</p>
+            <p class="hero-trust">Pas sûr ? <a href="#concret">Voir IA vs pack</a> · <a href="#situations">Voir si c’est pour vous</a> · <a href="https://wa.me/message/MYUATUR7EZPDD1">Demander 1 extrait</a> · <a href="mentions-legales.html">Mentions légales</a></p>
           </div>
         </div>
       </div>
     </header>
 
     <section id="concret" class="concret-section" aria-labelledby="concret-title">
-      <h2 id="concret-title">Concret : pourquoi pas juste ChatGPT ?</h2>
+      <h2 id="concret-title">Concret : une IA ou moi — quelle différence ?</h2>
+      <p class="concret-intro">Une IA (ChatGPT, Gemini, Copilot…) = vous réfléchissez encore le soir. <strong>Moi = c’est déjà écrit pour votre métier</strong> — par un humain, pas un abonnement, pas un bot qui répond à votre place.</p>
       <div class="card">
         <div class="concret-compare">
           <div class="concret-col chatgpt">
-            <h3>ChatGPT ce soir</h3>
+            <h3>Outil IA ce soir</h3>
             <ul>
+              <li>ChatGPT, Gemini, Copilot…</li>
               <li>Vous cherchez quoi demander</li>
               <li>Ton « coach business »</li>
               <li>~25 min · à corriger</li>
+              <li>Vous restez devant l’écran</li>
             </ul>
           </div>
           <div class="concret-col pack">
-            <h3>Pack demain matin</h3>
+            <h3>Chez Hervé — humain</h3>
             <ul>
               <li><strong>Déjà écrit</strong> pour votre métier</li>
               <li>Ça sonne comme <strong>vous</strong></li>
               <li><strong>2 min</strong> · copier · envoyer</li>
+              <li><strong>Vous</strong> envoyez · pas un robot</li>
+              <li>49&nbsp;€ une fois · pas d’abonnement</li>
             </ul>
           </div>
         </div>
@@ -1149,7 +1269,34 @@ Sinon, aucun souci — bonne continuation.</div>
           <span>pas dispo</span>
           <span>fin de chantier</span>
         </div>
-        <p class="concret-punch">49&nbsp;€ = 5 textes prêts · livrés en 24&nbsp;h · <strong>vous</strong> envoyez · pas un bot</p>
+        <p class="concret-punch">Ce n’est pas « être plus productif au travail » — c’est <strong>du temps retrouvé chez vous</strong>.</p>
+        <p class="concret-test-note"><strong>Test gratuit ici :</strong> comparatif + extrait ci-dessus. <strong>WhatsApp :</strong> métier + message qui vous bloque → <strong>1 extrait pour vous</strong>. Les 5 textes = pack 49&nbsp;€ après — pas avant.</p>
+      </div>
+    </section>
+
+    <section id="temps-gagne" class="temps-gagne-section" aria-labelledby="temps-gagne-title">
+      <h2 id="temps-gagne-title">Le temps que vous regagnez — chiffré</h2>
+      <div class="card">
+        <div class="temps-math">
+          <div class="temps-math-row">
+            <div><span class="lbl">1 message le soir</span>25 min à réfléchir</div>
+            <div class="arrow" aria-hidden="true">→</div>
+            <div class="win"><span class="lbl">Avec le pack</span>2 min · <strong>23 min retrouvées</strong></div>
+          </div>
+          <div class="temps-math-row">
+            <div><span class="lbl">5 messages / semaine</span>~2 h perdues</div>
+            <div class="arrow" aria-hidden="true">→</div>
+            <div class="win"><span class="lbl">Avec le pack</span>~10 min · <strong>près de 2 h pour vous</strong></div>
+          </div>
+        </div>
+        <p class="temps-vie-title">Concrètement, ce temps-là, c’est pour :</p>
+        <ul class="temps-vie-list">
+          <li>Un repas <strong>sans téléphone</strong> dans la main</li>
+          <li>Le coucher des enfants <strong>sans relancer un devis dans la tête</strong></li>
+          <li>Un week-end <strong>sans 5 messages qui traînent</strong> dans WhatsApp</li>
+          <li>Le soir : <strong>fermer le boulot</strong> au lieu de reformuler encore</li>
+        </ul>
+        <p class="temps-vie-punch">49&nbsp;€ une fois · pas d’abonnement · <strong>le gain, c’est votre vie perso</strong></p>
       </div>
     </section>
 
@@ -1158,7 +1305,7 @@ Sinon, aucun souci — bonne continuation.</div>
       <div class="card">
         <p>Concrètement : je vous aide à mieux gérer vos <strong>messages clients</strong> (réponses, relances, organisation) — sans outil compliqué.</p>
         <p><strong>Où :</strong> artisans et petits pros partout en <strong>France</strong>, prestation à distance.</p>
-        <p class="small no-mb">L’objectif n’est pas de compliquer les choses, mais de retirer ce qui prend du temps inutilement.</p>
+        <p class="small no-mb">L’objectif : vous rendre du <strong>temps perso</strong> — repas, famille, soirée — pas ajouter un outil de plus.</p>
       </div>
     </section>
 
@@ -1167,13 +1314,12 @@ Sinon, aucun souci — bonne continuation.</div>
       <p class="demo-intro intro-tight">Est-ce que vous vous reconnaissez ?</p>
       <div class="card">
         <ul class="hook-list">
-          <li>Trop de messages à gérer chaque jour</li>
-          <li>Des tâches répétitives qui prennent du temps</li>
-          <li>Une impression de courir sans vraiment avancer</li>
+          <li>Le soir, encore sur le téléphone au lieu d’être avec les vôtres</li>
+          <li>Des messages clients qui traînent dans la tête à la maison</li>
           <li>Des choses importantes repoussées par manque de temps</li>
           <li>Une activité chargée mais pas toujours fluide</li>
         </ul>
-        <p><strong>Si oui, vous n’êtes pas seul.</strong> Le problème vient souvent de l’organisation du quotidien, pas de votre travail.</p>
+        <p><strong>Si oui, vous n’êtes pas seul.</strong> Ce n’est pas votre métier qui manque — c’est du <strong>temps retrouvé chez vous</strong>.</p>
       </div>
     </section>
 
@@ -1184,18 +1330,18 @@ Sinon, aucun souci — bonne continuation.</div>
           <div class="day-col before">
             <h3>Avant</h3>
             <ul>
-              <li>Journées chargées mais dispersées</li>
-              <li>Beaucoup de petites tâches répétitives</li>
-              <li>Difficulté à se concentrer sur l’essentiel</li>
+              <li>25 min le soir sur un seul message</li>
+              <li>Téléphone allumé pendant le repas ou le coucher</li>
+              <li>Le boulot qui suit à la maison</li>
             </ul>
           </div>
           <div class="day-col after">
             <h3>Après</h3>
             <ul>
-              <li>Plus de temps disponible</li>
-              <li>Moins de tâches inutiles</li>
-              <li>Une activité plus fluide et structurée</li>
-              <li>Plus d’énergie pour développer votre activité</li>
+              <li>2 min · message envoyé · téléphone posé</li>
+              <li>23 min ce soir — pour vous, pas pour le client</li>
+              <li>Près de 2 h / semaine si 5 messages à gérer</li>
+              <li>Plus présent avec votre famille le soir</li>
             </ul>
           </div>
         </div>
@@ -1237,8 +1383,10 @@ Sinon, aucun souci — bonne continuation.</pre>
     <section id="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">Questions fréquentes</h2>
       <div class="card">
-        <h3>ChatGPT ne suffit-il pas pour écrire mes messages ?</h3>
-        <p class="small">ChatGPT peut générer du texte — oui. Ici, ce n’est pas « demander à l’IA le soir » : ce sont <strong>5 textes déjà prêts</strong> pour votre métier (devis, relance, etc.). Vous copiez, vous changez deux mots, vous envoyez. Vous gardez la main — pas un bot qui répond à votre place.</p>
+        <h3>ChatGPT, Gemini ou une autre IA ne suffit-il pas ?</h3>
+        <p class="small">Une IA gratuite peut générer du texte — oui. Là, ce n’est pas un outil à interroger le soir : <strong>5 textes déjà prêts</strong> pour votre métier, écrits par un humain. Vous copiez, vous changez deux mots, <strong>vous</strong> envoyez — pas un bot qui répond à votre place.</p>
+        <h3>Comment tester avant d’acheter ?</h3>
+        <p class="small">Sur cette page : comparatif IA vs pack + extrait réel (gratuit). Sur WhatsApp : indiquez votre métier et le message qui vous bloque le plus — j’envoie <strong>1 extrait pour vous</strong>. Le pack complet (5 textes) = 49&nbsp;€, livré en 24&nbsp;h.</p>
         <h3>Comment répondre à un client sur WhatsApp quand on est artisan ?</h3>
         <p class="small">Remerciez, reformulez la demande en une phrase, indiquez la prochaine étape (visite, devis, créneau). Le pack inclut un modèle prêt à copier, adapté à votre métier.</p>
         <h3>Existe-t-il un modèle de message pour relancer un devis ?</h3>
@@ -1258,7 +1406,7 @@ Sinon, aucun souci — bonne continuation.</pre>
         <div class="cta-rdv-action">
           <a class="btn" href="https://wa.me/message/MYUATUR7EZPDD1" aria-label="Échanger sur votre activité par WhatsApp">Échanger sur mon activité</a>
         </div>
-        <p class="cta-rdv-friction">Réponse rapide, sans engagement.</p>
+        <p class="cta-rdv-friction">WhatsApp : métier + 1 message qui vous bloque → <strong>1 extrait gratuit</strong>. Pack complet = 49&nbsp;€.</p>
       </div>
     </section>
 
