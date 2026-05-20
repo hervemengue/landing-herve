@@ -306,6 +306,78 @@
       color: #475569;
       line-height: 1.35;
     }
+    .concret-section {
+      margin-bottom: 22px;
+    }
+    .concret-section h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      margin-bottom: 12px;
+    }
+    .concret-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .concret-col {
+      border-radius: 14px;
+      padding: 12px 12px 10px;
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+    .concret-col.chatgpt {
+      background: #fff1f2;
+      border: 1px solid rgba(244, 63, 94, 0.35);
+    }
+    .concret-col.pack {
+      background: #ecfdf5;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+    }
+    .concret-col h3 {
+      margin: 0 0 8px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .concret-col.chatgpt h3 { color: #be123c; }
+    .concret-col.pack h3 { color: #047857; }
+    .concret-col ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+    .concret-col li { margin-bottom: 4px; font-weight: 600; }
+    .concret-extrait {
+      background: #0f172a;
+      color: #f1f5f9;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0 0 10px;
+      white-space: pre-wrap;
+    }
+    .concret-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 0 12px;
+    }
+    .concret-list span {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid rgba(37, 99, 235, 0.25);
+    }
+    .concret-punch {
+      margin: 0;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #334155;
+      text-align: center;
+    }
     .hero-cta-first {
       margin-top: 0;
     }
@@ -912,6 +984,7 @@
       .day-compare { gap: 10px; }
       .grid-3, .for-row, .day-compare, .task-removed, .demo-snapshot { grid-template-columns: 1fr; }
       .demo-punch { flex-direction: column; gap: 6px; }
+      .concret-compare { grid-template-columns: 1fr; }
       .offer-card:hover { transform: none; }
     }
   </style>
@@ -1044,6 +1117,42 @@
       </div>
     </header>
 
+    <section id="concret" class="concret-section" aria-labelledby="concret-title">
+      <h2 id="concret-title">Concret : pourquoi pas juste ChatGPT ?</h2>
+      <div class="card">
+        <div class="concret-compare">
+          <div class="concret-col chatgpt">
+            <h3>ChatGPT ce soir</h3>
+            <ul>
+              <li>Vous cherchez quoi demander</li>
+              <li>Ton « coach business »</li>
+              <li>~25 min · à corriger</li>
+            </ul>
+          </div>
+          <div class="concret-col pack">
+            <h3>Pack demain matin</h3>
+            <ul>
+              <li><strong>Déjà écrit</strong> pour votre métier</li>
+              <li>Ça sonne comme <strong>vous</strong></li>
+              <li><strong>2 min</strong> · copier · envoyer</li>
+            </ul>
+          </div>
+        </div>
+        <p class="small" style="margin:0 0 8px;font-weight:700;">Exemple réel — relance J+2 (extrait du pack) :</p>
+        <div class="concret-extrait">Bonjour [Prénom], je me permets une relance rapide 🙂
+Toujours partant si vous voulez qu'on avance.
+Sinon, aucun souci — bonne continuation.</div>
+        <div class="concret-list" aria-label="Les 5 textes inclus">
+          <span>devis</span>
+          <span>relance</span>
+          <span>premier contact</span>
+          <span>pas dispo</span>
+          <span>fin de chantier</span>
+        </div>
+        <p class="concret-punch">49&nbsp;€ = 5 textes prêts · livrés en 24&nbsp;h · <strong>vous</strong> envoyez · pas un bot</p>
+      </div>
+    </section>
+
     <section id="positionnement" aria-labelledby="positionnement-title">
       <h2 id="positionnement-title">Présentation</h2>
       <div class="card">
@@ -1098,8 +1207,8 @@
       <div class="card">
         <p class="small" style="margin-bottom:14px;">Un client n’a pas répondu à votre devis depuis 2 jours. Voici un texte prêt à copier (extrait du pack) :</p>
         <pre style="white-space:pre-wrap;background:#0f172a;color:#f1f5f9;border-radius:10px;padding:14px;font-family:'Source Sans 3',sans-serif;font-size:0.95rem;line-height:1.5;margin:0;">Bonjour [Prénom], je me permets une relance rapide 🙂
-Je peux vous envoyer un mini exemple concret adapté à votre activité avant décision.
-Si ce n’est pas le moment, aucun souci.</pre>
+Toujours partant si vous voulez qu'on avance.
+Sinon, aucun souci — bonne continuation.</pre>
         <p class="small" style="margin-top:14px;margin-bottom:0;">Le pack contient <strong>5 textes</strong> de ce type (premier message, réponse devis, relance J+2, message « pas dispo », clôture polie) — adaptés à votre métier.</p>
       </div>
     </section>
@@ -1128,6 +1237,8 @@ Si ce n’est pas le moment, aucun souci.</pre>
     <section id="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">Questions fréquentes</h2>
       <div class="card">
+        <h3>ChatGPT ne suffit-il pas pour écrire mes messages ?</h3>
+        <p class="small">ChatGPT peut générer du texte — oui. Ici, ce n’est pas « demander à l’IA le soir » : ce sont <strong>5 textes déjà prêts</strong> pour votre métier (devis, relance, etc.). Vous copiez, vous changez deux mots, vous envoyez. Vous gardez la main — pas un bot qui répond à votre place.</p>
         <h3>Comment répondre à un client sur WhatsApp quand on est artisan ?</h3>
         <p class="small">Remerciez, reformulez la demande en une phrase, indiquez la prochaine étape (visite, devis, créneau). Le pack inclut un modèle prêt à copier, adapté à votre métier.</p>
         <h3>Existe-t-il un modèle de message pour relancer un devis ?</h3>
