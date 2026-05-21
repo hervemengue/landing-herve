@@ -448,6 +448,46 @@
       text-align: center;
       line-height: 1.4;
     }
+    .offres-section { margin-bottom: 22px; }
+    .offres-section h2 { font-size: clamp(1.1rem, 2.5vw, 1.35rem); margin-bottom: 8px; }
+    .offres-intro { margin: 0 0 14px; font-size: 0.88rem; color: #475569; font-weight: 600; line-height: 1.4; }
+    .offer-ladder {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .offer-card {
+      border-radius: 14px;
+      padding: 14px 12px;
+      border: 1px solid #e2e8f0;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .offer-card.featured {
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+    }
+    .offer-tier { margin: 0; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; }
+    .offer-price { margin: 0; font-size: 1.35rem; font-weight: 800; color: #0f172a; line-height: 1.1; }
+    .offer-price sub { font-size: 0.75rem; font-weight: 700; color: #64748b; }
+    .offer-card ul { margin: 0; padding-left: 16px; font-size: 0.82rem; font-weight: 600; color: #334155; flex: 1; }
+    .offer-card li { margin-bottom: 4px; }
+    .offer-cta {
+      display: block;
+      text-align: center;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 4px;
+    }
+    .offer-cta.primary { background: #2563eb; color: #fff; }
+    .offer-cta.secondary { background: #f1f5f9; color: #1e40af; border: 1px solid rgba(37, 99, 235, 0.25); }
+    .offer-cta.ghost { background: transparent; color: #475569; border: 1px dashed #cbd5e1; font-weight: 600; }
+    .offres-note { margin: 12px 0 0; font-size: 0.82rem; color: #64748b; font-weight: 600; text-align: center; line-height: 1.4; }
     .hero-test-note {
       margin: 10px 0 0;
       padding: 12px 14px;
@@ -1421,7 +1461,7 @@ Sinon, aucun souci — bonne continuation.</pre>
         <p class="cta-rdv-lead cta-lead-strong"><strong>Vous voulez voir si c’est adapté à votre activité ?</strong></p>
         <p class="cta-rdv-lead">On peut en parler simplement et voir ce qui peut être amélioré.</p>
         <div class="cta-rdv-action">
-          <a class="btn" href="https://wa.me/message/MYUATUR7EZPDD1" aria-label="Échanger sur votre activité par WhatsApp">Échanger sur mon activité</a>
+          <a class="btn" href="test-gratuit.html" aria-label="Tester gratuitement sur WhatsApp">Tester gratuitement</a>
         </div>
         <p class="cta-rdv-friction">WhatsApp : métier + 1 message qui vous bloque → <strong>1 extrait gratuit</strong>. Pack complet = 49&nbsp;€.</p>
       </div>
