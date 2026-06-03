@@ -2,15 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hervemengue.github.io/landing-herve/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://hervemengue.github.io/landing-herve/test-gratuit.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hervemengue.github.io/landing-herve/textes-messages-clients-artisan-france.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://hervemengue.github.io/landing-herve/messages-whatsapp-artisan-tpe.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://hervemengue.github.io/landing-herve/modele-reponse-devis-plombier.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hervemengue.github.io/landing-herve/modele-relance-client-j2.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hervemengue.github.io/landing-herve/audit-messagerie-whatsapp-49.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hervemengue.github.io/landing-herve/merci-49.html</loc>
@@ -31,20 +61,8 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://hervemengue.github.io/landing-herve/audit-messagerie-whatsapp-49.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hervemengue.github.io/landing-herve/modele-relance-client-j2.html</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hervemengue.github.io/landing-herve/mentions-legales.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
