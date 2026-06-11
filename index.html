@@ -378,6 +378,49 @@
       color: #334155;
       text-align: center;
     }
+    .demo-situation {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      background: #f8fafc;
+    }
+    .demo-situation:last-child { margin-bottom: 0; }
+    .demo-situation h3 {
+      font-size: 0.95rem;
+      margin: 0 0 10px;
+      color: #0f172a;
+    }
+    .demo-block {
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .demo-block strong {
+      display: block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #64748b;
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+    .demo-benefit {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.85rem;
+      color: #065f46;
+      line-height: 1.4;
+    }
+    .demo-benefit strong {
+      display: block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: #047857;
+      margin-bottom: 4px;
+    }
     .temps-gagne-section {
       margin-bottom: 22px;
     }
@@ -1321,12 +1364,12 @@
         <div class="concret-extrait">Bonjour [Prénom], je me permets une relance rapide 🙂
 Toujours partant si vous voulez qu'on avance.
 Sinon, aucun souci — bonne continuation.</div>
-        <div class="concret-list" aria-label="Les 5 textes inclus">
+        <div class="concret-list" aria-label="Les 5 situations incluses">
           <span>réponse demande</span>
           <span>relance devis</span>
-          <span>premier contact</span>
-          <span>pas dispo</span>
-          <span>clôture polie</span>
+          <span>retard chantier</span>
+          <span>avis Google</span>
+          <span>client mécontent</span>
         </div>
         <p class="concret-punch">Ce n’est pas « être plus productif au travail » — c’est <strong>du temps retrouvé chez vous</strong>.</p>
         <p class="concret-test-note"><strong>Test gratuit ici :</strong> comparatif + extrait ci-dessus. <strong>WhatsApp :</strong> métier + message qui vous bloque → <strong>1 extrait pour vous</strong>. Les 5 textes = pack 49&nbsp;€ après — pas avant.</p>
@@ -1368,7 +1411,7 @@ Sinon, aucun souci — bonne continuation.</div>
           <p class="offer-price">49&nbsp;€ <sub>· une fois</sub></p>
           <ul>
             <li><strong>5 textes</strong> essentiels</li>
-            <li>Réponse à une demande, relance de devis, pas dispo…</li>
+            <li>5 situations : demande, relance de devis, retard, avis, réclamation…</li>
             <li>Livré en 24&nbsp;h</li>
             <li><strong>Test gratuit</strong> avant</li>
           </ul>
@@ -1449,13 +1492,48 @@ Sinon, aucun souci — bonne continuation.</div>
     </section>
 
     <section id="apercu" aria-labelledby="apercu-title">
-      <h2 id="apercu-title">Aperçu : un exemple du pack</h2>
+      <h2 id="apercu-title">Les 5 situations du pack — exemples</h2>
+      <p class="small intro-tight" style="margin:0 0 14px;">Chaque texte = un <strong>problème résolu</strong>, pas seulement une phrase. <strong>Pas</strong> le devis chantier (prix) — les messages autour. Vous chiffrez, vous envoyez.</p>
       <div class="card">
-        <p class="small" style="margin-bottom:14px;">Exemple — <strong>relance de devis</strong> : un client n’a pas répondu depuis 2 jours après l’envoi de <strong>votre</strong> devis chiffré. Message prêt à copier (extrait du pack) :</p>
-        <pre style="white-space:pre-wrap;background:#0f172a;color:#f1f5f9;border-radius:10px;padding:14px;font-family:'Source Sans 3',sans-serif;font-size:0.95rem;line-height:1.5;margin:0;">Bonjour [Prénom], je me permets une relance rapide 🙂
-Toujours partant si vous voulez qu'on avance.
-Sinon, aucun souci — bonne continuation.</pre>
-        <p class="small" style="margin-top:14px;margin-bottom:0;">Le pack contient <strong>5 textes</strong> de ce type (premier contact, réponse à une demande de devis, relance de devis, pas dispo, clôture polie) — adaptés à votre métier. <strong>Pas</strong> le chiffrage de vos travaux.</p>
+
+        <div class="demo-situation">
+          <h3>1 — Réponse à une demande (urgence)</h3>
+          <div class="demo-block"><strong>Client</strong>Bonjour, j'ai une fuite sous l'évier. Vous pouvez passer aujourd'hui ou demain ?</div>
+          <div class="demo-block"><strong>Pendant ce temps</strong>Vous êtes sur un chantier.</div>
+          <div class="demo-block"><strong>Réponse prête</strong>Bonjour, merci pour votre message. Je peux passer demain entre 14&nbsp;h et 16&nbsp;h pour voir la fuite. Je vous envoie le devis dès que j'ai tout vu sur place. Ça vous convient ?</div>
+          <div class="demo-benefit"><strong>Bénéfice</strong>Réponse rapide · aucune demande oubliée · vous restez sur le chantier.</div>
+        </div>
+
+        <div class="demo-situation">
+          <h3>2 — Relance de devis</h3>
+          <div class="demo-block"><strong>Situation</strong>Le devis est parti il y a 3 jours. Aucune réponse.</div>
+          <div class="demo-block"><strong>Réponse prête</strong>Bonjour, je me permets de revenir vers vous concernant le devis envoyé la semaine dernière. Le projet est-il toujours d'actualité ? Je suis disponible si vous avez des questions.</div>
+          <div class="demo-benefit"><strong>Bénéfice</strong>Plus de relances oubliées · plus de chances de transformer le devis en chantier.</div>
+        </div>
+
+        <div class="demo-situation">
+          <h3>3 — Retard chantier</h3>
+          <div class="demo-block"><strong>Situation</strong>Vous aurez 30 minutes de retard.</div>
+          <div class="demo-block"><strong>Réponse prête</strong>Bonjour, je préfère vous prévenir que j'aurai environ 30 minutes de retard aujourd'hui en raison d'une intervention qui a pris plus de temps que prévu. Merci de votre compréhension.</div>
+          <div class="demo-benefit"><strong>Bénéfice</strong>Moins de tensions · moins d'appels · image plus professionnelle.</div>
+        </div>
+
+        <div class="demo-situation">
+          <h3>4 — Demande d'avis Google</h3>
+          <div class="demo-block"><strong>Situation</strong>Le chantier est terminé.</div>
+          <div class="demo-block"><strong>Réponse prête</strong>Bonjour, merci encore pour votre confiance. Si vous êtes satisfait du travail réalisé, un avis Google nous aiderait beaucoup. Voici le lien : [lien].</div>
+          <div class="demo-benefit"><strong>Bénéfice</strong>Plus d'avis · plus de visibilité · plus de demandes entrantes.</div>
+        </div>
+
+        <div class="demo-situation">
+          <h3>5 — Client mécontent / réclamation</h3>
+          <div class="demo-block"><strong>Client</strong>Bonjour. Je ne suis pas satisfait du travail réalisé. Le problème n'est toujours pas réglé malgré votre intervention.</div>
+          <div class="demo-block"><strong>Pendant ce temps</strong>Vous êtes sur un chantier — pas de réponse immédiate.</div>
+          <div class="demo-block"><strong>Réponse prête</strong>Bonjour, merci de m'avoir informé. Je comprends votre mécontentement et je souhaite trouver une solution rapidement. Pouvez-vous m'envoyer quelques photos ou précisions sur le problème ? Je reviens vers vous dès que possible pour convenir d'une intervention.</div>
+          <div class="demo-benefit"><strong>Bénéfice</strong>Client écouté · situation qui ne s'envenime pas · image pro même occupé.</div>
+        </div>
+
+        <p class="small" style="margin:14px 0 0;">Pack <strong>49&nbsp;€</strong> : ces 5 textes <strong>adaptés à votre métier</strong> après brief · livraison 24&nbsp;h · <a href="test-gratuit.html">test gratuit</a> (1 extrait) avant paiement.</p>
       </div>
     </section>
 
