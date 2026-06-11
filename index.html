@@ -1174,7 +1174,7 @@
         "@type": "Service",
         "@id": "https://hervemengue.github.io/landing-herve/#service",
         "name": "Pack messagerie clients — indépendants et TPE",
-        "description": "Modèles de messages clients pour indépendants et TPE, tous corps de métier : réponse devis WhatsApp, relance J+2, premier message, message pas dispo, clôture polie. Pack de 5 textes prêts à copier, livré en 24 h. Commerce, services, terrain, bureau. Vous envoyez vous-même — pas de bot.",
+        "description": "Messages clients pour indépendants et TPE (pas devis chantier) : réponse à une demande de devis, relance de devis, pas dispo, premier contact. Pack de 5 textes prêts à copier, livré en 24 h. Vous chiffrez et envoyez vous-même — pas de bot.",
         "provider": { "@id": "https://hervemengue.github.io/landing-herve/#person" },
         "areaServed": { "@type": "Country", "name": "France" },
         "serviceType": "Aide à la communication client pour indépendants, TPE et petites structures",
@@ -1196,23 +1196,31 @@
             "name": "Comment répondre à un client sur WhatsApp quand on est indépendant ou en TPE ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Remerciez, reformulez la demande en une phrase, indiquez la prochaine étape (visite, devis, créneau). Le pack inclut un modèle de premier message et de réponse devis prêts à copier, adaptés à votre métier."
+              "text": "Remerciez, reformulez la demande en une phrase, indiquez la prochaine étape (visite, créneau). Le pack inclut un modèle de réponse à une demande de devis prêt à copier — pas le chiffrage de vos travaux."
             }
           },
           {
             "@type": "Question",
-            "name": "Existe-t-il un modèle de message pour relancer un devis ?",
+            "name": "Rédigez-vous nos devis chantier (prix, lignes) ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Oui. Une relance J+2 courte et polie fonctionne bien. Le pack 49 € contient ce texte prêt à coller, plus 4 autres messages (premier contact, réponse devis, pas dispo, clôture)."
+              "text": "Non. Nous préparons les messages autour : réponse à une demande de devis, relance de devis, pas dispo, premier contact. Vous chiffrez vos travaux et vous envoyez vous-même."
             }
           },
           {
             "@type": "Question",
-            "name": "Comment écrire un message professionnel pour un devis, quel que soit mon métier ?",
+            "name": "Existe-t-il un modèle pour relancer un devis déjà envoyé ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Nommez le besoin du client, ce que vous proposez et une question simple pour avancer. Le pack vous donne la formulation adaptée à votre activité : vous personnalisez deux lignes et vous envoyez."
+              "text": "Oui. Une relance de devis J+2 courte et polie. Le pack 49 € contient ce texte prêt à coller, plus 4 autres messages (premier contact, réponse à une demande, pas dispo, clôture)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment répondre par message à une demande de devis ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nommez le besoin du client, proposez une prochaine étape (visite, créneau). Le pack vous donne la formulation adaptée à votre métier : vous personnalisez deux lignes et vous envoyez. Ce n'est pas le document de chiffrage."
             }
           },
           {
@@ -1285,6 +1293,7 @@
     <section id="concret" class="concret-section" aria-labelledby="concret-title">
       <h2 id="concret-title">Concret : une IA ou moi — quelle différence ?</h2>
       <p class="concret-intro">Une IA (ChatGPT, Gemini, Copilot…) = vous réfléchissez encore le soir. <strong>Moi = c’est déjà écrit pour votre métier</strong> — par un humain, pas un abonnement, pas un bot qui répond à votre place.</p>
+      <p class="clarte-offre" style="margin:0 0 16px;padding:14px 16px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;font-size:0.95rem;line-height:1.5;"><strong>Important :</strong> nous ne rédigeons <strong>pas</strong> vos devis chantier (prix, lignes, TVA). Nous préparons les <strong>messages</strong> WhatsApp ou SMS : réponse à une demande de devis, relance de devis, pas dispo… <strong>Vous chiffrez. Vous envoyez.</strong></p>
       <div class="card">
         <div class="concret-compare">
           <div class="concret-col chatgpt">
@@ -1313,8 +1322,8 @@
 Toujours partant si vous voulez qu'on avance.
 Sinon, aucun souci — bonne continuation.</div>
         <div class="concret-list" aria-label="Les 5 textes inclus">
-          <span>devis</span>
-          <span>relance</span>
+          <span>réponse demande</span>
+          <span>relance devis</span>
           <span>premier contact</span>
           <span>pas dispo</span>
           <span>clôture polie</span>
@@ -1342,7 +1351,7 @@ Sinon, aucun souci — bonne continuation.</div>
         <p class="temps-vie-title">Concrètement, ce temps-là, c’est pour :</p>
         <ul class="temps-vie-list">
           <li>Un repas <strong>sans téléphone</strong> dans la main</li>
-          <li>Le coucher des enfants <strong>sans relancer un devis dans la tête</strong></li>
+          <li>Le coucher des enfants <strong>sans une relance client dans la tête</strong></li>
           <li>Un week-end <strong>sans 5 messages qui traînent</strong> dans WhatsApp</li>
           <li>Le soir : <strong>fermer le boulot</strong> au lieu de reformuler encore</li>
         </ul>
@@ -1359,7 +1368,7 @@ Sinon, aucun souci — bonne continuation.</div>
           <p class="offer-price">49&nbsp;€ <sub>· une fois</sub></p>
           <ul>
             <li><strong>5 textes</strong> essentiels</li>
-            <li>Devis, relance, premier contact…</li>
+            <li>Réponse à une demande, relance de devis, pas dispo…</li>
             <li>Livré en 24&nbsp;h</li>
             <li><strong>Test gratuit</strong> avant</li>
           </ul>
@@ -1442,11 +1451,11 @@ Sinon, aucun souci — bonne continuation.</div>
     <section id="apercu" aria-labelledby="apercu-title">
       <h2 id="apercu-title">Aperçu : un exemple du pack</h2>
       <div class="card">
-        <p class="small" style="margin-bottom:14px;">Un client n’a pas répondu à votre devis depuis 2 jours. Voici un texte prêt à copier (extrait du pack) :</p>
+        <p class="small" style="margin-bottom:14px;">Exemple — <strong>relance de devis</strong> : un client n’a pas répondu depuis 2 jours après l’envoi de <strong>votre</strong> devis chiffré. Message prêt à copier (extrait du pack) :</p>
         <pre style="white-space:pre-wrap;background:#0f172a;color:#f1f5f9;border-radius:10px;padding:14px;font-family:'Source Sans 3',sans-serif;font-size:0.95rem;line-height:1.5;margin:0;">Bonjour [Prénom], je me permets une relance rapide 🙂
 Toujours partant si vous voulez qu'on avance.
 Sinon, aucun souci — bonne continuation.</pre>
-        <p class="small" style="margin-top:14px;margin-bottom:0;">Le pack contient <strong>5 textes</strong> de ce type (premier message, réponse devis, relance J+2, message « pas dispo », clôture polie) — adaptés à votre métier.</p>
+        <p class="small" style="margin-top:14px;margin-bottom:0;">Le pack contient <strong>5 textes</strong> de ce type (premier contact, réponse à une demande de devis, relance de devis, pas dispo, clôture polie) — adaptés à votre métier. <strong>Pas</strong> le chiffrage de vos travaux.</p>
       </div>
     </section>
 
@@ -1480,6 +1489,8 @@ Sinon, aucun souci — bonne continuation.</pre>
     <section id="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">Questions fréquentes</h2>
       <div class="card">
+        <h3>Rédigez-vous nos devis chantier (prix, lignes) ?</h3>
+        <p class="small"><strong>Non.</strong> Nous préparons les <strong>messages</strong> (WhatsApp, SMS) : réponse à une demande de devis, relance de devis, pas dispo… <strong>Vous chiffrez vos travaux. Vous envoyez.</strong></p>
         <h3>ChatGPT, Gemini ou une autre IA ne suffit-il pas ?</h3>
         <p class="small">Une IA gratuite peut générer du texte — oui. Là, ce n’est pas un outil à interroger le soir : <strong>5 textes déjà prêts</strong> pour votre métier, écrits par un humain. Vous copiez, vous changez deux mots, <strong>vous</strong> envoyez — pas un bot qui répond à votre place.</p>
         <h3>Que se passe-t-il après le paiement de 49&nbsp;€ ?</h3>
@@ -1487,11 +1498,11 @@ Sinon, aucun souci — bonne continuation.</pre>
         <h3>Comment tester avant d’acheter ?</h3>
         <p class="small">Sur cette page : comparatif IA vs pack + extrait réel (gratuit). Via <a href="test-gratuit.html">Tester gratuitement</a> : brief WhatsApp en 3 lignes → <strong>1 extrait pour vous</strong>. Le pack complet (5 textes) = 49&nbsp;€, livré en 24&nbsp;h.</p>
         <h3>Comment répondre à un client sur WhatsApp quand on est indépendant ou en TPE ?</h3>
-        <p class="small">Remerciez, reformulez la demande en une phrase, indiquez la prochaine étape (visite, devis, créneau). Le pack inclut un modèle prêt à copier, adapté à votre métier.</p>
-        <h3>Existe-t-il un modèle de message pour relancer un devis ?</h3>
-        <p class="small">Oui — une relance J+2 courte et polie. Voir aussi notre <a href="modele-relance-client-j2.html">exemple de relance client J+2</a>. Le pack 49&nbsp;€ contient ce texte plus 4 autres messages.</p>
-        <h3>Comment écrire un message pro pour un devis, quel que soit mon métier ?</h3>
-        <p class="small">Nommez le besoin, ce que vous proposez, une question pour avancer. Pas de pavé le soir : vous copiez le modèle adapté à votre activité, vous personnalisez deux lignes, vous envoyez.</p>
+        <p class="small">Remerciez, reformulez la demande en une phrase, indiquez la prochaine étape (visite, créneau). Le pack inclut une <strong>réponse à une demande de devis</strong> prête à copier — pas le chiffrage de vos travaux.</p>
+        <h3>Existe-t-il un modèle pour relancer un devis déjà envoyé ?</h3>
+        <p class="small">Oui — une <strong>relance de devis</strong> J+2 courte et polie. Voir aussi notre <a href="modele-relance-client-j2.html">exemple relance de devis J+2</a>. Le pack 49&nbsp;€ contient ce texte plus 4 autres messages.</p>
+        <h3>Comment répondre par message à une demande de devis ?</h3>
+        <p class="small">Nommez le besoin, proposez une visite ou un créneau. Pas de pavé le soir : vous copiez le modèle adapté à votre métier, vous personnalisez deux lignes, vous envoyez. <strong>Ce n’est pas le document de chiffrage.</strong></p>
         <h3>Le pack remplace-t-il WhatsApp Business ou un CRM ?</h3>
         <p class="small no-mb">Non. Textes prêts à coller — vous envoyez vous-même. Pas de bot. <a href="audit-messagerie-whatsapp-49.html">Détail audit messagerie WhatsApp</a>.</p>
       </div>
