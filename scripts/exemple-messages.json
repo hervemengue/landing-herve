@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "title": "Demande client",
+      "label": "Urgence · fuite",
+      "text": "Bonjour, merci pour votre message. Je peux passer demain entre 14 h et 16 h pour voir la fuite. Je vous envoie le devis dès que j'ai tout vu sur place. Ça vous convient ?"
+    },
+    {
+      "title": "Relance de devis",
+      "label": "Devis sans réponse",
+      "text": "Bonjour, je me permets de revenir vers vous concernant le devis envoyé la semaine dernière. Le projet est-il toujours d'actualité ? Je suis disponible si vous avez des questions."
+    },
+    {
+      "title": "Retard chantier",
+      "label": "Prévenir le client",
+      "text": "Bonjour, je préfère vous prévenir que j'aurai environ 30 minutes de retard aujourd'hui en raison d'une intervention qui a pris plus de temps que prévu. Merci de votre compréhension."
+    },
+    {
+      "title": "Demande d'avis Google",
+      "label": "Fin de chantier",
+      "text": "Bonjour, merci encore pour votre confiance. Si vous êtes satisfait du travail réalisé, un avis Google nous aiderait beaucoup. Voici le lien : [lien]."
+    },
+    {
+      "title": "Client mécontent",
+      "label": "Réclamation",
+      "text": "Bonjour, merci de m'avoir informé. Je comprends votre mécontentement et je souhaite trouver une solution rapidement. Pouvez-vous m'envoyer quelques photos ou précisions sur le problème ? Je reviens vers vous dès que possible pour convenir d'une intervention."
+    }
+  ]
+}

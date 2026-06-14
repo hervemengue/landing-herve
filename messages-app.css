@@ -1,0 +1,162 @@
+:root {
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --ok: #047857;
+  --ok-bg: #ecfdf5;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --radius: 14px;
+  --font: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: #f1f5f9;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px 32px;
+}
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(241, 245, 249, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 12px 0 10px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.top h1 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+
+.top .sub {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.badge-demo {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-client {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+
+.badge-test {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.hint-bar {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  color: #1e3a8a;
+  margin-bottom: 14px;
+}
+
+.msg-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 14px 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.msg-card h2 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin: 0 0 6px;
+}
+
+.msg-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 8px;
+}
+
+.msg-text {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+
+.copy-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.copy-btn:active {
+  background: var(--primary-dark);
+}
+
+.copy-btn.copied {
+  background: var(--ok);
+}
+
+.foot {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 20px;
+  padding-top: 12px;
+}
+
+.foot a {
+  color: var(--primary);
+}
