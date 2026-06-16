@@ -1,0 +1,32 @@
+# Hervé — messages clients artisans & TPE (France)
+
+> Pack de textes WhatsApp pour artisans et TPE : réponse à une demande, relance de devis, pas dispo. Vous copiez, vous envoyez — pas de bot.
+
+Site : https://hervemengue.github.io/landing-herve/
+Contact : test gratuit via WhatsApp sur la page d'accueil
+Zone : France entière (prestation à distance)
+Offre : pack 5 messages personnalisés — 49 € — livraison 24 h
+
+## Guides gratuits
+
+- https://hervemengue.github.io/landing-herve/textes-messages-clients-artisan-france.html
+- https://hervemengue.github.io/landing-herve/messages-whatsapp-artisan-tpe.html
+- https://hervemengue.github.io/landing-herve/organisation-reponses-clients-tpe.html
+- https://hervemengue.github.io/landing-herve/relance-devis-sans-reponse-artisan.html
+- https://hervemengue.github.io/landing-herve/modele-reponse-devis-plombier.html
+- https://hervemengue.github.io/landing-herve/modele-reponse-devis-electricien.html
+- https://hervemengue.github.io/landing-herve/modele-reponse-devis-menuisier.html
+- https://hervemengue.github.io/landing-herve/modele-reponse-devis-couvreur.html
+- https://hervemengue.github.io/landing-herve/modele-relance-client-j2.html
+
+## Démos par métier
+
+- https://hervemengue.github.io/landing-herve/demo-plombier.html
+- https://hervemengue.github.io/landing-herve/demo-menuisier.html
+- https://hervemengue.github.io/landing-herve/demo-electricien.html
+
+## Ce que nous ne faisons pas
+
+- Pas de rédaction de devis chantier (prix, lignes)
+- Pas de bot qui envoie à la place du client
+- Pas de CRM ni logiciel à installer
