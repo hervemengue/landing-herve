@@ -512,6 +512,12 @@
       border-color: rgba(37, 99, 235, 0.45);
       box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
     }
+    .offer-card.suivi {
+      border-color: rgba(124, 58, 237, 0.45);
+      background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
+      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.12);
+    }
+    .offer-card.suivi .offer-tier { color: #6d28d9; }
     .offer-tier { margin: 0; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; }
     .offer-price { margin: 0; font-size: 1.35rem; font-weight: 800; color: #0f172a; line-height: 1.1; }
     .offer-price sub { font-size: 0.75rem; font-weight: 700; color: #64748b; }
@@ -572,6 +578,107 @@
       font-weight: 600;
       color: #475569;
       line-height: 1.4;
+    }
+    .demo-caption {
+      margin: 0 0 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      text-align: center;
+    }
+    .pilot-banner {
+      margin: 14px 0 0;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 2px solid #f59e0b;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.15);
+    }
+    .pilot-banner-title {
+      margin: 0 0 6px;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #92400e;
+      line-height: 1.3;
+    }
+    .pilot-banner p {
+      margin: 0 0 10px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #78350f;
+      line-height: 1.4;
+    }
+    .pilot-banner .btn {
+      width: 100%;
+      font-size: 0.92rem;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      box-shadow: 0 4px 14px rgba(180, 83, 9, 0.35);
+    }
+    .pilot-banner .btn:hover, .pilot-banner .btn:focus {
+      filter: brightness(1.06);
+    }
+    .cta-strip {
+      margin: 14px 0 0;
+      text-align: center;
+    }
+    .cta-strip .btn {
+      width: 100%;
+      max-width: 360px;
+    }
+    .offer-suivi-note {
+      margin: 0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #64748b;
+      line-height: 1.35;
+    }
+    .offer-duo {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .exemple-more {
+      margin-top: 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 0 12px;
+      background: #fafafa;
+    }
+    .exemple-more summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 0;
+      color: var(--primary);
+    }
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255, 255, 255, 0.96);
+      border-top: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(8px);
+    }
+    .sticky-cta .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 14px 16px;
+      font-size: 0.98rem;
+    }
+    @media (max-width: 640px) {
+      .sticky-cta { display: block; }
+      body { padding-bottom: 72px; }
     }
     .hero-cta-lead {
       margin: 0 auto 12px;
@@ -1289,6 +1396,7 @@
             <div class="demo-hero" id="demo-visuelle">
               <h1 class="visually-primary">Messages clients — 2 minutes au lieu de 25</h1>
 
+              <p class="demo-caption">Exemple illustratif — pas une liste de clients</p>
               <div class="demo-visual" role="img" aria-label="Avant : vous réfléchissez face aux messages. Après : vous modifiez et envoyez en deux minutes.">
                 <img class="demo-img-before" src="demo-hero-avant-25min.png" width="800" height="500" alt="" decoding="async">
                 <img class="demo-img-after" src="demo-hero-apres-2min.png" width="800" height="500" alt="" decoding="async">
@@ -1297,23 +1405,27 @@
               <div class="demo-punch">
                 <span class="demo-punch-part before">25 min · vous réfléchissez</span>
                 <span class="demo-punch-arrow" aria-hidden="true">→</span>
-                <span class="demo-punch-part after">2 min · vous envoyez · vous fermez le tel</span>
+                <span class="demo-punch-part after">2 min · copier · envoyer · fermer le tel</span>
               </div>
-              <p class="hero-life-note"><strong>23 minutes ce soir</strong> — pour votre vie perso, pas pour un message client.</p>
 
               <div class="hero-human">
-                <img src="herve-photo.png" width="160" height="160" alt="Hervé Mengue — contact humain">
+                <img src="herve-photo.png" width="160" height="160" alt="Hervé Mengue">
                 <div>
-                  <p class="hero-human-name">Hervé — c’est moi qui écris vos textes</p>
-                  <p class="hero-human-tag">Pas un bot · <strong>vous</strong> envoyez à vos clients · contact humain</p>
+                  <p class="hero-human-name">Hervé — humain, pas un bot</p>
+                  <p class="hero-human-tag">Messages WhatsApp/SMS · <strong>vous</strong> chiffrez et envoyez · France · 24&nbsp;h</p>
                 </div>
               </div>
 
               <div class="hero-cta-row hero-cta-single hero-cta-first">
-                <p class="hero-cta-lead">Vous expliquez votre besoin, vous recevez votre message prêt à envoyer.</p>
                 <a class="btn" href="test-gratuit.html" aria-label="Tester gratuitement — 1 message adapté à votre activité">Tester gratuitement</a>
               </div>
-              <p class="hero-cta-note-short">Test gratuit — sans engagement — 1 message adapté à votre activité.</p>
+              <p class="hero-cta-note-short">Métier + message qui bloque → <strong>1 extrait gratuit</strong> sous 24&nbsp;h · sans engagement</p>
+
+              <div class="pilot-banner" id="pilote">
+                <p class="pilot-banner-title">Lancement — 3 places · pack complet offert</p>
+                <p><strong>5 textes sur mesure</strong> (valeur 49&nbsp;€) · jusqu’au <strong>26 juin 2026</strong> · en échange d’un retour franc en privé après réception.</p>
+                <a class="btn" id="wa-pilote" href="test-gratuit.html">Demander une place pilote</a>
+              </div>
             </div>
             <div class="hero-wow" role="group" aria-label="Avant et après en une journée" hidden>
               <div class="wow-before"><span class="lbl">Avant</span>Vous improvisez entre deux coups de fil. Les relances traînent. Tout est dans la tête.</div>
@@ -1327,242 +1439,167 @@
               <span class="hero-chip">Pas de bot</span>
             </div>
             <p class="hero-promise"><strong>Je vous écris 5 textes prêts à copier.</strong> Adapté à <strong>votre métier</strong> — indépendant, TPE, commerce, services, terrain ou bureau. Vous n’avez plus à réfléchir le soir — vous modifiez, vous envoyez, <strong>vous retrouvez du temps pour vous et votre famille</strong>.</p>
-            <p class="hero-trust">Pas sûr ? <a href="#concret">Voir IA vs pack</a> · <a href="#situations">Voir si c’est pour vous</a> · <a href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01">Pack complet · 5 messages · 49&nbsp;€</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+            <p class="hero-trust">Pas sûr ? <a href="#concret">IA vs pack</a> · <a href="#apercu">Exemples</a> · <a href="mentions-legales.html">Mentions légales</a></p>
           </div>
         </div>
       </div>
     </header>
 
     <section id="concret" class="concret-section" aria-labelledby="concret-title">
-      <h2 id="concret-title">Concret : une IA ou moi — quelle différence ?</h2>
-      <p class="concret-intro">Une IA (ChatGPT, Gemini, Copilot…) = vous réfléchissez encore le soir. <strong>Moi = c’est déjà écrit pour votre métier</strong> — par un humain, pas un abonnement, pas un bot qui répond à votre place.</p>
-      <p class="clarte-offre" style="margin:0 0 16px;padding:14px 16px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;font-size:0.95rem;line-height:1.5;"><strong>Important :</strong> nous ne rédigeons <strong>pas</strong> vos devis chantier (prix, lignes, TVA). Nous préparons les <strong>messages</strong> WhatsApp ou SMS : réponse à une demande de devis, relance de devis, pas dispo… <strong>Vous chiffrez. Vous envoyez.</strong></p>
+      <h2 id="concret-title">IA ou moi — la différence</h2>
+      <p class="clarte-offre" style="margin:0 0 14px;padding:12px 14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;font-size:0.9rem;line-height:1.45;"><strong>Pas vos devis chantier</strong> (prix, TVA). <strong>Oui vos messages</strong> WhatsApp/SMS : demande, relance, pas dispo… <strong>Vous chiffrez. Vous envoyez.</strong></p>
       <div class="card">
         <div class="concret-compare">
           <div class="concret-col chatgpt">
-            <h3>Outil IA ce soir</h3>
+            <h3>IA ce soir</h3>
             <ul>
-              <li>ChatGPT, Gemini, Copilot…</li>
+              <li>ChatGPT, Gemini…</li>
               <li>Vous cherchez quoi demander</li>
-              <li>Ton « coach business »</li>
               <li>~25 min · à corriger</li>
-              <li>Vous restez devant l’écran</li>
             </ul>
           </div>
           <div class="concret-col pack">
-            <h3>Chez Hervé — humain</h3>
+            <h3>Chez Hervé</h3>
             <ul>
               <li><strong>Déjà écrit</strong> pour votre métier</li>
-              <li>Ça sonne comme <strong>vous</strong></li>
               <li><strong>2 min</strong> · copier · envoyer</li>
-              <li><strong>Vous</strong> envoyez · pas un robot</li>
               <li>49&nbsp;€ une fois · pas d’abonnement</li>
             </ul>
           </div>
         </div>
-        <p class="small" style="margin:0 0 8px;font-weight:700;">Exemple réel — relance J+2 (extrait du pack) :</p>
+        <p class="small" style="margin:0 0 8px;font-weight:700;">Extrait réel — relance devis J+2 :</p>
         <div class="concret-extrait">Bonjour [Prénom], je me permets une relance rapide 🙂
 Toujours partant si vous voulez qu'on avance.
 Sinon, aucun souci — bonne continuation.</div>
-        <p class="small" style="margin:8px 0 6px;font-weight:600;">Exemples de situations — <strong>vos 5 textes = ceux dont vous avez besoin</strong> (brief après test ou paiement) :</p>
-        <div class="concret-list" aria-label="Exemples de situations possibles">
-          <span>réponse demande</span>
-          <span>premier contact</span>
+        <div class="concret-list" aria-label="Situations couvertes">
+          <span>demande</span>
           <span>relance devis</span>
           <span>retard</span>
           <span>avis</span>
           <span>réclamation</span>
         </div>
-        <p class="concret-punch">Ce n’est pas « être plus productif au travail » — c’est <strong>du temps retrouvé chez vous</strong>.</p>
-        <p class="concret-test-note"><strong>Test gratuit ici :</strong> comparatif + extrait ci-dessus. <strong>WhatsApp :</strong> métier + message qui vous bloque → <strong>1 extrait pour vous</strong>. Les 5 textes = pack 49&nbsp;€ après — pas avant.</p>
+        <div class="cta-strip">
+          <a class="btn" href="test-gratuit.html">Tester gratuitement — 1 extrait</a>
+        </div>
       </div>
     </section>
 
     <section id="temps-gagne" class="temps-gagne-section" aria-labelledby="temps-gagne-title">
-      <h2 id="temps-gagne-title">Le temps que vous regagnez — chiffré</h2>
+      <h2 id="temps-gagne-title">Le temps retrouvé — chiffré</h2>
       <div class="card">
         <div class="temps-math">
           <div class="temps-math-row">
-            <div><span class="lbl">1 message le soir</span>25 min à réfléchir</div>
+            <div><span class="lbl">1 message le soir</span>25 min</div>
             <div class="arrow" aria-hidden="true">→</div>
-            <div class="win"><span class="lbl">Avec le pack</span>2 min · <strong>23 min retrouvées</strong></div>
+            <div class="win"><span class="lbl">Avec le pack</span>2 min · <strong>23 min pour vous</strong></div>
           </div>
           <div class="temps-math-row">
             <div><span class="lbl">5 messages / semaine</span>~2 h perdues</div>
             <div class="arrow" aria-hidden="true">→</div>
-            <div class="win"><span class="lbl">Avec le pack</span>~10 min · <strong>près de 2 h pour vous</strong></div>
+            <div class="win"><span class="lbl">Avec le pack</span>~10 min · <strong>près de 2 h libres</strong></div>
           </div>
         </div>
-        <p class="temps-vie-title">Concrètement, ce temps-là, c’est pour :</p>
         <ul class="temps-vie-list">
-          <li>Un repas <strong>sans téléphone</strong> dans la main</li>
-          <li>Le coucher des enfants <strong>sans une relance client dans la tête</strong></li>
-          <li>Un week-end <strong>sans 5 messages qui traînent</strong> dans WhatsApp</li>
-          <li>Le soir : <strong>fermer le boulot</strong> au lieu de reformuler encore</li>
+          <li>Repas <strong>sans téléphone</strong></li>
+          <li>Soirée <strong>sans relance dans la tête</strong></li>
+          <li>Week-end <strong>sans WhatsApp qui traîne</strong></li>
         </ul>
-        <p class="temps-vie-punch">Commencez par le test gratuit ou le pack 49&nbsp;€ — <a href="#offres">voir les 3 formules</a></p>
       </div>
     </section>
 
     <section id="offres" class="offres-section" aria-labelledby="offres-title">
-      <h2 id="offres-title">Les formules — tout est clair</h2>
-      <p class="offres-intro">Pas une IA générique : <strong>des textes écrits pour votre métier</strong>, par un humain. Vous testez d’abord (gratuit), vous payez quand c’est utile. Montée vers 99&nbsp;€ et 149&nbsp;€ seulement si vous voulez plus.</p>
+      <h2 id="offres-title">Formules</h2>
+      <p class="offres-intro">49&nbsp;€ ou 99&nbsp;€ = packs · <strong>79&nbsp;€/mois</strong> = situations <strong>nouvelles</strong> chaque mois.</p>
       <div class="offer-ladder">
         <div class="offer-card featured">
           <p class="offer-tier">Découverte</p>
           <p class="offer-price">49&nbsp;€ <sub>· une fois</sub></p>
           <ul>
-            <li><strong>5 textes</strong> essentiels</li>
-            <li><strong>5 textes</strong> adaptés à <strong>vos</strong> situations (brief WhatsApp)</li>
-            <li>Livré en 24&nbsp;h</li>
-            <li><strong>Test gratuit</strong> avant</li>
+            <li><strong>5 textes</strong> sur mesure (brief WhatsApp)</li>
+            <li><strong>Webapp mobile</strong> — copier en 1 clic</li>
+            <li>Livré en 24&nbsp;h · test gratuit avant</li>
           </ul>
           <a class="offer-cta primary" href="test-gratuit.html">Tester gratuitement</a>
+        </div>
+        <div class="offer-card suivi">
+          <p class="offer-tier">Assist mensuel</p>
+          <p class="offer-price">79&nbsp;€ <sub>· / mois</sub></p>
+          <ul>
+            <li><strong>5 situations nouvelles / mois</strong></li>
+            <li>Vocal ou écrit → texte sous 24&nbsp;h</li>
+            <li>Webapp + priorité WhatsApp · résiliable</li>
+          </ul>
+          <p class="offer-suivi-note">Coiffeur, traiteur, VTC… · pas pour plombier stable → <strong>49&nbsp;€</strong>.</p>
+          <div class="offer-duo">
+            <a class="offer-cta secondary" href="https://buy.stripe.com/fZu6oH1eX1yda0g19ifEk03" style="background:#7c3aed;color:#fff;border:none;">S'abonner — 79&nbsp;€/mois</a>
+            <a class="offer-cta ghost" id="wa-abo-79" href="#">Question WhatsApp</a>
+          </div>
+          <p class="small" style="margin:8px 0 0;text-align:center;"><a href="assist-mensuel-79.html">Détails assist mensuel</a></p>
         </div>
         <div class="offer-card">
           <p class="offer-tier">Complet</p>
           <p class="offer-price">99&nbsp;€ <sub>· une fois</sub></p>
           <ul>
-            <li><strong>10 textes</strong> au total</li>
-            <li>Les 5 de base + <strong>5 bonus</strong></li>
-            <li>Retard, photo, avis client…</li>
-            <li>Après le 49&nbsp;€ ou direct</li>
+            <li><strong>10 textes</strong> (5 + 5 bonus)</li>
+            <li><strong>Webapp mobile</strong> — tous vos textes</li>
+            <li>Retard, photo, avis… · après le 49&nbsp;€ ou direct</li>
           </ul>
-          <a class="offer-cta secondary" href="https://buy.stripe.com/eVq00j7Dl4Kpegw7xGfEk02">Pack complet — 99&nbsp;€</a>
-        </div>
-        <div class="offer-card">
-          <p class="offer-tier">Suivi</p>
-          <p class="offer-price">149&nbsp;€ <sub>· / mois</sub></p>
-          <ul>
-            <li><strong>Nouveaux textes</strong> chaque mois</li>
-            <li>Mises à jour selon votre activité</li>
-            <li>Priorité WhatsApp</li>
-            <li>Sans engagement long</li>
-          </ul>
-          <a class="offer-cta secondary" href="https://buy.stripe.com/fZu6oH1eX1yda0g19ifEk03">Suivi mensuel — 149&nbsp;€</a>
-        </div>
-      </div>
-      <p class="offres-note">ChatGPT ou une autre IA = vous réfléchissez encore le soir. Ici = <strong>déjà écrit pour vous</strong> · <a href="#concret">voir la différence</a></p>
-    </section>
-
-    <section id="positionnement" aria-labelledby="positionnement-title">
-      <h2 id="positionnement-title">Présentation</h2>
-      <div class="card">
-        <p>Concrètement : je vous aide à mieux gérer vos <strong>messages clients</strong> (réponses, relances, organisation) — sans outil compliqué.</p>
-        <p><strong>Où :</strong> indépendants, TPE et petits pros — <strong>tous corps de métier</strong>, partout en <strong>France</strong>, prestation à distance.</p>
-        <p class="small no-mb">L’objectif : vous rendre du <strong>temps perso</strong> — repas, famille, soirée — pas ajouter un outil de plus.</p>
-      </div>
-    </section>
-
-    <section id="situations" aria-labelledby="situations-title">
-      <h2 id="situations-title">Situations réelles</h2>
-      <p class="demo-intro intro-tight">Est-ce que vous vous reconnaissez ?</p>
-      <div class="card">
-        <ul class="hook-list">
-          <li>Le soir, encore sur le téléphone au lieu d’être avec les vôtres</li>
-          <li>Des messages clients qui traînent dans la tête à la maison</li>
-          <li>Des choses importantes repoussées par manque de temps</li>
-          <li>Une activité chargée mais pas toujours fluide</li>
-        </ul>
-        <p><strong>Si oui, vous n’êtes pas seul.</strong> Ce n’est pas votre métier qui manque — c’est du <strong>temps retrouvé chez vous</strong>.</p>
-      </div>
-    </section>
-
-    <section id="changement" aria-labelledby="changement-title">
-      <h2 id="changement-title">Ce que ça change</h2>
-      <div class="card">
-        <div class="day-compare">
-          <div class="day-col before">
-            <h3>Avant</h3>
-            <ul>
-              <li>25 min le soir sur un seul message</li>
-              <li>Téléphone allumé pendant le repas ou le coucher</li>
-              <li>Le boulot qui suit à la maison</li>
-            </ul>
-          </div>
-          <div class="day-col after">
-            <h3>Après</h3>
-            <ul>
-              <li>2 min · message envoyé · téléphone posé</li>
-              <li>23 min ce soir — pour vous, pas pour le client</li>
-              <li>Près de 2 h / semaine si 5 messages à gérer</li>
-              <li>Plus présent avec votre famille le soir</li>
-            </ul>
-          </div>
+          <a class="offer-cta secondary" href="https://buy.stripe.com/eVq00j7Dl4Kpegw7xGfEk02">Pack 99&nbsp;€</a>
         </div>
       </div>
     </section>
 
     <section id="apercu" aria-labelledby="apercu-title">
-      <h2 id="apercu-title">Exemples — ce que le pack peut couvrir</h2>
-      <p class="small intro-tight" style="margin:0 0 14px;">Ci-dessous : des <strong>situations fréquentes</strong> pour illustrer le format (problème → réponse prête → bénéfice). Vos <strong>5 textes</strong> sont <strong>adaptés à votre métier et à ce que vous rencontrez</strong> — premier contact, relance, retard, avis… selon votre brief. <strong>Pas</strong> le devis chantier (prix). Vous chiffrez, vous envoyez.</p>
+      <h2 id="apercu-title">Exemples — à quoi ça ressemble</h2>
+      <p class="small intro-tight" style="margin:0 0 12px;">Vos <strong>5 textes</strong> = adaptés à <strong>votre</strong> métier (brief WhatsApp). Ci-dessous : le format — pas une liste figée.</p>
       <div class="card">
 
         <div class="demo-situation">
-          <h3>1 — Réponse à une demande (urgence)</h3>
+          <h3>1 — Demande urgente (fuite)</h3>
           <div class="demo-block"><strong>Client</strong>Bonjour, j'ai une fuite sous l'évier. Vous pouvez passer aujourd'hui ou demain ?</div>
-          <div class="demo-block"><strong>Pendant ce temps</strong>Vous êtes sur un chantier.</div>
           <div class="demo-block"><strong>Réponse prête</strong>Bonjour, merci pour votre message. Je peux passer demain entre 14&nbsp;h et 16&nbsp;h pour voir la fuite. Je vous envoie le devis dès que j'ai tout vu sur place. Ça vous convient ?</div>
-          <div class="demo-benefit"><strong>Bénéfice</strong>Réponse rapide · aucune demande oubliée · vous restez sur le chantier.</div>
         </div>
 
         <div class="demo-situation">
-          <h3>2 — Relance de devis</h3>
-          <div class="demo-block"><strong>Situation</strong>Le devis est parti il y a 3 jours. Aucune réponse.</div>
+          <h3>2 — Relance devis</h3>
+          <div class="demo-block"><strong>Situation</strong>Devis parti il y a 3 jours. Silence.</div>
           <div class="demo-block"><strong>Réponse prête</strong>Bonjour, je me permets de revenir vers vous concernant le devis envoyé la semaine dernière. Le projet est-il toujours d'actualité ? Je suis disponible si vous avez des questions.</div>
-          <div class="demo-benefit"><strong>Bénéfice</strong>Plus de relances oubliées · plus de chances de transformer le devis en chantier.</div>
         </div>
+
+        <details class="exemple-more">
+          <summary>3 autres situations (retard, avis, réclamation)</summary>
 
         <div class="demo-situation">
           <h3>3 — Retard chantier</h3>
-          <div class="demo-block"><strong>Situation</strong>Vous aurez 30 minutes de retard.</div>
           <div class="demo-block"><strong>Réponse prête</strong>Bonjour, je préfère vous prévenir que j'aurai environ 30 minutes de retard aujourd'hui en raison d'une intervention qui a pris plus de temps que prévu. Merci de votre compréhension.</div>
-          <div class="demo-benefit"><strong>Bénéfice</strong>Moins de tensions · moins d'appels · image plus professionnelle.</div>
         </div>
 
         <div class="demo-situation">
           <h3>4 — Demande d'avis Google</h3>
-          <div class="demo-block"><strong>Situation</strong>Le chantier est terminé.</div>
           <div class="demo-block"><strong>Réponse prête</strong>Bonjour, merci encore pour votre confiance. Si vous êtes satisfait du travail réalisé, un avis Google nous aiderait beaucoup. Voici le lien : [lien].</div>
-          <div class="demo-benefit"><strong>Bénéfice</strong>Plus d'avis · plus de visibilité · plus de demandes entrantes.</div>
         </div>
 
         <div class="demo-situation">
-          <h3>5 — Client mécontent / réclamation</h3>
-          <div class="demo-block"><strong>Client</strong>Bonjour. Je ne suis pas satisfait du travail réalisé. Le problème n'est toujours pas réglé malgré votre intervention.</div>
-          <div class="demo-block"><strong>Pendant ce temps</strong>Vous êtes sur un chantier — pas de réponse immédiate.</div>
-          <div class="demo-block"><strong>Réponse prête</strong>Bonjour, merci de m'avoir informé. Je comprends votre mécontentement et je souhaite trouver une solution rapidement. Pouvez-vous m'envoyer quelques photos ou précisions sur le problème ? Je reviens vers vous dès que possible pour convenir d'une intervention.</div>
-          <div class="demo-benefit"><strong>Bénéfice</strong>Client écouté · situation qui ne s'envenime pas · image pro même occupé.</div>
+          <h3>5 — Réclamation</h3>
+          <div class="demo-block"><strong>Réponse prête</strong>Bonjour, merci de m'avoir informé. Je comprends votre mécontentement et je souhaite trouver une solution rapidement. Pouvez-vous m'envoyer quelques photos ou précisions sur le problème ? Je reviens vers vous dès que possible.</div>
         </div>
+        </details>
 
-        <p class="small" style="margin:14px 0 0;">Pack <strong>49&nbsp;€</strong> : <strong>5 textes sur mesure</strong> — pas cette liste figée. Premier contact, pas dispo, clôture polie… : on choisit ensemble ce qui vous sert au quotidien · livraison 24&nbsp;h · <a href="test-gratuit.html">test gratuit</a> (1 extrait) avant paiement.</p>
+        <div class="cta-strip">
+          <a class="btn" href="test-gratuit.html">Recevoir mon extrait gratuit</a>
+        </div>
       </div>
     </section>
 
     <section id="methode" aria-labelledby="methode-title">
       <h2 id="methode-title">Comment ça se passe</h2>
       <div class="card">
-        <p class="methode-kicker"><strong>Test gratuit</strong></p>
         <ol class="methode-soft">
-          <li>Vous cliquez <strong>Tester gratuitement</strong> → brief en 3 lignes sur WhatsApp.</li>
-          <li>Je vous envoie <strong>1 extrait</strong> adapté à votre métier (sous 24&nbsp;h).</li>
-          <li>Si c’est utile → pack complet 5 messages · 49&nbsp;€.</li>
+          <li><strong>Test gratuit</strong> → brief WhatsApp → <strong>1 extrait</strong> sous 24&nbsp;h.</li>
+          <li>Pack 49&nbsp;€ ou 99&nbsp;€ → <strong>webapp mobile</strong> + textes sous 24&nbsp;h.</li>
+          <li><strong>Assist 79&nbsp;€/mois</strong> seulement si des <strong>situations nouvelles</strong> reviennent souvent · <a href="assist-mensuel-79.html">détails</a>.</li>
         </ol>
-        <p class="methode-kicker" style="margin-top:18px;"><strong>Après paiement 49&nbsp;€</strong></p>
-        <ol class="methode-soft">
-          <li>Page de confirmation → <strong>brief en 6 lignes</strong> sur WhatsApp (<a href="merci-49.html">aperçu</a>).</li>
-          <li>Je confirme la prise en charge.</li>
-          <li><strong>5 textes prêts</strong> livrés sous 24&nbsp;h — vous copiez, vous envoyez.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="approche" aria-labelledby="approche-title">
-      <h2 id="approche-title">Approche</h2>
-      <div class="card">
-        <p>Chaque activité est différente.</p>
-        <p>Il n’y a pas de solution unique ou compliquée.</p>
-        <p class="small no-mb">On adapte simplement les solutions à votre manière de travailler.</p>
+        <p class="small" style="margin:12px 0 0;"><a href="merci-49.html">Après paiement</a> · <a href="#pilote">Place pilote lancement</a> (3 offertes)</p>
       </div>
     </section>
 
@@ -1570,33 +1607,25 @@ Sinon, aucun souci — bonne continuation.</div>
       <h2 id="faq-title">Questions fréquentes</h2>
       <div class="card">
         <h3>Rédigez-vous nos devis chantier (prix, lignes) ?</h3>
-        <p class="small"><strong>Non.</strong> Nous préparons les <strong>messages</strong> (WhatsApp, SMS) : réponse à une demande de devis, relance de devis, pas dispo… <strong>Vous chiffrez vos travaux. Vous envoyez.</strong></p>
-        <h3>ChatGPT, Gemini ou une autre IA ne suffit-il pas ?</h3>
-        <p class="small">Une IA gratuite peut générer du texte — oui. Là, ce n’est pas un outil à interroger le soir : <strong>5 textes déjà prêts</strong> pour votre métier, écrits par un humain. Vous copiez, vous changez deux mots, <strong>vous</strong> envoyez — pas un bot qui répond à votre place.</p>
-        <h3>Que se passe-t-il après le paiement de 49&nbsp;€ ?</h3>
-        <p class="small">Vous arrivez sur une page avec les instructions. Vous envoyez un <strong>brief</strong> (métier, zone, ton…) sur WhatsApp. Je confirme, puis je livre <strong>5 textes prêts</strong> sous 24&nbsp;h. Vous copiez et vous envoyez à vos clients — pas de bot.</p>
+        <p class="small"><strong>Non.</strong> Messages WhatsApp/SMS seulement. <strong>Vous chiffrez. Vous envoyez.</strong></p>
+        <h3>ChatGPT ne suffit-il pas ?</h3>
+        <p class="small">Une IA = vous réfléchissez encore le soir. Ici = <strong>5 textes déjà prêts</strong> pour votre métier, écrits par un humain.</p>
         <h3>Comment tester avant d’acheter ?</h3>
-        <p class="small">Sur cette page : comparatif IA vs pack + extrait réel (gratuit). Via <a href="test-gratuit.html">Tester gratuitement</a> : brief WhatsApp en 3 lignes → <strong>1 extrait pour vous</strong>. Le pack complet (5 textes) = 49&nbsp;€, livré en 24&nbsp;h.</p>
-        <h3>Comment répondre à un client sur WhatsApp quand on est indépendant ou en TPE ?</h3>
-        <p class="small">Remerciez, reformulez la demande en une phrase, indiquez la prochaine étape (visite, créneau). Le pack inclut une <strong>réponse à une demande de devis</strong> prête à copier — pas le chiffrage de vos travaux.</p>
-        <h3>Existe-t-il un modèle pour relancer un devis déjà envoyé ?</h3>
-        <p class="small">Oui — une <strong>relance de devis</strong> J+2 courte et polie. Voir aussi notre <a href="modele-relance-client-j2.html">exemple relance de devis J+2</a>. Le pack 49&nbsp;€ contient ce texte plus 4 autres messages.</p>
-        <h3>Comment répondre par message à une demande de devis ?</h3>
-        <p class="small">Nommez le besoin, proposez une visite ou un créneau. Pas de pavé le soir : vous copiez le modèle adapté à votre métier, vous personnalisez deux lignes, vous envoyez. <strong>Ce n’est pas le document de chiffrage.</strong></p>
-        <h3>Le pack remplace-t-il WhatsApp Business ou un CRM ?</h3>
-        <p class="small no-mb">Non. Textes prêts à coller — vous envoyez vous-même. Pas de bot. <a href="audit-messagerie-whatsapp-49.html">Détail audit messagerie WhatsApp</a>.</p>
+        <p class="small"><a href="test-gratuit.html">Tester gratuitement</a> → brief WhatsApp → <strong>1 extrait</strong>. Pack complet = 49&nbsp;€.</p>
+        <h3>Que se passe-t-il après le paiement ?</h3>
+        <p class="small">Brief sur WhatsApp → confirmation → <strong>5 textes sous 24&nbsp;h</strong>. Vous copiez et envoyez.</p>
+        <h3>Le pack remplace WhatsApp Business ou un CRM ?</h3>
+        <p class="small no-mb"><strong>Non.</strong> Textes à coller — vous envoyez vous-même. <a href="audit-messagerie-whatsapp-49.html">Audit messagerie</a> · <a href="modele-relance-client-j2.html">Exemple relance J+2</a></p>
       </div>
     </section>
 
     <section id="contact" class="section-rdv" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
+      <h2 id="contact-title">Prêt ?</h2>
       <div class="card">
-        <p class="cta-rdv-lead cta-lead-strong"><strong>Vous voulez voir si c’est adapté à votre activité ?</strong></p>
-        <p class="cta-rdv-lead">On peut en parler simplement et voir ce qui peut être amélioré.</p>
         <div class="cta-rdv-action">
           <a class="btn" href="test-gratuit.html" aria-label="Tester gratuitement sur WhatsApp">Tester gratuitement</a>
         </div>
-        <p class="cta-rdv-friction">WhatsApp : métier + 1 message qui vous bloque → <strong>1 extrait gratuit</strong>. Pack complet = 49&nbsp;€.</p>
+        <p class="cta-rdv-friction no-mb">WhatsApp · métier + 1 message · <strong>extrait gratuit</strong> · pack 5 textes = 49&nbsp;€</p>
       </div>
     </section>
 
@@ -1606,5 +1635,22 @@ Sinon, aucun souci — bonne continuation.</div>
       <p class="footer-extra">Préférez avancer sans échange ? <a href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01">Pack messagerie express — 49&nbsp;EUR</a></p>
     </footer>
   </main>
+  <div class="sticky-cta" aria-hidden="false">
+    <a class="btn" href="test-gratuit.html">Tester gratuitement</a>
+  </div>
+  <script>
+    (function () {
+      var pilotText = "Bonjour Hervé — PLACE PILOTE LANCEMENT (site)\n\nJe demande une place parmi les 3 pilotes (pack 5 textes offert, avant le 26/06).\n\n1) Mon métier :\n2) Mon prénom :\n3) J'accepte un retour franc en privé après réception.";
+      var aboText = "Bonjour Hervé — ASSIST MENSUEL 79€/mois\n\nJe veux en savoir plus.\n\n1) Mon métier :\n2) Mon prénom :\n3) Ma question :";
+      var el = document.getElementById("wa-pilote");
+      if (el) {
+        el.href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(pilotText);
+      }
+      var abo = document.getElementById("wa-abo-79");
+      if (abo) {
+        abo.href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(aboText);
+      }
+    })();
+  </script>
 </body>
 </html>

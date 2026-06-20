@@ -91,6 +91,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://hervemengue.github.io/landing-herve/assist-mensuel-79.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://hervemengue.github.io/landing-herve/merci-49.html</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>yearly</changefreq>
