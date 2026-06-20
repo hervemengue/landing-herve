@@ -19,6 +19,24 @@
       <p class="sub">Plombier · Exemple démo</p>
     </header>
     <p class="hint-bar">Messages illustratifs pour votre métier. Vous copiez, vous envoyez — pas de robot.</p>
+
+    <section id="assist-instant" class="assist-instant" data-slug="demo-plombier">
+      <p class="assist-badge">Beta · Assist instantané</p>
+      <h2>Nouvelle situation</h2>
+      <p class="assist-hint">Décrivez ou parlez · texte calé sur vos messages ci-dessous · vous copiez, vous envoyez.</p>
+      <textarea id="assist-input" class="assist-input" placeholder="Ex. : client demande dispo demain pour une fuite sous l'évier…" rows="3"></textarea>
+      <div class="assist-actions">
+        <button type="button" id="assist-mic" class="assist-mic">Parler</button>
+        <button type="button" id="assist-generate" class="assist-generate">Générer le message</button>
+      </div>
+      <p id="assist-status" class="assist-status" aria-live="polite"></p>
+      <div id="assist-result" class="assist-result" hidden>
+        <p class="msg-label" id="assist-result-label">Nouvelle situation</p>
+        <div class="msg-text" id="assist-result-text"></div>
+        <button type="button" id="assist-copy" class="copy-btn assist-copy">Copier le message</button>
+      </div>
+    </section>
+
 <main>
     <article class="msg-card">
       <h2>1 — Demande client</h2>
@@ -53,6 +71,8 @@
 </main>
     <p class="foot">Préparé par <a href="index.html">Hervé</a> · vous copiez, vous envoyez</p>
   </div>
+  <script src="assist-instant-config.js"></script>
+  <script src="assist-instant.js"></script>
   <script src="messages-app.js"></script>
 </body>
 </html>

@@ -160,3 +160,108 @@ body {
 .foot a {
   color: var(--primary);
 }
+
+/* Assist instantané (beta MVP) */
+.assist-instant {
+  background: linear-gradient(180deg, #faf5ff 0%, #fff 100%);
+  border: 1px solid #c4b5fd;
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.assist-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #ede9fe;
+  color: #5b21b6;
+  margin: 0 0 8px;
+}
+
+.assist-instant h2 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin: 0 0 6px;
+}
+
+.assist-hint {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.assist-input {
+  width: 100%;
+  min-height: 72px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.assist-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.assist-mic {
+  flex: 0 0 auto;
+  border: 2px solid #c4b5fd;
+  background: #fff;
+  color: #6d28d9;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.assist-mic--active {
+  background: #6d28d9;
+  color: #fff;
+}
+
+.assist-generate {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  background: #7c3aed;
+  color: #fff;
+}
+
+.assist-generate:disabled {
+  opacity: 0.65;
+}
+
+.assist-status {
+  font-size: 0.85rem;
+  margin: 0 0 8px;
+  min-height: 1.2em;
+}
+
+.assist-status--warn { color: #92400e; }
+.assist-status--ok { color: var(--ok); }
+.assist-status--error { color: #b91c1c; }
+
+.assist-result {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #c4b5fd;
+}
+
+.assist-copy {
+  background: var(--primary);
+}
