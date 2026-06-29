@@ -18,8 +18,9 @@
     * { box-sizing: border-box; }
     body { margin:0; font-family: "Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--text); min-height:100vh; display:flex; align-items:center; justify-content:center; }
     main { max-width:400px; width:100%; padding:28px 20px; text-align:center; }
+    .face { width:88px; height:88px; border-radius:50%; object-fit:cover; border:3px solid var(--accent); margin-bottom:12px; }
     h1 { font-size:1.2rem; margin:0 0 8px; font-weight:700; }
-    .tag { color:var(--muted); font-size:1rem; line-height:1.4; margin:0 0 28px; }
+    .tag { color:var(--muted); font-size:0.95rem; line-height:1.4; margin:0 0 24px; }
     a.btn {
       display:block; padding:18px 20px; background:var(--accent); color:#fff;
       text-decoration:none; border-radius:12px; font-weight:700; font-size:1.08rem;
@@ -31,10 +32,11 @@
 </head>
 <body>
   <main>
+    <img class="face" src="herve-photo.png" width="88" height="88" alt="Hervé Mengue">
     <h1>Hervé Mengue</h1>
-    <p class="tag">Messages WhatsApp prêts pour artisans &amp; TPE.<br>Vous copiez. Vous envoyez. Pas un bot.</p>
+    <p class="tag">Je prépare vos messages WhatsApp.<br>Artisans &amp; TPE · vous copiez, vous envoyez · pas un bot.</p>
     <a class="btn" href="test-gratuit.html?utm_source=linkedin&utm_medium=lien_bio">Test gratuit — 1 message pour mon métier</a>
-    <p class="foot">Pack 5 textes · 49&nbsp;€ · <a href="index.html?utm_source=linkedin&utm_medium=lien_bio">détails</a></p>
+    <p class="foot">Pack 5 textes · 49&nbsp;€ · <a href="a-propos.html?utm_source=linkedin&utm_medium=lien_bio">mon parcours</a></p>
   </main>
 </body>
 </html>
