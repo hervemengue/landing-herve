@@ -3,6 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN5ZZ8T2Q3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MN5ZZ8T2Q3');
+  </script>
   <title>Test gratuit — 1 message pour votre activité</title>
   <meta name="description" content="Test gratuit : indiquez votre métier et recevez 1 message prêt à envoyer, adapté à votre activité. Sans engagement.">
   <link rel="canonical" href="https://hervemengue.github.io/landing-herve/test-gratuit.html">
@@ -22,41 +29,36 @@
   <meta name="twitter:image" content="https://hervemengue.github.io/landing-herve/og-test-gratuit.png">
   <style>
     body { font-family: "Source Sans 3", Arial, sans-serif; margin: 0; color: #0f172a; background: #f8fafc; }
-    main { max-width: 520px; margin: 0 auto; padding: 24px 16px 40px; line-height: 1.5; }
-    h1 { font-size: 1.35rem; line-height: 1.25; margin: 0 0 12px; }
-    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; margin: 16px 0; }
-    .card ol { margin: 0; padding-left: 20px; font-weight: 600; }
-    .card li { margin-bottom: 8px; }
-    .note { font-size: 0.88rem; color: #475569; margin: 0; }
-    .btn { display: block; text-align: center; padding: 16px 18px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 1.05rem; margin-top: 16px; }
+    main { max-width: 480px; margin: 0 auto; padding: 28px 16px 40px; line-height: 1.5; }
+    h1 { font-size: 1.45rem; line-height: 1.2; margin: 0 0 10px; }
+    .lead { font-size: 1.05rem; color: #334155; margin: 0 0 20px; }
+    .btn { display: block; text-align: center; padding: 18px 20px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1.1rem; }
     .btn:hover, .btn:focus { background: #1d4ed8; }
-    .small { font-size: 0.85rem; color: #64748b; }
+    .steps { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; margin: 20px 0 0; font-size: 0.92rem; color: #475569; }
+    .steps strong { color: #0f172a; }
+    .steps ol { margin: 8px 0 0; padding-left: 20px; }
+    .steps li { margin-bottom: 4px; }
+    .small { font-size: 0.82rem; color: #64748b; margin-top: 24px; }
     a { color: #2563eb; }
   </style>
 </head>
 <body>
   <main>
-    <h1>Test gratuit — 1 message pour votre activité</h1>
-    <p class="note">Sans engagement. <strong>1 extrait adapté à votre métier</strong> — pas les 5 textes du pack. Réponse sous 24&nbsp;h ouvrées.</p>
-
-    <div class="card" style="background:#fffbeb;border-color:#f59e0b;">
-      <p style="margin:0 0 8px;font-weight:800;color:#92400e;">Lancement — 3 places pilotes</p>
-      <p class="note" style="margin:0;">Pack <strong>5 textes complet offert</strong> (valeur 49&nbsp;€) · jusqu’au 5 juillet · retour franc en privé. <a href="index.html#pilote">Détails sur la page d’accueil</a>.</p>
-    </div>
-
-    <div class="card">
-      <p class="note" style="margin:0 0 10px;font-weight:700;color:#0f172a;">Au clic, WhatsApp s’ouvre avec ce brief (3 lignes) :</p>
-      <ol>
-        <li>Votre <strong>métier</strong></li>
-        <li>Le <strong>message qui vous bloque</strong> (réponse à une demande, relance de devis, pas dispo…)</li>
-        <li>Votre <strong>prénom</strong></li>
-      </ol>
-    </div>
+    <h1>1 message prêt à envoyer, adapté à votre métier</h1>
+    <p class="lead">Test gratuit · brief WhatsApp en 30 secondes · réponse sous 24&nbsp;h · sans engagement.</p>
 
     <a class="btn" id="wa-test" href="#">Ouvrir WhatsApp — envoyer mon brief</a>
 
-    <p class="small" style="margin-top:16px;">Pack complet (5 messages) = 49&nbsp;€ · <a href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01">payer en ligne</a> · puis <a href="merci-49.html">page après paiement</a>.</p>
-    <p class="small"><a href="index.html">← Retour au site</a></p>
+    <div class="steps">
+      <strong>Le brief prérempli (3 lignes) :</strong>
+      <ol>
+        <li>Votre métier</li>
+        <li>Le message qui vous bloque (demande, relance devis, pas dispo…)</li>
+        <li>Votre prénom</li>
+      </ol>
+    </div>
+
+    <p class="small">Ce n'est pas le pack complet (5 textes). <a href="index.html">Voir le pack 49&nbsp;€</a> · <a href="index.html#pilote">Place pilote lancement</a> · <a href="lien.html">← Retour</a></p>
   </main>
   <script>
     var text = "Bonjour Hervé — TEST GRATUIT (site)\n\n1) Mon métier :\n2) Message qui me bloque (réponse demande / relance devis / pas dispo / autre) :\n3) Mon prénom :";
