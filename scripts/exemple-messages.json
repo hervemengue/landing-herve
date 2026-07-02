@@ -1,13 +1,13 @@
 {
   "messages": [
     {
-      "title": "Demande client",
+      "title": "Réponse à une demande",
       "label": "Urgence · fuite",
       "text": "Bonjour, merci pour votre message. Je peux passer demain entre 14 h et 16 h pour voir la fuite. Je vous envoie le devis dès que j'ai tout vu sur place. Ça vous convient ?"
     },
     {
       "title": "Relance de devis",
-      "label": "Devis sans réponse",
+      "label": "Relance de devis sans réponse",
       "text": "Bonjour, je me permets de revenir vers vous concernant le devis envoyé la semaine dernière. Le projet est-il toujours d'actualité ? Je suis disponible si vous avez des questions."
     },
     {

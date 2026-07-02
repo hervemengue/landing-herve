@@ -47,7 +47,7 @@ def main() -> None:
     draw.text((56, 148), "1 message adapté", fill="#0f172a", font=f_h1)
     draw.text((56, 218), "à votre métier", fill="#0f172a", font=f_h1)
 
-    draw.text((56, 310), "Réponse · relance devis · pas dispo", fill="#2563eb", font=f_sub)
+    draw.text((56, 310), "Réponse à une demande · relance de devis · pas dispo", fill="#2563eb", font=f_sub)
 
     draw.rounded_rectangle([56, 390, 720, 540], radius=18, fill="#ffffff", outline="#cbd5e1", width=2)
     draw.text((88, 418), "Brief WhatsApp en 30 secondes", fill="#475569", font=f_body)

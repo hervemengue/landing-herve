@@ -1,6 +1,6 @@
 # Hervé — messages clients artisans & TPE (France)
 
-> Pack de textes WhatsApp pour artisans et TPE : réponse à une demande, relance de devis, pas dispo. Vous copiez, vous envoyez — pas de bot.
+> Pack de textes WhatsApp pour artisans et TPE : réponse à une demande de devis, relance de devis, pas dispo. Vous copiez, vous envoyez — pas de bot.
 
 Site : https://hervemengue.github.io/landing-herve/
 Contact : test gratuit via WhatsApp sur la page d'accueil

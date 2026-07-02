@@ -16,7 +16,7 @@ P_DIR = ROOT / "p"
 
 DEFAULT_MESSAGES = [
     {
-        "title": "Demande client",
+        "title": "Réponse à une demande",
         "label": "Réponse à une demande",
         "text": (
             "Bonjour, merci pour votre message. Je peux passer demain entre 14 h et 16 h "
@@ -26,7 +26,7 @@ DEFAULT_MESSAGES = [
     },
     {
         "title": "Relance de devis",
-        "label": "Devis sans réponse",
+        "label": "Relance de devis sans réponse",
         "text": (
             "Bonjour, je me permets de revenir vers vous concernant le devis envoyé la semaine "
             "dernière. Le projet est-il toujours d'actualité ? Je suis disponible si vous "
@@ -68,7 +68,7 @@ DEMOS = {
         "entreprise": "Exemple démo",
         "messages": [
             {
-                "title": "Demande client",
+                "title": "Réponse à une demande",
                 "label": "Urgence · fuite",
                 "text": (
                     "Bonjour, merci pour votre message. Je peux passer demain entre 14 h et "
@@ -84,7 +84,7 @@ DEMOS = {
         "entreprise": "Exemple démo",
         "messages": [
             {
-                "title": "Demande client",
+                "title": "Réponse à une demande",
                 "label": "Devis fenêtres",
                 "text": (
                     "Bonjour, merci pour votre demande. Je peux passer jeudi en fin "
@@ -100,7 +100,7 @@ DEMOS = {
         "entreprise": "Exemple démo",
         "messages": [
             {
-                "title": "Demande client",
+                "title": "Réponse à une demande",
                 "label": "Tableau · Beauvais",
                 "text": (
                     "Bonjour, oui j'interviens sur Beauvais et les alentours. Je peux passer "
