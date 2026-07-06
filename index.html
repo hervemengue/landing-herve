@@ -15,8 +15,8 @@
   <meta name="description" content="Messages WhatsApp prêts pour artisans. Vous copiez, vous envoyez. Test gratuit sous 24 h · 49 € une fois · pas de bot.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Messages clients prêts pour artisans | Hervé">
-  <meta property="og:description" content="WhatsApp prêt · votre métier · vous envoyez. Test gratuit sous 24 h.">
+  <meta property="og:title" content="Hervé Mengue — Messages clients artisans">
+  <meta property="og:description" content="Je prépare vos messages WhatsApp pour artisans. Photo, parcours, test gratuit. Vous copiez, vous envoyez.">
   <meta property="og:url" content="https://hervemengue.github.io/landing-herve/">
   <meta property="og:site_name" content="Hervé · Messages clients artisans">
   <meta property="og:image" content="https://hervemengue.github.io/landing-herve/og-image.png">
@@ -715,80 +715,141 @@
       border: 1px solid rgba(148, 163, 184, 0.25);
       box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
     }
-    .hero-splash::before { opacity: 1; height: 2px; }
-    .hero-splash::after { display: none; }
-    .hero-brand {
-      margin: 0 0 16px;
-      font-size: 0.75rem;
+    .hero-pro {
+      background: #fff;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: var(--radius-lg);
+      padding: clamp(22px, 4vw, 32px);
+      box-shadow: 0 8px 32px rgba(15, 23, 42, 0.06);
+      text-align: left;
+    }
+    .hero-pro::before {
+      content: "";
+      display: block;
+      height: 3px;
+      margin: 0 0 20px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--primary), #93c5fd);
+      opacity: 0.5;
+    }
+    .hero-pro-grid {
+      display: grid;
+      gap: 24px;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .hero-pro-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 32px;
+      }
+    }
+    .hero-founder {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .hero-founder img {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #dbeafe;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+      flex-shrink: 0;
+    }
+    .hero-founder-name {
+      margin: 0;
+      font-family: var(--font-display);
       font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+      font-size: 1.08rem;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+    .hero-founder-role {
+      margin: 3px 0 0;
+      font-size: 0.86rem;
+      font-weight: 600;
       color: #64748b;
     }
-    .hero-splash h1.visually-primary {
-      max-width: 11em;
-      margin: 0 auto 10px;
-      font-size: clamp(1.75rem, 5.5vw, 2.5rem);
-      line-height: 1.12;
-      background: none;
-      -webkit-background-clip: unset;
-      background-clip: unset;
-      color: var(--text);
+    .hero-pro h1 {
+      margin: 0 0 10px;
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 4.2vw, 2rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      color: #0f172a;
     }
-    .hero-hook {
-      margin: 0 auto 22px;
-      max-width: 28em;
-      font-size: 1.08rem;
+    .hero-lead {
+      margin: 0 0 14px;
+      font-size: 1.02rem;
       color: #475569;
-      font-weight: 500;
-      line-height: 1.45;
+      line-height: 1.5;
+      max-width: 38em;
     }
-    .demo-visual-compact {
-      max-width: min(320px, 88vw);
-      margin: 0 auto 12px;
-      border-radius: 14px;
-      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
-      aspect-ratio: 16 / 10;
+    .hero-benefits {
+      margin: 0 0 18px;
+      padding: 0;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    .hero-benefits li {
+      position: relative;
+      padding: 5px 0 5px 20px;
+      line-height: 1.35;
+    }
+    .hero-benefits li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+    .hero-pro .btn-hero {
+      display: inline-block;
+      width: auto;
+      min-width: 240px;
+      max-width: 100%;
+      padding: 14px 26px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .hero-about-mini {
+      margin: 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .hero-about-mini a { color: var(--primary); text-decoration: none; }
+    .hero-about-mini a:hover { text-decoration: underline; }
+    .hero-pro-proof { text-align: center; }
+    .hero-pro-proof .demo-visual {
+      max-width: 100%;
+      margin: 0 auto 10px;
+      border-radius: 16px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+    }
+    .hero-follow {
+      margin-top: 20px;
     }
     .demo-stat {
-      margin: 0 0 24px;
+      margin: 0;
       font-family: var(--font-display);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #334155;
     }
     .demo-stat .before { color: #be123c; }
     .demo-stat .after { color: #047857; }
-    .hero-splash .btn-hero {
-      display: inline-block;
-      width: 100%;
-      max-width: 280px;
-      padding: 15px 28px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      border-radius: 12px;
-      margin-bottom: 8px;
-    }
-    .hero-micro {
-      margin: 0 0 18px;
-      font-size: 0.82rem;
-      color: #64748b;
-      font-weight: 600;
-    }
-    .hero-nav-min {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px 18px;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-    .hero-nav-min a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .hero-nav-min a:hover { text-decoration: underline; }
     .fold-stack {
       margin-top: 20px;
       display: flex;
@@ -1545,33 +1606,40 @@
 <body>
   <main class="wrap" id="top">
     <header>
-      <div class="hero hero-splash">
-        <p class="hero-brand">Hervé · Messages clients artisans</p>
-        <h1 class="visually-primary">Ce soir, vous savez quoi répondre.</h1>
-        <p class="hero-hook">WhatsApp prêt pour <strong>votre métier</strong>. Vous copiez, vous envoyez. Pas de bot.</p>
-
-        <div class="demo-visual demo-visual-compact" role="img" aria-label="Avant 25 minutes, après 2 minutes">
-          <img class="demo-img-before" src="demo-hero-avant-25min.png" width="800" height="500" alt="" decoding="async">
-          <img class="demo-img-after" src="demo-hero-apres-2min.png" width="800" height="500" alt="" decoding="async">
+      <div class="hero hero-pro">
+        <div class="hero-pro-grid">
+          <div class="hero-pro-intro">
+            <div class="hero-founder">
+              <img src="herve-photo.png" width="76" height="76" alt="Hervé Mengue">
+              <div>
+                <p class="hero-founder-name">Hervé Mengue</p>
+                <p class="hero-founder-role">Messages clients artisans · micro-entrepreneur</p>
+              </div>
+            </div>
+            <h1>Ce soir, vous savez quoi répondre à vos clients</h1>
+            <p class="hero-lead">Je ne suis pas une agence ni un bot. Je prépare vos <strong>messages WhatsApp</strong> (demande, relance, pas dispo) adaptés à <strong>votre métier</strong>. Vous copiez, vous envoyez.</p>
+            <ul class="hero-benefits">
+              <li>1 extrait gratuit sous 24&nbsp;h</li>
+              <li>Pack 49&nbsp;€ une fois · pas d'abonnement</li>
+              <li>Pas vos devis chantier · vous chiffrez</li>
+            </ul>
+            <a class="btn btn-hero" href="test-gratuit.html">Tester gratuitement</a>
+            <p class="hero-about-mini"><a href="a-propos.html">Qui est Hervé ? Mon parcours →</a></p>
+          </div>
+          <div class="hero-pro-proof">
+            <div class="demo-visual" role="img" aria-label="Avant : 25 minutes à réfléchir. Après : 2 minutes pour copier et envoyer.">
+              <img class="demo-img-before" src="demo-hero-avant-25min.png" width="800" height="500" alt="" decoding="async">
+              <img class="demo-img-after" src="demo-hero-apres-2min.png" width="800" height="500" alt="" decoding="async">
+            </div>
+            <p class="demo-stat"><span class="before">25 min</span> à réfléchir → <span class="after">2 min</span> à envoyer</p>
+          </div>
         </div>
-        <p class="demo-stat"><span class="before">25 min</span> → <span class="after">2 min</span></p>
-
-        <a class="btn btn-hero" href="test-gratuit.html">Tester gratuitement</a>
-        <p class="hero-micro">1 extrait gratuit · pack 49&nbsp;€ · pas vos devis chantier</p>
-        <nav class="hero-nav-min" aria-label="Liens utiles">
-          <a href="#plus">En savoir plus</a>
-          <a href="a-propos.html">Qui est Hervé</a>
-        </nav>
       </div>
     </header>
 
-    <div class="fold-stack">
-    <details class="fold-section" id="plus">
-      <summary>C'est quoi ?</summary>
-      <div class="fold-body">
-    <section id="concret" class="concret-section" aria-labelledby="concret-title">
+    <section id="concret" class="concret-section hero-follow" aria-labelledby="concret-title">
       <h2 id="concret-title">Seul le soir ou avec mes textes</h2>
-      <p class="clarte-offre" style="margin:0 0 14px;padding:12px 14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;font-size:0.9rem;line-height:1.45;"><strong>Pas vos devis chantier</strong> (prix). <strong>Oui vos messages</strong> : demande, relance, pas dispo. <strong>Vous chiffrez. Vous envoyez.</strong> Pas de bot · pas d'abonnement forcé · adapté à votre métier.</p>
+      <p class="clarte-offre" style="margin:0 0 14px;padding:12px 14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;font-size:0.9rem;line-height:1.45;"><strong>Pas vos devis chantier</strong> (prix). <strong>Oui vos messages</strong> : demande, relance, pas dispo. <strong>Vous chiffrez. Vous envoyez.</strong></p>
       <div class="card">
         <div class="concret-compare">
           <div class="concret-col seul">
@@ -1583,11 +1651,11 @@
             </ul>
           </div>
           <div class="concret-col pack">
-            <h3>Chez Hervé</h3>
+            <h3>Avec Hervé</h3>
             <ul>
               <li><strong>Déjà écrit</strong> pour votre métier</li>
               <li><strong>2 min</strong> · copier · envoyer</li>
-              <li>49&nbsp;€ une fois · pas d’abonnement</li>
+              <li>49&nbsp;€ une fois · pas d'abonnement</li>
             </ul>
           </div>
         </div>
@@ -1603,12 +1671,12 @@ Sinon, aucun souci — bonne continuation.</div>
           <span>réclamation</span>
         </div>
       </div>
+      <p style="margin:14px 0 0;text-align:center;"><a class="btn" href="test-gratuit.html">Tester gratuitement</a></p>
     </section>
-      </div>
-    </details>
 
+    <div class="fold-stack">
     <details class="fold-section" id="offres-fold">
-      <summary>Tarifs · pilote lancement</summary>
+      <summary>Formules et tarifs</summary>
       <div class="fold-body">
         <div class="pilot-banner" id="pilote">
           <p class="pilot-banner-title">3 places pilote · pack offert</p>
