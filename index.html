@@ -11,12 +11,12 @@
     gtag('js', new Date());
     gtag('config', 'G-MN5ZZ8T2Q3');
   </script>
-  <title>Hervé · Messages clients artisans — réponses prêtes WhatsApp, relance de devis | 49 € France</title>
-  <meta name="description" content="Artisans et TPE : finissez avec les messages clients qui traînent le soir. Réponses et relances prêtes, adaptées à votre métier. Test gratuit · pack 49 € · vous envoyez, pas de bot.">
+  <title>Hervé · Messages clients artisans — WhatsApp prêt, test gratuit</title>
+  <meta name="description" content="Messages WhatsApp prêts pour artisans. Vous copiez, vous envoyez. Test gratuit sous 24 h · 49 € une fois · pas de bot.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Ce soir, vous savez quoi répondre — messages clients artisans | Hervé">
-  <meta property="og:description" content="Réponses et relances prêtes, adaptées à votre métier. Pas de bot · 49 € une fois · test gratuit sous 24 h.">
+  <meta property="og:title" content="Messages clients prêts pour artisans | Hervé">
+  <meta property="og:description" content="WhatsApp prêt · votre métier · vous envoyez. Test gratuit sous 24 h.">
   <meta property="og:url" content="https://hervemengue.github.io/landing-herve/">
   <meta property="og:site_name" content="Hervé · Messages clients artisans">
   <meta property="og:image" content="https://hervemengue.github.io/landing-herve/og-image.png">
@@ -54,18 +54,15 @@
       margin: 0;
       font-family: var(--font-body);
       color: var(--text);
-      background-color: #eeebf5;
-      background-image:
-        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(219, 234, 254, 0.7) 0%, transparent 50%),
-        radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.045) 1px, transparent 0);
-      background-size: 100% 100%, 22px 22px;
+      background-color: #f8fafc;
+      background-image: none;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
     .wrap {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 28px 22px 40px;
+      padding: 20px 18px 32px;
     }
     header, footer {
       margin-bottom: 28px;
@@ -711,6 +708,109 @@
       color: #334155;
     }
     .hero-scan li::before { content: "✓ "; color: #16a34a; }
+    .hero-splash {
+      text-align: center;
+      padding: clamp(32px, 7vw, 48px) clamp(20px, 4vw, 28px);
+      background: #fff;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+    }
+    .hero-splash::before { opacity: 1; height: 2px; }
+    .hero-splash::after { display: none; }
+    .hero-brand {
+      margin: 0 0 16px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .hero-splash h1.visually-primary {
+      max-width: 11em;
+      margin: 0 auto 10px;
+      font-size: clamp(1.75rem, 5.5vw, 2.5rem);
+      line-height: 1.12;
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+      color: var(--text);
+    }
+    .hero-hook {
+      margin: 0 auto 22px;
+      max-width: 28em;
+      font-size: 1.08rem;
+      color: #475569;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+    .demo-visual-compact {
+      max-width: min(320px, 88vw);
+      margin: 0 auto 12px;
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+      aspect-ratio: 16 / 10;
+    }
+    .demo-stat {
+      margin: 0 0 24px;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #334155;
+    }
+    .demo-stat .before { color: #be123c; }
+    .demo-stat .after { color: #047857; }
+    .hero-splash .btn-hero {
+      display: inline-block;
+      width: 100%;
+      max-width: 280px;
+      padding: 15px 28px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+    .hero-micro {
+      margin: 0 0 18px;
+      font-size: 0.82rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .hero-nav-min {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .hero-nav-min a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .hero-nav-min a:hover { text-decoration: underline; }
+    .fold-stack {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .fold-stack .fold-section {
+      margin: 0;
+    }
+    .fold-stack .fold-section summary {
+      font-size: 0.92rem;
+      padding: 12px 0;
+    }
+    footer.site-foot {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: #64748b;
+    }
+    footer.site-foot p { margin: 0 0 6px; font-size: 0.78rem; }
+    footer.site-foot a { color: #475569; }
     .sticky-cta {
       display: none;
       position: fixed;
@@ -1445,71 +1545,29 @@
 <body>
   <main class="wrap" id="top">
     <header>
-      <div class="hero">
-        <div class="hero-inner">
-          <div class="hero-copy hero-first">
-            <div class="demo-hero" id="demo-visuelle">
-              <!-- deploy positionnement 06/07/2026 -->
-              <h1 class="visually-primary">Ce soir, vous savez quoi répondre à vos clients</h1>
-              <p class="strap">Messages WhatsApp prêts, adaptés à <strong>votre métier</strong>. Vous envoyez · pas de bot.</p>
-              <ul class="hero-scan" aria-label="En bref">
-                <li>Test gratuit sous 24 h</li>
-                <li>49&nbsp;€ une fois</li>
-                <li>Pas vos devis chantier</li>
-              </ul>
+      <div class="hero hero-splash">
+        <p class="hero-brand">Hervé · Messages clients artisans</p>
+        <h1 class="visually-primary">Ce soir, vous savez quoi répondre.</h1>
+        <p class="hero-hook">WhatsApp prêt pour <strong>votre métier</strong>. Vous copiez, vous envoyez. Pas de bot.</p>
 
-              <p class="demo-caption">Exemple illustratif — pas une liste de clients</p>
-              <div class="demo-visual" role="img" aria-label="Avant : vous réfléchissez face aux messages. Après : vous modifiez et envoyez en deux minutes.">
-                <img class="demo-img-before" src="demo-hero-avant-25min.png" width="800" height="500" alt="" decoding="async">
-                <img class="demo-img-after" src="demo-hero-apres-2min.png" width="800" height="500" alt="" decoding="async">
-              </div>
-
-              <div class="demo-punch">
-                <span class="demo-punch-part before">25 min · vous réfléchissez</span>
-                <span class="demo-punch-arrow" aria-hidden="true">→</span>
-                <span class="demo-punch-part after">2 min · copier · envoyer · fermer le tel</span>
-              </div>
-
-              <div class="hero-human">
-                <img src="herve-photo.png" width="80" height="80" alt="Hervé Mengue">
-                <div>
-                  <p class="hero-human-name">Hervé Mengue · Messages clients artisans</p>
-                  <p class="hero-human-tag">Micro-entrepreneur · vous copiez, vous envoyez</p>
-                  <p class="hero-about-link" style="margin:6px 0 0;"><a href="a-propos.html">Voir mon parcours →</a></p>
-                </div>
-              </div>
-
-              <div class="hero-cta-row hero-cta-single hero-cta-first">
-                <a class="btn" href="test-gratuit.html" aria-label="Tester gratuitement — 1 message adapté à votre activité">Tester gratuitement</a>
-              </div>
-              <p class="hero-cta-note-short">Métier + message qui bloque → <strong>1 extrait gratuit</strong> sous 24&nbsp;h · sans engagement</p>
-
-              <div class="pilot-banner" id="pilote">
-                <p class="pilot-banner-title">Lancement — 3 places · pack complet offert</p>
-                <!-- pilote prolongé 16/07/2026 -->
-                <p><strong>5 textes sur mesure</strong> (valeur 49&nbsp;€) · jusqu’au <strong>16 juillet 2026</strong> · en échange d’un retour franc en privé après réception.</p>
-                <a class="btn" id="wa-pilote" href="test-gratuit.html">Demander une place pilote</a>
-              </div>
-            </div>
-            <div class="hero-wow" role="group" aria-label="Avant et après en une journée" hidden>
-              <div class="wow-before"><span class="lbl">Avant</span>Vous improvisez entre deux coups de fil. Les relances traînent. Tout est dans la tête.</div>
-              <div class="wow-after"><span class="lbl">Après (24 h)</span>5 textes prêts + relance de devis J+2. Vous copiez, vous envoyez. La tête est plus légère.</div>
-              <p class="wow-arrow">↓ C’est exactement ce que livre le pack</p>
-            </div>
-            <div class="hero-chips">
-              <span class="hero-chip accent">49&nbsp;€</span>
-              <span class="hero-chip">Livré en 24&nbsp;h</span>
-              <span class="hero-chip">Vous envoyez</span>
-              <span class="hero-chip">Pas de bot</span>
-            </div>
-            <p class="hero-trust">Pas sûr ? <a href="a-propos.html">Qui est Hervé</a> · <a href="#plus">En savoir plus</a></p>
-          </div>
+        <div class="demo-visual demo-visual-compact" role="img" aria-label="Avant 25 minutes, après 2 minutes">
+          <img class="demo-img-before" src="demo-hero-avant-25min.png" width="800" height="500" alt="" decoding="async">
+          <img class="demo-img-after" src="demo-hero-apres-2min.png" width="800" height="500" alt="" decoding="async">
         </div>
+        <p class="demo-stat"><span class="before">25 min</span> → <span class="after">2 min</span></p>
+
+        <a class="btn btn-hero" href="test-gratuit.html">Tester gratuitement</a>
+        <p class="hero-micro">1 extrait gratuit · pack 49&nbsp;€ · pas vos devis chantier</p>
+        <nav class="hero-nav-min" aria-label="Liens utiles">
+          <a href="#plus">En savoir plus</a>
+          <a href="a-propos.html">Qui est Hervé</a>
+        </nav>
       </div>
     </header>
 
+    <div class="fold-stack">
     <details class="fold-section" id="plus">
-      <summary>C'est quoi exactement ? (30 secondes)</summary>
+      <summary>C'est quoi ?</summary>
       <div class="fold-body">
     <section id="concret" class="concret-section" aria-labelledby="concret-title">
       <h2 id="concret-title">Seul le soir ou avec mes textes</h2>
@@ -1550,8 +1608,13 @@ Sinon, aucun souci — bonne continuation.</div>
     </details>
 
     <details class="fold-section" id="offres-fold">
-      <summary>Formules et tarifs (49&nbsp;€ · 79&nbsp;€/mois · 99&nbsp;€)</summary>
+      <summary>Tarifs · pilote lancement</summary>
       <div class="fold-body">
+        <div class="pilot-banner" id="pilote">
+          <p class="pilot-banner-title">3 places pilote · pack offert</p>
+          <p><strong>5 textes</strong> (49&nbsp;€) · jusqu'au <strong>16 juillet 2026</strong> · retour franc en privé.</p>
+          <a class="btn" id="wa-pilote" href="test-gratuit.html">Demander une place</a>
+        </div>
     <section id="offres" class="offres-section" aria-labelledby="offres-title">
       <h2 id="offres-title">Formules</h2>
       <p class="offres-intro">On commence par le <strong>49&nbsp;€</strong>. Le reste seulement si ça vous sert vraiment.</p>
@@ -1615,7 +1678,7 @@ Sinon, aucun souci — bonne continuation.</div>
     </details>
 
     <details class="fold-section" id="apercu-fold">
-      <summary>Exemples de messages</summary>
+      <summary>Exemples</summary>
       <div class="fold-body">
     <section id="apercu" aria-labelledby="apercu-title">
       <h2 id="apercu-title">Exemples — à quoi ça ressemble</h2>
@@ -1658,7 +1721,7 @@ Sinon, aucun souci — bonne continuation.</div>
     </details>
 
     <details class="fold-section" id="faq-fold">
-      <summary>Comment ça se passe · Questions fréquentes</summary>
+      <summary>FAQ</summary>
       <div class="fold-body">
     <section id="methode" aria-labelledby="methode-title">
       <h2 id="methode-title">Comment ça se passe</h2>
@@ -1689,18 +1752,10 @@ Sinon, aucun souci — bonne continuation.</div>
     </section>
       </div>
     </details>
+    </div>
 
-    <section id="contact" class="section-rdv" aria-labelledby="contact-title">
-      <h2 id="contact-title">Prêt ?</h2>
-      <div class="card">
-        <p class="cta-rdv-friction no-mb" style="margin:0;font-size:1rem;"><a href="test-gratuit.html"><strong>Tester gratuitement</strong></a> — métier + 1 message · extrait sous 24&nbsp;h · pack 5 textes = 49&nbsp;€ · <a href="a-propos.html">Mon parcours</a></p>
-      </div>
-    </section>
-
-    <footer class="small">
-      <p>© 2026 — Hervé MENGUE | Micro-entrepreneur — SIRET 10458821500012 — <a href="./a-propos.html">À propos</a> · <a href="./mentions-legales.html">Mentions légales</a></p>
-      <p class="footer-extra">Guides gratuits : <a href="textes-messages-clients-artisan-france.html">Messages clients artisan (France)</a> — relance de devis, réponse à une demande de devis, WhatsApp</p>
-      <p class="footer-extra">Préférez avancer sans échange ? <a href="https://buy.stripe.com/fZucN58Hpfp31tK2dmfEk01">Pack messagerie express — 49&nbsp;EUR</a></p>
+    <footer class="site-foot small">
+      <p>© 2026 Hervé Mengue · <a href="a-propos.html">À propos</a> · <a href="mentions-legales.html">Mentions légales</a></p>
     </footer>
   </main>
   <div class="sticky-cta" aria-hidden="false">
