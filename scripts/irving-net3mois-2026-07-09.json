@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "title": "Pas disponible",
+      "label": "Accuse reception professionnel",
+      "text": "Bonjour [Prenom], merci pour votre message. Je suis actuellement en intervention et je ne peux pas vous repondre en detail tout de suite. Je vous rappelle des que je suis disponible. Cordialement, Irving - Net3mois."
+    },
+    {
+      "title": "Confirmation intervention",
+      "label": "Intervention prevue sous 2 a 3 jours",
+      "text": "Bonjour [Prenom], petit point de confirmation : je prevois d'intervenir d'ici 2 a 3 jours, comme convenu. Pouvez-vous me confirmer que vous etes toujours disponible pour l'intervention ? Cordialement, Irving - Net3mois."
+    },
+    {
+      "title": "Priorite avant devis",
+      "label": "Urgence ou delai client",
+      "text": "Bonjour [Prenom], avant de vous envoyer la proposition, j'ai besoin d'une precision : souhaitez-vous une intervention au plus tot, ou avez-vous une date limite a respecter ? Cela me permet de vous proposer le bon planning. Cordialement, Irving - Net3mois."
+    }
+  ]
+}
