@@ -13,7 +13,7 @@
     {
       "title": "Priorité avant devis",
       "label": "Urgence ou délai client",
-      "text": "Bonjour [Prénom],\n\nAvant de vous envoyer la proposition, j'ai besoin d'une précision :\nsouhaitez-vous une intervention au plus tôt, ou avez-vous une date limite à respecter ?\nCela me permet de vous proposer le bon planning.\n\nCordialement,\nIrving - Net3mois"
+      "text": "Bonjour [Prénom],\n\nPour vous proposer le bon planning, une question rapide : vous préférez que j'intervienne au plus tôt, ou avez-vous une date précise à respecter ?\n\nJe vous envoie la proposition dès votre retour.\n\nCordialement,\nIrving - Net3mois"
     },
     {
       "title": "Avis en fin de chantier",
