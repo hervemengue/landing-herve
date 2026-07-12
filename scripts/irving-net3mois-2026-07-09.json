@@ -8,22 +8,22 @@
     {
       "title": "Confirmation intervention",
       "label": "Intervention prévue sous 2 à 3 jours",
-      "text": "Bonjour [Prénom],\n\nPetit point de confirmation : je prévois d'intervenir d'ici 2 à 3 jours, comme convenu.\nPouvez-vous me confirmer que vous êtes toujours disponible pour l'intervention ?\n\nCordialement,\nIrving - Net3mois"
+      "text": "Bonjour [Prénom],\n\nJe prévois d'intervenir d'ici 2 à 3 jours, comme convenu.\nPouvez-vous me confirmer que vous êtes toujours disponible pour l'intervention ?\n\nCordialement,\nIrving - Net3mois"
     },
     {
       "title": "Priorité avant devis",
-      "label": "Urgence ou délai client · demande Irving (client perdu)",
-      "text": "Bonjour [Prénom],\n\nPour vous proposer le bon planning, une question rapide : vous préférez que j'intervienne au plus tôt, ou avez-vous une date précise à respecter ?\n\nJe vous envoie la proposition dès votre retour.\n\nCordialement,\nIrving - Net3mois"
+      "label": "Urgence ou délai client · demande Irving",
+      "text": "Bonjour [Prénom],\n\nPour vous proposer le bon planning, vous préférez que j'intervienne au plus tôt, ou avez-vous une date précise à respecter ?\n\nJe vous envoie la proposition dès votre retour.\n\nCordialement,\nIrving - Net3mois"
     },
     {
       "title": "Avis en fin de chantier",
-      "label": "Proposition Hervé · avis Google (optionnel)",
-      "text": "Bonjour [Prénom],\n\nL'intervention sur vos sols est terminée.\nSi le résultat vous convient, un petit retour nous aide beaucoup pour notre visibilité.\n\nVous pouvez laisser un avis ici : [lien Google]\nOu me répondre en quelques mots sur ce qui vous a plu.\n\nMerci encore pour votre confiance.\n\nCordialement,\nIrving - Net3mois"
+      "label": "Avis Google · un seul CTA",
+      "text": "Bonjour [Prénom],\n\nL'intervention sur vos sols est terminée.\nSi le résultat vous convient, un avis Google m'aiderait beaucoup : [lien Google]\n\nMerci encore pour votre confiance.\n\nCordialement,\nIrving - Net3mois"
     },
     {
       "title": "Relance de devis",
-      "label": "Devis en cours · éviter le silence client",
-      "text": "Bonjour [Prénom],\n\nPetit mot concernant votre devis : je suis en train de le finaliser et vous le recevrez d'ici [délai, ex. : demain / 48 h].\nSi vous avez besoin d'une réponse plus rapide, n'hésitez pas à me le dire.\n\nCordialement,\nIrving - Net3mois"
+      "label": "Devis en cours · pas de silence",
+      "text": "Bonjour [Prénom],\n\nConcernant votre devis, je suis en train de le finaliser, vous le recevrez d'ici [délai, ex. : demain / 48 h].\nSi vous avez besoin d'une réponse plus rapide, dites-le-moi.\n\nCordialement,\nIrving - Net3mois"
     }
   ]
 }
