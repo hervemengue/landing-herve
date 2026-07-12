@@ -2,13 +2,13 @@
   "messages": [
     {
       "title": "Pas disponible",
-      "label": "Accusé réception professionnel",
-      "text": "Bonjour [Prénom],\n\nMerci pour votre message.\nJe suis actuellement en intervention et je ne peux pas vous répondre en détail tout de suite.\nJe vous rappelle dès que je suis disponible.\n\nCordialement,\nIrving - Net3mois"
+      "label": "Accusé réception · réponse écrite",
+      "text": "Bonjour [Prénom],\n\nMerci pour votre message. Je suis actuellement en intervention, je vous réponds dès que possible.\n\nCordialement,\nIrving - Net3mois"
     },
     {
       "title": "Confirmation intervention",
       "label": "Intervention prévue sous 2 à 3 jours",
-      "text": "Bonjour [Prénom],\n\nJe prévois d'intervenir d'ici 2 à 3 jours, comme convenu.\nPouvez-vous me confirmer que vous êtes toujours disponible pour l'intervention ?\n\nCordialement,\nIrving - Net3mois"
+      "text": "Bonjour [Prénom],\n\nJe prévois d'intervenir d'ici 2 à 3 jours, comme convenu. Pouvez-vous me confirmer que vous êtes toujours disponible pour l'intervention ?\n\nCordialement,\nIrving - Net3mois"
     },
     {
       "title": "Priorité avant devis",
@@ -18,12 +18,12 @@
     {
       "title": "Avis en fin de chantier",
       "label": "Avis Google · un seul CTA",
-      "text": "Bonjour [Prénom],\n\nL'intervention sur vos sols est terminée.\nSi le résultat vous convient, un avis Google m'aiderait beaucoup : [lien Google]\n\nMerci encore pour votre confiance.\n\nCordialement,\nIrving - Net3mois"
+      "text": "Bonjour [Prénom],\n\nL'intervention sur vos sols est terminée. Si le résultat vous convient, un avis Google m'aiderait beaucoup : [lien Google]\n\nMerci encore pour votre confiance.\n\nCordialement,\nIrving - Net3mois"
     },
     {
       "title": "Relance de devis",
       "label": "Devis en cours · pas de silence",
-      "text": "Bonjour [Prénom],\n\nConcernant votre devis, je suis en train de le finaliser, vous le recevrez d'ici [délai, ex. : demain / 48 h].\nSi vous avez besoin d'une réponse plus rapide, dites-le-moi.\n\nCordialement,\nIrving - Net3mois"
+      "text": "Bonjour [Prénom],\n\nConcernant votre devis, je suis en train de le finaliser, vous le recevrez d'ici [délai, ex. : demain / 48 h]. Si vous avez besoin d'une réponse plus rapide, faites-le-moi savoir.\n\nCordialement,\nIrving - Net3mois"
     }
   ]
 }
