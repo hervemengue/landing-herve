@@ -1755,7 +1755,7 @@
               <img class="demo-img-after" src="demo-hero-apres-2min.png" width="800" height="500" alt="" decoding="async">
             </div>
             <p class="demo-stat" style="margin:10px 0 16px;text-align:center;"><span class="before">25 min</span> → <span class="after">2 min</span> · vous gardez la main sur l'envoi</p>
-            <a class="btn btn-hero" href="test-gratuit.html">Recevoir 1 message adapté à mon métier</a>
+            <a class="btn btn-hero" href="test-gratuit.html?utm_source=site&utm_medium=hero" data-track="cta_test_gratuit">Recevoir 1 message gratuit →</a>
             <p class="hero-about-mini">1 extrait sous 24&nbsp;h · pack 49&nbsp;€ · <strong>pas vos devis chantier</strong></p>
           </div>
         </div>
@@ -1933,7 +1933,7 @@ Sinon, aucun souci — bonne continuation.</div>
         <h3>Que se passe-t-il après le paiement ?</h3>
         <p class="small">Brief 3 lignes → confirmation → <strong>5 textes sous 24&nbsp;h</strong>. Vous copiez et envoyez sur votre canal.</p>
         <h3>Le pack remplace un logiciel de messagerie ou un CRM ?</h3>
-        <p class="small no-mb"><strong>Non.</strong> Textes à coller sur le canal que vous utilisez. Vous envoyez vous-même. <a href="audit-messagerie-whatsapp-49.html">Pack messages clients</a></p>
+        <p class="small no-mb"><strong>Non.</strong> Textes à coller sur le canal que vous utilisez. Vous envoyez vous-même. <a href="test-gratuit.html?utm_source=site&utm_medium=faq">Tester 1 message gratuit</a></p>
       </div>
     </section>
       </div>
@@ -1945,8 +1945,9 @@ Sinon, aucun souci — bonne continuation.</div>
     </footer>
   </main>
   <div class="sticky-cta" aria-hidden="false">
-    <a class="btn" href="test-gratuit.html">Recevoir 1 message adapté</a>
+    <a class="btn" href="test-gratuit.html?utm_source=site&utm_medium=sticky" data-track="cta_test_gratuit">Recevoir 1 message gratuit →</a>
   </div>
+  <script src="analytics-events.js"></script>
   <script>
     (function () {
       var pilotText = "Bonjour Hervé — PLACE PILOTE LANCEMENT (site)\n\nJe demande une place parmi les 3 pilotes (pack 5 textes offert, avant le 16/07).\n\n1) Mon métier :\n2) Mon prénom :\n3) J'accepte un retour franc en privé après réception.";
@@ -1954,11 +1955,22 @@ Sinon, aucun souci — bonne continuation.</div>
       var el = document.getElementById("wa-pilote");
       if (el) {
         el.href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(pilotText);
+        el.setAttribute("data-track", "cta_whatsapp_pilote");
       }
       var abo = document.getElementById("wa-abo-79");
       if (abo) {
         abo.href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(aboText);
+        abo.setAttribute("data-track", "cta_whatsapp_question");
       }
+      document.querySelectorAll("[data-track]").forEach(function (node) {
+        if (node.dataset.trackBound) return;
+        node.dataset.trackBound = "1";
+        node.addEventListener("click", function () {
+          if (typeof hmTrack === "function") {
+            hmTrack(node.getAttribute("data-track"), { link_url: node.href || "", page_path: location.pathname });
+          }
+        });
+      });
     })();
   </script>
 </body>
