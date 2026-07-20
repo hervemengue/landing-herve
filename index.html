@@ -1822,10 +1822,6 @@ Sinon, aucun souci — bonne continuation.</div>
 
     <section id="offres" class="offer-spotlight offres-section" aria-labelledby="offres-title">
       <h2 id="offres-title">Pack découverte</h2>
-      <div class="pilot-banner" id="pilote" style="margin-bottom:14px;">
-        <p class="pilot-banner-title">3 places pilote · pack offert jusqu'au 16/07</p>
-        <a class="btn" id="wa-pilote" href="test-gratuit.html" style="margin-top:8px;">Demander une place</a>
-      </div>
       <div class="offer-card featured">
         <p class="offer-tier">Le plus demandé</p>
         <p class="offer-price">49&nbsp;€ <sub>· une fois</sub></p>
@@ -1917,7 +1913,7 @@ Sinon, aucun souci — bonne continuation.</div>
           <li>Pack 49&nbsp;€ ou 99&nbsp;€ → <strong>webapp mobile</strong> + textes sous 24&nbsp;h.</li>
           <li><strong>Assist 79&nbsp;€/mois</strong> seulement si des <strong>situations nouvelles</strong> reviennent souvent · <a href="assist-mensuel-79.html">détails</a>.</li>
         </ol>
-        <p class="small" style="margin:12px 0 0;"><a href="merci-49.html">Après paiement</a> · <a href="#pilote">Place pilote lancement</a> (3 offertes)</p>
+        <p class="small" style="margin:12px 0 0;"><a href="merci-49.html">Après paiement</a> · <a href="test-gratuit.html">Tester 1 message gratuit</a></p>
       </div>
     </section>
 
@@ -1927,7 +1923,7 @@ Sinon, aucun souci — bonne continuation.</div>
         <h3>Rédigez-vous nos devis chantier (prix, lignes) ?</h3>
         <p class="small"><strong>Non.</strong> Messages clients seulement (pas le chiffrage chantier). <strong>Vous chiffrez. Vous envoyez.</strong></p>
         <h3>Pourquoi payer si je peux écrire moi-même ?</h3>
-        <p class="small">Quand ça traîne le soir, <strong>5 textes déjà prêts</strong> pour votre métier valent mieux qu'une page blanche. Je les prépare pour vous — vous copiez, vous envoyez.</p>
+        <p class="small">Quand ça traîne le soir, <strong>5 textes déjà prêts</strong> pour votre métier valent mieux qu'une page blanche. Je les prépare pour vous. Vous copiez, vous envoyez.</p>
         <h3>Comment tester avant d’acheter ?</h3>
         <p class="small"><a href="test-gratuit.html">Tester gratuitement</a> → brief 3 lignes → <strong>1 extrait</strong>. Pack complet = 49&nbsp;€.</p>
         <h3>Que se passe-t-il après le paiement ?</h3>
@@ -1951,13 +1947,7 @@ Sinon, aucun souci — bonne continuation.</div>
   <script src="analytics-events.js"></script>
   <script>
     (function () {
-      var pilotText = "Bonjour Hervé — PLACE PILOTE LANCEMENT (site)\n\nJe demande une place parmi les 3 pilotes (pack 5 textes offert, avant le 16/07).\n\n1) Mon métier :\n2) Mon prénom :\n3) J'accepte un retour franc en privé après réception.";
       var aboText = "Bonjour Hervé — ASSIST MENSUEL 79€/mois\n\nJe veux en savoir plus.\n\n1) Mon métier :\n2) Mon prénom :\n3) Ma question :";
-      var el = document.getElementById("wa-pilote");
-      if (el) {
-        el.href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(pilotText);
-        el.setAttribute("data-track", "cta_whatsapp_pilote");
-      }
       var abo = document.getElementById("wa-abo-79");
       if (abo) {
         abo.href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(aboText);
