@@ -38,7 +38,13 @@
   </url>
   <url>
     <loc>https://hervemengue.github.io/landing-herve/relance-devis-sans-reponse-artisan.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://hervemengue.github.io/landing-herve/reponse-appel-manque-artisan.html</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
