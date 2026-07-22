@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN5ZZ8T2Q3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MN5ZZ8T2Q3');
+  </script>
+  <title>Commande reçue — objets utiles</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; color: #0f172a; background: #ecfdf5; line-height: 1.55; }
+    main { max-width: 520px; margin: 0 auto; padding: 28px 16px 48px; }
+    h1 { font-size: 1.35rem; color: #065f46; margin: 0 0 10px; }
+    .card { background: #fff; border: 1px solid #a7f3d0; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    .btn { display: block; text-align: center; padding: 14px; background: #047857; color: #fff; text-decoration: none; border-radius: 10px; font-weight: 700; }
+    .small { font-size: 0.88rem; color: #475569; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Paiement reçu — merci</h1>
+    <p>Votre commande d'objet utile est bien enregistrée.</p>
+    <div class="card">
+      <p><strong>Prochaine étape obligatoire :</strong> envoyez votre adresse de livraison sur WhatsApp (nom complet, rue, CP, ville, téléphone).</p>
+      <a class="btn" id="wa" href="#">Envoyer mon adresse sur WhatsApp</a>
+    </div>
+    <p class="small">Délai estimé d'expédition : 8 à 20 jours. Vous recevrez le numéro de suivi dès qu'il est disponible.</p>
+  </main>
+  <script>
+    var t = "Bonjour Hervé — ADRESSE LIVRAISON DROPSHIP\n\nNom complet :\nAdresse :\nCP + ville :\nTéléphone :\nProduit commandé :";
+    document.getElementById("wa").href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(t);
+  </script>
+</body>
+</html>
