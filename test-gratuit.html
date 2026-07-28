@@ -11,12 +11,12 @@
     gtag('config', 'G-MN5ZZ8T2Q3');
   </script>
   <title>Test gratuit — 1 message pour votre activité</title>
-  <meta name="description" content="Test gratuit : métier + message qui bloque (réponse à une demande de devis, relance de devis, pas dispo). 1 extrait adapté sous 24 h. Sans engagement.">
+  <meta name="description" content="Test gratuit : métier + message qui bloque (réponse à une demande de devis, relance de devis, pas dispo). 1 extrait adapté, réponse dans la journée. Sans engagement.">
   <link rel="canonical" href="https://hervemengue.github.io/landing-herve/test-gratuit.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Test gratuit — 1 message pour votre activité">
-  <meta property="og:description" content="Brief 3 lignes : métier + réponse à une demande de devis, relance de devis ou pas dispo → 1 extrait sous 24 h.">
+  <meta property="og:description" content="Brief 3 lignes : métier + réponse à une demande de devis, relance de devis ou pas dispo → 1 extrait, réponse dans la journée.">
   <meta property="og:url" content="https://hervemengue.github.io/landing-herve/test-gratuit.html">
   <meta property="og:site_name" content="Hervé — messages clients artisans &amp; TPE">
   <meta property="og:image" content="https://hervemengue.github.io/landing-herve/og-test-gratuit.png">
@@ -25,7 +25,7 @@
   <meta property="og:image:alt" content="Test gratuit — 1 message client adapté à votre métier, brief 3 lignes">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Test gratuit — 1 message pour votre activité">
-  <meta name="twitter:description" content="Brief 3 lignes → 1 extrait adapté à votre métier sous 24 h. Sans engagement.">
+  <meta name="twitter:description" content="Brief 3 lignes → 1 extrait adapté à votre métier, réponse dans la journée. Sans engagement.">
   <meta name="twitter:image" content="https://hervemengue.github.io/landing-herve/og-test-gratuit.png">
   <style>
     body { font-family: "Source Sans 3", Arial, sans-serif; margin: 0; color: #0f172a; background: #f8fafc; }
@@ -40,6 +40,10 @@
     }
     .btn:hover, .btn:focus { background: #15803d; }
     .btn-sub { text-align: center; margin: 10px 0 0; font-size: 0.85rem; color: #64748b; }
+    .btn-alt { margin-top: 14px; background: #fff; color: #2563eb; border: 1px solid #bfdbfe; box-shadow: none; }
+    .btn-alt:hover, .btn-alt:focus { background: #eff6ff; }
+    .instant { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 12px 14px; margin: 0 0 18px; font-size: 0.95rem; color: #14532d; }
+    .instant a { color: #15803d; font-weight: 700; }
     .steps { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; margin: 22px 0 0; font-size: 0.92rem; color: #475569; }
     .steps strong { color: #0f172a; }
     .steps ol { margin: 8px 0 0; padding-left: 20px; }
@@ -51,11 +55,16 @@
 <body>
   <main>
     <h1>Ne perdez plus de clients faute de réponse</h1>
-    <p class="lead">1 message prêt pour votre métier · brief 3 lignes · extrait sous 24&nbsp;h.</p>
+    <p class="lead">1 message adapté à votre entreprise · réponse dans la journée.</p>
     <p class="reassure">Sans engagement · pas vos devis chantier · vous gardez la main sur l'envoi.</p>
+
+    <p class="instant"><strong>Pas envie d'écrire ?</strong> Voyez d'abord un message pour votre métier, tout de suite, sans rien donner : <a href="generateur.html?utm_source=test_gratuit&utm_medium=instant" data-track="cta_generateur">le voir en 5 secondes →</a></p>
 
     <a class="btn" id="wa-test" href="#" data-track="cta_whatsapp_brief">Envoyer mon brief WhatsApp (30 sec) →</a>
     <p class="btn-sub">S'ouvre dans WhatsApp · 30 secondes à remplir</p>
+
+    <a class="btn btn-alt" id="wa-capture" href="#" data-track="cta_whatsapp_capture">Ou envoyer la capture du message client</a>
+    <p class="btn-sub">Vous ne rédigez rien : la capture d'écran suffit.</p>
 
     <div class="steps">
       <strong>Le brief prérempli (3 lignes) :</strong>
@@ -71,6 +80,9 @@
   <script>
     var text = "Bonjour Hervé — TEST GRATUIT (site)\n\n1) Mon métier :\n2) Message qui me bloque (réponse à une demande de devis / relance de devis / pas dispo / autre) :\n3) Mon prénom :";
     document.getElementById("wa-test").href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(text);
+
+    var capture = "Bonjour Hervé — CAPTURE (site)\n\nMon métier :\n\nJe vous envoie la capture du message de mon client juste après. Pouvez-vous me préparer la réponse ?";
+    document.getElementById("wa-capture").href = "https://wa.me/message/MYUATUR7EZPDD1?text=" + encodeURIComponent(capture);
   </script>
   <script src="analytics-events.js"></script>
 </body>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN5ZZ8T2Q3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MN5ZZ8T2Q3');
+  </script>
+  <title>Message client prêt en 5 secondes — gratuit, sans inscription</title>
+  <meta name="description" content="Choisissez votre métier et la situation : votre message client s'affiche tout de suite. Gratuit, sans inscription, sans donner votre numéro. Vous copiez, vous envoyez.">
+  <link rel="canonical" href="https://hervemengue.github.io/landing-herve/generateur.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Message client prêt en 5 secondes — gratuit">
+  <meta property="og:description" content="Votre métier + la situation : le message s'affiche tout de suite. Sans inscription, sans numéro de téléphone.">
+  <meta property="og:url" content="https://hervemengue.github.io/landing-herve/generateur.html">
+  <meta property="og:site_name" content="Hervé — messages clients artisans &amp; TPE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Message client prêt en 5 secondes — gratuit">
+  <meta name="twitter:description" content="Votre métier + la situation : le message s'affiche tout de suite. Sans inscription.">
+  <style>
+    :root { --ink:#0f172a; --muted:#64748b; --border:#e2e8f0; --green:#16a34a; --blue:#2563eb; }
+    * { box-sizing: border-box; }
+    body { font-family: "Source Sans 3", Arial, Helvetica, sans-serif; margin:0; color:var(--ink); background:#f8fafc; -webkit-text-size-adjust:100%; }
+    main { max-width: 620px; margin: 0 auto; padding: 22px 16px 90px; line-height: 1.5; }
+    h1 { font-size: clamp(1.35rem, 5vw, 1.75rem); line-height:1.2; margin: 0 0 8px; letter-spacing:-0.02em; }
+    .lead { font-size: 1.02rem; color:#334155; margin: 0 0 6px; }
+    .reassure { font-size: 0.88rem; color: var(--muted); margin: 0 0 18px; }
+    .step { background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; margin-bottom:14px; }
+    .step-num { display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:#1d4ed8; background:#eff6ff; padding:4px 9px; border-radius:999px; margin-bottom:10px; }
+    .step h2 { font-size:1.05rem; margin:0 0 12px; }
+    .choices { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr)); gap:8px; }
+    .choice {
+      font: inherit; font-weight:600; font-size:0.94rem; text-align:left;
+      padding:12px 13px; border:1px solid var(--border); border-radius:11px;
+      background:#f8fafc; color:var(--ink); cursor:pointer; line-height:1.3;
+    }
+    .choice:hover { border-color:#93c5fd; background:#eff6ff; }
+    .choice[aria-pressed="true"] { background:#1d4ed8; border-color:#1d4ed8; color:#fff; }
+    .result { background:#fff; border:2px solid var(--green); border-radius:14px; padding:16px; margin-bottom:14px; }
+    .result-label { font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:#047857; margin:0 0 10px; }
+    .msg-text { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:11px; padding:14px; font-size:1.02rem; line-height:1.55; white-space:pre-wrap; }
+    .copy-btn { display:block; width:100%; margin-top:12px; padding:15px; font:inherit; font-weight:700; font-size:1.02rem; background:var(--green); color:#fff; border:0; border-radius:12px; cursor:pointer; }
+    .copy-btn:hover { background:#15803d; }
+    .copy-note { margin:10px 0 0; font-size:0.84rem; color:var(--muted); }
+    .brackets-note { margin:12px 0 0; font-size:0.84rem; color:#92400e; background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:10px 12px; }
+    .next { background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px 16px; }
+    .next h2 { font-size:1.1rem; margin:0 0 8px; }
+    .next p { margin:0 0 14px; font-size:0.96rem; color:#475569; }
+    .btn { display:block; text-align:center; padding:16px 18px; border-radius:12px; font-weight:700; text-decoration:none; font-size:1.02rem; }
+    .btn-wa { background:var(--green); color:#fff; box-shadow:0 8px 20px rgba(22,163,74,0.26); }
+    .btn-wa:hover { background:#15803d; }
+    .btn-alt { background:#fff; color:var(--blue); border:1px solid #bfdbfe; margin-top:10px; }
+    .btn-alt:hover { background:#eff6ff; }
+    .btn-sub { text-align:center; margin:9px 0 0; font-size:0.84rem; color:var(--muted); }
+    .proof { margin:20px 0 0; font-size:0.86rem; color:var(--muted); text-align:center; line-height:1.6; }
+    .foot { margin:26px 0 0; font-size:0.8rem; color:var(--muted); text-align:center; }
+    .foot a { color:#475569; }
+    .sticky { position:fixed; bottom:0; left:0; right:0; z-index:50; padding:10px 14px calc(10px + env(safe-area-inset-bottom)); background:rgba(255,255,255,0.96); border-top:1px solid rgba(148,163,184,0.45); box-shadow:0 -8px 24px rgba(15,23,42,0.1); backdrop-filter:blur(8px); }
+    .sticky a { display:block; max-width:520px; margin:0 auto; text-align:center; padding:14px; background:var(--green); color:#fff; font-weight:700; border-radius:12px; text-decoration:none; }
+    [hidden] { display:none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Votre message client, prêt en 5 secondes</h1>
+    <p class="lead">Choisissez votre métier, puis la situation. Le message s'affiche tout de suite, vous le copiez, vous l'envoyez.</p>
+    <p class="reassure">Gratuit · sans inscription · sans donner votre numéro.</p>
+
+    <section class="step">
+      <span class="step-num">Étape 1</span>
+      <h2>Votre métier</h2>
+      <div class="choices" id="metiers"></div>
+    </section>
+
+    <section class="step" id="step-situation" hidden>
+      <span class="step-num">Étape 2</span>
+      <h2>La situation</h2>
+      <div class="choices" id="situations"></div>
+    </section>
+
+    <section class="result" id="result" hidden>
+      <p class="result-label" id="result-label"></p>
+      <div class="msg-text" id="result-text"></div>
+      <button type="button" class="copy-btn" id="copy-btn">Copier le message</button>
+      <p class="copy-note" id="copy-note">Collez-le dans WhatsApp, un SMS ou un mail.</p>
+      <p class="brackets-note">Les passages entre [crochets] sont à remplacer par vos infos (jour, durée, lien).</p>
+    </section>
+
+    <section class="next" id="next" hidden>
+      <h2>Vous voulez les autres, écrits pour votre entreprise ?</h2>
+      <p>Celui-ci est un modèle pour votre métier. Envoyez-moi votre situation réelle, je vous renvoie le message adapté à votre entreprise et à votre façon de parler. Réponse dans la journée.</p>
+      <a class="btn btn-wa" id="wa-brief" href="#" data-track="cta_whatsapp_brief">Recevoir mon message adapté →</a>
+      <p class="btn-sub">Le message WhatsApp est déjà prérempli avec votre métier.</p>
+      <a class="btn btn-alt" id="wa-capture" href="#" data-track="cta_whatsapp_capture">Ou envoyez la capture du message de votre client</a>
+      <p class="btn-sub">Vous ne rédigez rien : la capture d'écran suffit.</p>
+    </section>
+
+    <p class="proof">Messages déjà écrits pour&nbsp;: plombier, électricien, menuisier, couvreur, coiffeur, traiteur, VTC, boucher, agent immobilier.<br>
+    Pack complet des 5 situations pour votre entreprise&nbsp;: <a href="produit-pack-49.html?utm_source=generateur&utm_medium=proof" data-track="cta_stripe">49&nbsp;€, une fois</a>.</p>
+
+    <p class="foot"><a href="index.html?utm_source=generateur&utm_medium=footer">Accueil</a> · <a href="a-propos.html">À propos</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+  </main>
+
+  <div class="sticky">
+    <a href="#metiers" id="sticky-link">Choisir mon métier ↓</a>
+  </div>
+
+  <script>
+    var WA = "https://wa.me/message/MYUATUR7EZPDD1";
+
+    var METIERS = [
+      { id:"plombier", label:"Plombier", sujet:"de la fuite", etape:"passer sur place pour voir l'installation", livrable:"le devis", fin:"l'intervention", finDe:"de l'intervention", raison:"une intervention avant la vôtre a pris plus de temps que prévu", prix:"au temps sur place, au matériel et à la garantie du travail" },
+      { id:"electricien", label:"Électricien", sujet:"de l'installation électrique", etape:"passer sur place pour voir le tableau et les points à reprendre", livrable:"le devis", fin:"l'intervention", finDe:"de l'intervention", raison:"une intervention avant la vôtre a pris plus de temps que prévu", prix:"au matériel aux normes, au temps sur place et à la garantie" },
+      { id:"menuisier", label:"Menuisier", sujet:"du projet de menuiserie", etape:"passer prendre les mesures", livrable:"le devis", fin:"la pose", finDe:"de la pose", raison:"une livraison de matériel a pris du retard", prix:"au bois, au temps d'atelier et à la pose" },
+      { id:"couvreur", label:"Couvreur", sujet:"de la toiture", etape:"monter voir la toiture", livrable:"le devis", fin:"les travaux", finDe:"des travaux", raison:"le chantier précédent a pris plus de temps que prévu", prix:"au matériel, à la sécurité et au temps passé sur le toit" },
+      { id:"coiffeur", label:"Coiffeur, coiffeuse", sujet:"du rendez-vous", etape:"vous proposer un créneau", livrable:"le tarif exact", fin:"votre rendez-vous", finDe:"de votre rendez-vous", raison:"le rendez-vous précédent a débordé", prix:"aux produits utilisés et au temps passé sur votre coupe" },
+      { id:"traiteur", label:"Traiteur", sujet:"de la réception", etape:"faire le point sur le nombre de personnes et le menu", livrable:"la proposition et le prix", fin:"la réception", finDe:"de la réception", raison:"la préparation a pris un peu plus de temps que prévu", prix:"aux produits frais, à la préparation et au service" },
+      { id:"vtc", label:"VTC, chauffeur", sujet:"du trajet", etape:"confirmer l'adresse et l'heure de départ", livrable:"le tarif de la course", fin:"la course", finDe:"de la course", raison:"la circulation est bloquée sur mon trajet", prix:"au trajet, au temps d'attente et à l'entretien du véhicule" },
+      { id:"boucher", label:"Boucher, commerce de bouche", sujet:"de la commande", etape:"faire le point sur les quantités", livrable:"le récapitulatif et le prix", fin:"votre commande", finDe:"de votre commande", raison:"la préparation a pris un peu plus de temps que prévu", prix:"à la qualité des produits et au travail de préparation" },
+      { id:"immobilier", label:"Agent immobilier", sujet:"du bien", etape:"organiser une visite", livrable:"une estimation", fin:"la visite", finDe:"de la visite", raison:"le rendez-vous précédent a débordé", prix:"au travail de commercialisation, aux visites et au suivi jusqu'à la signature" },
+      { id:"autre", label:"Autre métier", sujet:"de votre demande", etape:"faire le point avec vous", livrable:"le devis", fin:"la prestation", finDe:"de la prestation", raison:"le rendez-vous précédent a pris plus de temps que prévu", prix:"au temps passé et au matériel nécessaire" }
+    ];
+
+    var SITUATIONS = [
+      {
+        id:"devis", label:"Répondre à une demande de devis",
+        build:function (m) {
+          return "Bonjour, merci pour votre message. J'ai bien noté votre demande au sujet " + m.sujet + ".\n\n"
+            + "Je peux " + m.etape + " [jour] dans la matinée, et je vous transmets " + m.livrable + " juste après.\n\n"
+            + "Est-ce que ça vous convient ?";
+        }
+      },
+      {
+        id:"relance", label:"Relancer un devis sans réponse",
+        build:function (m) {
+          return "Bonjour, je reviens vers vous concernant " + m.livrable + " que je vous ai envoyé [la semaine dernière].\n\n"
+            + "Est-ce que le projet est toujours d'actualité ?\n\n"
+            + "Si un point vous freine ou si vous avez une question, dites-le-moi simplement, je m'adapte.";
+        }
+      },
+      {
+        id:"indispo", label:"Dire que vous n'êtes pas disponible",
+        build:function (m) {
+          return "Bonjour, merci d'avoir pensé à moi.\n\n"
+            + "Je préfère être clair tout de suite : je ne suis pas disponible sur cette période, et je ne veux pas vous faire attendre pour rien.\n\n"
+            + "Si vous pouvez décaler après le [date], je m'en occupe volontiers. Sinon je comprends très bien que vous voyiez ailleurs, et je reste disponible pour la suite.";
+        }
+      },
+      {
+        id:"retard", label:"Prévenir d'un retard",
+        build:function (m) {
+          return "Bonjour, je préfère vous prévenir : j'aurai environ [30 minutes] de retard, " + m.raison + ".\n\n"
+            + "Je serai là, rien n'est annulé. Je vous envoie un message dès que je pars.\n\n"
+            + "Merci de votre compréhension.";
+        }
+      },
+      {
+        id:"avis", label:"Demander un avis Google",
+        build:function (m) {
+          return "Bonjour, merci encore pour votre confiance.\n\n"
+            + "Si vous êtes satisfait " + m.finDe + ", un avis Google m'aiderait beaucoup : c'est ce qui permet à d'autres clients de me trouver.\n\n"
+            + "Ça prend une minute : [votre lien Google]. Merci d'avance.";
+        }
+      },
+      {
+        id:"mecontent", label:"Répondre à un client mécontent",
+        build:function (m) {
+          return "Bonjour, merci de me l'avoir dit directement, je préfère ça à un silence.\n\n"
+            + "Je comprends que le résultat ne soit pas ce que vous attendiez. Pouvez-vous me préciser en deux lignes ce qui n'a pas été ?\n\n"
+            + "Je regarde ça aujourd'hui et je reviens vers vous avec une solution concrète.";
+        }
+      },
+      {
+        id:"cher", label:"Répondre à « c'est trop cher »",
+        build:function (m) {
+          return "Bonjour, je comprends, le budget compte.\n\n"
+            + "Le prix correspond " + m.prix + ".\n\n"
+            + "Si l'enveloppe est serrée, je peux vous proposer une version allégée : on garde l'essentiel et on met le reste de côté pour plus tard.\n\n"
+            + "Dites-moi le budget que vous avez en tête, je vous dis franchement si c'est faisable ou non.";
+        }
+      }
+    ];
+
+    var state = { metier:null, situation:null };
+    var booting = true;
+
+    function el(id) { return document.getElementById(id); }
+
+    function makeChoice(label, onClick) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "choice";
+      b.textContent = label;
+      b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", onClick);
+      return b;
+    }
+
+    function clearPressed(container) {
+      container.querySelectorAll(".choice").forEach(function (c) {
+        c.setAttribute("aria-pressed", "false");
+      });
+    }
+
+    var metierButtons = {};
+
+    METIERS.forEach(function (m) {
+      var b = makeChoice(m.label, function () {
+        clearPressed(el("metiers"));
+        b.setAttribute("aria-pressed", "true");
+        state.metier = m;
+        el("step-situation").hidden = false;
+        if (state.situation) { render(); }
+        else if (!booting) { el("step-situation").scrollIntoView({ behavior:"smooth", block:"center" }); }
+        if (window.hmTrack) { window.hmTrack("generateur_metier", { metier: m.id }); }
+      });
+      metierButtons[m.id] = b;
+      el("metiers").appendChild(b);
+    });
+
+    SITUATIONS.forEach(function (s) {
+      var b = makeChoice(s.label, function () {
+        clearPressed(el("situations"));
+        b.setAttribute("aria-pressed", "true");
+        state.situation = s;
+        render();
+        if (window.hmTrack) { window.hmTrack("generateur_situation", { situation: s.id }); }
+      });
+      el("situations").appendChild(b);
+    });
+
+    function waLink(text) {
+      return WA + "?text=" + encodeURIComponent(text);
+    }
+
+    function render() {
+      if (!state.metier || !state.situation) { return; }
+      var m = state.metier, s = state.situation;
+      var text = s.build(m);
+
+      el("result-label").textContent = m.label + " · " + s.label;
+      el("result-text").textContent = text;
+      el("result").hidden = false;
+      el("next").hidden = false;
+      el("copy-btn").textContent = "Copier le message";
+
+      var brief = "Bonjour Hervé, je viens du site.\n\n"
+        + "Mon métier : " + m.label + "\n"
+        + "Ma situation : " + s.label + "\n"
+        + "Mon prénom : \n\n"
+        + "Je veux le message adapté à mon entreprise.";
+      el("wa-brief").href = waLink(brief);
+
+      var capture = "Bonjour Hervé, je viens du site.\n\n"
+        + "Mon métier : " + m.label + "\n\n"
+        + "Je vous envoie la capture du message de mon client juste après. Pouvez-vous me préparer la réponse ?";
+      el("wa-capture").href = waLink(capture);
+
+      var sticky = el("sticky-link");
+      sticky.href = waLink(brief);
+      sticky.textContent = "Recevoir mon message adapté →";
+
+      el("result").scrollIntoView({ behavior:"smooth", block:"center" });
+
+      if (window.hmTrack) {
+        window.hmTrack("generateur_message", { metier: m.id, situation: s.id });
+      }
+    }
+
+    el("sticky-link").addEventListener("click", function () {
+      if (state.metier && state.situation && window.hmTrack) {
+        window.hmTrack("cta_whatsapp_brief", { link_text: "sticky generateur" });
+      }
+    });
+
+    (function preselect() {
+      var wanted = new URLSearchParams(location.search).get("metier");
+      if (wanted && metierButtons[wanted]) {
+        metierButtons[wanted].click();
+      }
+      booting = false;
+    })();
+
+    el("copy-btn").addEventListener("click", function () {
+      var text = el("result-text").textContent;
+      var done = function () {
+        el("copy-btn").textContent = "Message copié";
+        el("copy-note").textContent = "Collez-le dans WhatsApp, un SMS ou un mail, puis relisez les [crochets].";
+        if (window.hmTrack) {
+          window.hmTrack("generateur_copie", {
+            metier: state.metier ? state.metier.id : "",
+            situation: state.situation ? state.situation.id : ""
+          });
+        }
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else {
+        fallback();
+      }
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "absolute";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {
+          el("copy-note").textContent = "Sélectionnez le texte ci-dessus pour le copier.";
+        }
+        document.body.removeChild(ta);
+      }
+    });
+  </script>
+  <script src="analytics-events.js"></script>
+</body>
+</html>
