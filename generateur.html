@@ -48,12 +48,19 @@
     .copy-btn:hover { background:#15803d; }
     .copy-note { margin:10px 0 0; font-size:0.84rem; color:var(--muted); }
     .brackets-note { margin:12px 0 0; font-size:0.84rem; color:#92400e; background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:10px 12px; }
-    .next { background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px 16px; }
+    .bridge {
+      margin-top:16px; padding-top:16px; border-top:1px dashed #bbf7d0;
+    }
+    .bridge p { margin:0 0 12px; font-size:0.96rem; color:#334155; }
+    .bridge strong { color:var(--ink); }
+    .next { background:#eff6ff; border:2px solid #93c5fd; border-radius:14px; padding:18px 16px; margin-bottom:14px; }
     .next h2 { font-size:1.1rem; margin:0 0 8px; }
     .next p { margin:0 0 14px; font-size:0.96rem; color:#475569; }
     .btn { display:block; text-align:center; padding:16px 18px; border-radius:12px; font-weight:700; text-decoration:none; font-size:1.02rem; }
     .btn-wa { background:var(--green); color:#fff; box-shadow:0 8px 20px rgba(22,163,74,0.26); }
     .btn-wa:hover { background:#15803d; }
+    .btn-pack { background:#1d4ed8; color:#fff; margin-top:10px; }
+    .btn-pack:hover { background:#1e40af; }
     .btn-alt { background:#fff; color:var(--blue); border:1px solid #bfdbfe; margin-top:10px; }
     .btn-alt:hover { background:#eff6ff; }
     .btn-sub { text-align:center; margin:9px 0 0; font-size:0.84rem; color:var(--muted); }
@@ -89,15 +96,20 @@
       <button type="button" class="copy-btn" id="copy-btn">Copier le message</button>
       <p class="copy-note" id="copy-note">Collez-le dans WhatsApp, un SMS ou un mail.</p>
       <p class="brackets-note">Les passages entre [crochets] sont à remplacer par vos infos (jour, durée, lien).</p>
+      <div class="bridge" id="bridge">
+        <p><strong>Ceci est un modèle.</strong> Pour le même message, écrit avec votre façon de parler et le détail de votre entreprise, je vous le prépare gratuitement. Réponse dans la journée.</p>
+        <a class="btn btn-wa" id="wa-brief" href="#" data-track="cta_whatsapp_brief">Recevoir mon message adapté (gratuit) →</a>
+        <p class="btn-sub">WhatsApp déjà prérempli avec votre métier et votre situation.</p>
+        <a class="btn btn-alt" id="wa-capture" href="#" data-track="cta_whatsapp_capture">Ou envoyez la capture du message de votre client</a>
+        <p class="btn-sub">Vous ne rédigez rien : la capture d'écran suffit.</p>
+      </div>
     </section>
 
     <section class="next" id="next" hidden>
-      <h2>Vous voulez les autres, écrits pour votre entreprise ?</h2>
-      <p>Celui-ci est un modèle pour votre métier. Envoyez-moi votre situation réelle, je vous renvoie le message adapté à votre entreprise et à votre façon de parler. Réponse dans la journée.</p>
-      <a class="btn btn-wa" id="wa-brief" href="#" data-track="cta_whatsapp_brief">Recevoir mon message adapté →</a>
-      <p class="btn-sub">Le message WhatsApp est déjà prérempli avec votre métier.</p>
-      <a class="btn btn-alt" id="wa-capture" href="#" data-track="cta_whatsapp_capture">Ou envoyez la capture du message de votre client</a>
-      <p class="btn-sub">Vous ne rédigez rien : la capture d'écran suffit.</p>
+      <h2>Vous voulez 5 textes prêts, une fois pour toutes ?</h2>
+      <p>Le modèle ci-dessus est un aperçu. Le pack, c'est 5 messages écrits pour votre activité, que vous réutilisez toute l'année.</p>
+      <a class="btn btn-pack" href="produit-pack-49.html?utm_source=generateur&utm_medium=after_result" data-track="cta_stripe">Voir le pack 49 € →</a>
+      <p class="btn-sub">Paiement une fois. Livraison le jour même.</p>
     </section>
 
     <p class="proof">Les 10 situations couvertes&nbsp;: répondre à une demande de devis, relancer un devis sans réponse, dire que vous n'êtes pas disponible, prévenir d'un retard, demander un avis Google, répondre à un client mécontent, répondre à «&nbsp;c'est trop cher&nbsp;», répondre à un avis Google positif, répondre à un avis Google négatif, répondre à un avis injuste ou faux.</p>
@@ -293,9 +305,10 @@
 
       var sticky = el("sticky-link");
       sticky.href = waLink(brief);
-      sticky.textContent = "Recevoir mon message adapté →";
+      sticky.textContent = "Recevoir mon message adapté (gratuit) →";
+      sticky.setAttribute("data-track", "cta_whatsapp_brief");
 
-      el("result").scrollIntoView({ behavior:"smooth", block:"center" });
+      el("result").scrollIntoView({ behavior:"smooth", block:"start" });
 
       if (window.hmTrack) {
         window.hmTrack("generateur_message", { metier: m.id, situation: s.id });
@@ -319,8 +332,9 @@
     el("copy-btn").addEventListener("click", function () {
       var text = el("result-text").textContent;
       var done = function () {
-        el("copy-btn").textContent = "Message copié";
-        el("copy-note").textContent = "Collez-le dans WhatsApp, un SMS ou un mail, puis relisez les [crochets].";
+        el("copy-btn").textContent = "Message copié ✓";
+        el("copy-note").textContent = "Copié. Relisez les [crochets], puis envoyez. Pour le même texte adapté à votre entreprise : bouton vert juste en dessous.";
+        el("bridge").scrollIntoView({ behavior:"smooth", block:"center" });
         if (window.hmTrack) {
           window.hmTrack("generateur_copie", {
             metier: state.metier ? state.metier.id : "",
