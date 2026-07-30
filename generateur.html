@@ -11,7 +11,7 @@
     gtag('config', 'G-MN5ZZ8T2Q3');
   </script>
   <title>Message client prêt en 5 secondes — gratuit, sans inscription</title>
-  <meta name="description" content="Choisissez votre métier et la situation : votre message client s'affiche tout de suite. Gratuit, sans inscription, sans donner votre numéro. Vous copiez, vous envoyez.">
+  <meta name="description" content="Choisissez votre métier et la situation : votre message client s'affiche tout de suite. Réponse à une demande de devis, relance, retard, avis Google positif ou négatif. Gratuit, sans inscription.">
   <link rel="canonical" href="https://hervemengue.github.io/landing-herve/generateur.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
@@ -100,8 +100,10 @@
       <p class="btn-sub">Vous ne rédigez rien : la capture d'écran suffit.</p>
     </section>
 
-    <p class="proof">Messages déjà écrits pour&nbsp;: plombier, électricien, menuisier, couvreur, coiffeur, traiteur, VTC, boucher, agent immobilier.<br>
-    Pack complet des 5 situations pour votre entreprise&nbsp;: <a href="produit-pack-49.html?utm_source=generateur&utm_medium=proof" data-track="cta_stripe">49&nbsp;€, une fois</a>.</p>
+    <p class="proof">Les 10 situations couvertes&nbsp;: répondre à une demande de devis, relancer un devis sans réponse, dire que vous n'êtes pas disponible, prévenir d'un retard, demander un avis Google, répondre à un client mécontent, répondre à «&nbsp;c'est trop cher&nbsp;», répondre à un avis Google positif, répondre à un avis Google négatif, répondre à un avis injuste ou faux.</p>
+
+    <p class="proof">Messages déjà écrits pour&nbsp;: plombier, électricien, menuisier, couvreur, coiffeur, traiteur, VTC, boucher, agent immobilier, restaurant, hôtel, garage.<br>
+    Pack de 5 textes sur mesure pour votre entreprise&nbsp;: <a href="produit-pack-49.html?utm_source=generateur&utm_medium=proof" data-track="cta_stripe">49&nbsp;€, une fois</a>.</p>
 
     <p class="foot"><a href="index.html?utm_source=generateur&utm_medium=footer">Accueil</a> · <a href="a-propos.html">À propos</a> · <a href="mentions-legales.html">Mentions légales</a></p>
   </main>
@@ -123,6 +125,9 @@
       { id:"vtc", label:"VTC, chauffeur", sujet:"du trajet", etape:"confirmer l'adresse et l'heure de départ", livrable:"le tarif de la course", fin:"la course", finDe:"de la course", raison:"la circulation est bloquée sur mon trajet", prix:"au trajet, au temps d'attente et à l'entretien du véhicule" },
       { id:"boucher", label:"Boucher, commerce de bouche", sujet:"de la commande", etape:"faire le point sur les quantités", livrable:"le récapitulatif et le prix", fin:"votre commande", finDe:"de votre commande", raison:"la préparation a pris un peu plus de temps que prévu", prix:"à la qualité des produits et au travail de préparation" },
       { id:"immobilier", label:"Agent immobilier", sujet:"du bien", etape:"organiser une visite", livrable:"une estimation", fin:"la visite", finDe:"de la visite", raison:"le rendez-vous précédent a débordé", prix:"au travail de commercialisation, aux visites et au suivi jusqu'à la signature" },
+      { id:"restaurant", label:"Restaurant, café", sujet:"de votre réservation", etape:"vous confirmer une table", livrable:"la confirmation", fin:"votre repas", finDe:"de votre repas", raison:"le service précédent a débordé", prix:"aux produits frais, au travail en cuisine et au service" },
+      { id:"hotel", label:"Hôtel, chambres d'hôtes", sujet:"de votre séjour", etape:"vérifier les disponibilités", livrable:"le tarif et la confirmation", fin:"votre séjour", finDe:"de votre séjour", raison:"la chambre n'est pas encore prête", prix:"à la chambre, à l'entretien et au service sur place" },
+      { id:"garage", label:"Garage automobile", sujet:"de votre véhicule", etape:"prendre le véhicule pour un diagnostic", livrable:"le devis", fin:"la réparation", finDe:"de la réparation", raison:"une réparation avant la vôtre a pris plus de temps que prévu", prix:"aux pièces, au temps de main-d'œuvre et à la garantie" },
       { id:"autre", label:"Autre métier", sujet:"de votre demande", etape:"faire le point avec vous", livrable:"le devis", fin:"la prestation", finDe:"de la prestation", raison:"le rendez-vous précédent a pris plus de temps que prévu", prix:"au temps passé et au matériel nécessaire" }
     ];
 
@@ -182,6 +187,31 @@
             + "Le prix correspond " + m.prix + ".\n\n"
             + "Si l'enveloppe est serrée, je peux vous proposer une version allégée : on garde l'essentiel et on met le reste de côté pour plus tard.\n\n"
             + "Dites-moi le budget que vous avez en tête, je vous dis franchement si c'est faisable ou non.";
+        }
+      },
+      {
+        id:"avis-positif", label:"Répondre à un avis Google positif",
+        build:function (m) {
+          return "Merci beaucoup [Prénom] pour votre message et pour la note.\n\n"
+            + "Content que tout se soit bien passé " + m.finDe + ". C'est ce qu'on cherche à faire à chaque fois.\n\n"
+            + "Au plaisir de vous revoir.\n\n"
+            + "[Votre prénom]";
+        }
+      },
+      {
+        id:"avis-negatif", label:"Répondre à un avis Google négatif",
+        build:function (m) {
+          return "Bonjour [Prénom], je suis désolé que ça se soit passé comme ça. Ce n'est pas ce que je veux pour mes clients.\n\n"
+            + "Je préfère comprendre et corriger plutôt que de laisser les choses en l'état. Vous pouvez m'appeler au [votre numéro], je regarde ce qui s'est passé.\n\n"
+            + "[Votre prénom]";
+        }
+      },
+      {
+        id:"avis-injuste", label:"Répondre à un avis injuste ou faux",
+        build:function (m) {
+          return "Bonjour, je prends note de votre message.\n\n"
+            + "Ma version des faits est différente, mais ce n'est pas ici que ça se règle. Si vous souhaitez en parler, je reste joignable au [votre numéro].\n\n"
+            + "[Votre prénom]";
         }
       }
     ];
