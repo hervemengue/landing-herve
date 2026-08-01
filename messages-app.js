@@ -3,7 +3,7 @@
     function done() {
       btn.classList.add("copied");
       var prev = btn.textContent;
-      btn.textContent = "Copié — collez dans WhatsApp ou SMS";
+      btn.textContent = "Copié. Collez dans WhatsApp ou SMS";
       setTimeout(function () {
         btn.classList.remove("copied");
         btn.textContent = prev;

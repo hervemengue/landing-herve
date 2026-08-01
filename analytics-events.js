@@ -1,5 +1,5 @@
 /**
- * GA4 — événements conversion (cta_test_gratuit, cta_whatsapp_brief, cta_stripe)
+ * GA4 : événements conversion (cta_test_gratuit, cta_whatsapp_brief, cta_stripe)
  * + propagation UTM sur liens internes [data-utm-carry]
  */
 (function () {

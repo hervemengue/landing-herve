@@ -30,7 +30,7 @@
     function done() {
       btn.classList.add("copied");
       var prev = btn.textContent;
-      btn.textContent = "Copié — collez dans WhatsApp";
+      btn.textContent = "Copié. Collez dans WhatsApp";
       setTimeout(function () {
         btn.classList.remove("copied");
         btn.textContent = prev;
@@ -97,7 +97,7 @@
         micBtn.classList.remove("assist-mic--active");
         micBtn.textContent = "Parler";
       }
-      setStatus("Micro indisponible — écrivez la situation.", "warn");
+      setStatus("Micro indisponible. Écrivez la situation.", "warn");
     };
   }
 
@@ -117,7 +117,7 @@
   function generate() {
     if (!apiUrl) {
       setStatus(
-        "API non configurée — déployez le Worker (voir worker/README.md) puis remplissez assist-instant-config.js.",
+        "API non configurée. Déployez le Worker (voir worker/README.md) puis remplissez assist-instant-config.js.",
         "warn"
       );
       return;
@@ -151,10 +151,10 @@
         if (resultTextEl) resultTextEl.textContent = data.reply || "";
         if (labelEl) labelEl.textContent = data.label || "Nouvelle situation";
         if (resultEl) resultEl.hidden = false;
-        setStatus("Brouillon prêt — relisez avant d'envoyer.", "ok");
+        setStatus("Brouillon prêt. Relisez avant d'envoyer.", "ok");
       })
       .catch(function (err) {
-        setStatus(err.message || "Échec — réessayez.", "error");
+        setStatus(err.message || "Échec. Réessayez.", "error");
       })
       .finally(function () {
         if (genBtn) {
@@ -176,6 +176,6 @@
   initSpeech();
 
   if (!apiUrl) {
-    setStatus("Beta — configurez l'URL API Worker pour activer la génération.", "warn");
+    setStatus("Beta. Configurez l'URL API Worker pour activer la génération.", "warn");
   }
 })();

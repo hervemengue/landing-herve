@@ -1,5 +1,5 @@
 /**
- * Assist instantané — proxy OpenAI pour webapp messages artisan.
+ * Assist instantané : proxy OpenAI pour webapp messages artisan.
  */
 
 function parseOrigins(raw) {
@@ -161,7 +161,7 @@ export default {
 
     if (!checkRateLimit(slug)) {
       return jsonResponse(
-        { error: "Trop de requêtes — réessayez dans une minute." },
+        { error: "Trop de requêtes. Réessayez dans une minute." },
         429,
         origin,
         allowedOrigins
