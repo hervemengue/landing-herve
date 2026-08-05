@@ -64,6 +64,9 @@
     .btn-alt { background:#fff; color:var(--blue); border:1px solid #bfdbfe; margin-top:10px; }
     .btn-alt:hover { background:#eff6ff; }
     .btn-sub { text-align:center; margin:9px 0 0; font-size:0.84rem; color:var(--muted); }
+    .precision-label { display:block; margin:0 0 6px; font-size:0.88rem; font-weight:600; color:#334155; }
+    .precision-input { display:block; width:100%; margin:0 0 12px; padding:12px 13px; font:inherit; font-size:0.95rem; color:var(--text); background:#fff; border:1px solid #cbd5e1; border-radius:10px; }
+    .precision-input:focus { outline:none; border-color:var(--green); box-shadow:0 0 0 3px rgba(22,163,74,0.16); }
     .proof { margin:20px 0 0; font-size:0.86rem; color:var(--muted); text-align:center; line-height:1.6; }
     .foot { margin:26px 0 0; font-size:0.8rem; color:var(--muted); text-align:center; }
     .foot a { color:#475569; }
@@ -98,6 +101,8 @@
       <p class="brackets-note">Les passages entre [crochets] sont à remplacer par vos infos (jour, durée, lien).</p>
       <div class="bridge" id="bridge">
         <p><strong>Ceci est un modèle.</strong> Pour le même message, écrit avec votre façon de parler et le détail de votre entreprise, je vous le prépare gratuitement. Réponse dans la journée.</p>
+        <label class="precision-label" for="precision">Une précision sur votre situation (facultatif)</label>
+        <input class="precision-input" id="precision" type="text" maxlength="140" autocomplete="off" placeholder="Ex : client fidèle, chantier de 3 jours, je préfère un ton direct">
         <a class="btn btn-wa" id="wa-brief" href="#" data-track="cta_whatsapp_brief">Recevoir mon message adapté (gratuit) →</a>
         <p class="btn-sub">WhatsApp déjà prérempli avec votre métier et votre situation.</p>
         <a class="btn btn-alt" id="wa-capture" href="#" data-track="cta_whatsapp_capture">Ou envoyez la capture du message de votre client</a>
@@ -230,6 +235,7 @@
 
     var state = { metier:null, situation:null };
     var booting = true;
+    var pendingSituation = null;
 
     function el(id) { return document.getElementById(id); }
 
@@ -257,13 +263,20 @@
         b.setAttribute("aria-pressed", "true");
         state.metier = m;
         el("step-situation").hidden = false;
-        if (state.situation) { render(); }
+        if (pendingSituation && situationButtons[pendingSituation]) {
+          var target = situationButtons[pendingSituation];
+          pendingSituation = null;
+          target.click();
+        }
+        else if (state.situation) { render(); }
         else if (!booting) { el("step-situation").scrollIntoView({ behavior:"smooth", block:"center" }); }
         if (window.hmTrack) { window.hmTrack("generateur_metier", { metier: m.id }); }
       });
       metierButtons[m.id] = b;
       el("metiers").appendChild(b);
     });
+
+    var situationButtons = {};
 
     SITUATIONS.forEach(function (s) {
       var b = makeChoice(s.label, function () {
@@ -273,11 +286,37 @@
         render();
         if (window.hmTrack) { window.hmTrack("generateur_situation", { situation: s.id }); }
       });
+      situationButtons[s.id] = b;
       el("situations").appendChild(b);
     });
 
     function waLink(text) {
       return WA + "?text=" + encodeURIComponent(text);
+    }
+
+    function refreshLinks() {
+      if (!state.metier || !state.situation) { return; }
+      var m = state.metier, s = state.situation;
+      var precision = el("precision").value.trim();
+
+      var brief = "Bonjour Hervé, je viens du site.\n\n"
+        + "Mon métier : " + m.label + "\n"
+        + "Ma situation : " + s.label + "\n"
+        + (precision ? "Ma précision : " + precision + "\n" : "")
+        + "Mon prénom : \n\n"
+        + "Je veux le message adapté à mon entreprise.";
+      el("wa-brief").href = waLink(brief);
+
+      var capture = "Bonjour Hervé, je viens du site.\n\n"
+        + "Mon métier : " + m.label + "\n"
+        + (precision ? "Ma précision : " + precision + "\n" : "")
+        + "\nJe vous envoie la capture du message de mon client juste après. Pouvez-vous me préparer la réponse ?";
+      el("wa-capture").href = waLink(capture);
+
+      var sticky = el("sticky-link");
+      sticky.href = waLink(brief);
+      sticky.textContent = "Recevoir mon message adapté (gratuit) →";
+      sticky.setAttribute("data-track", "cta_whatsapp_brief");
     }
 
     function render() {
@@ -291,22 +330,7 @@
       el("next").hidden = false;
       el("copy-btn").textContent = "Copier le message";
 
-      var brief = "Bonjour Hervé, je viens du site.\n\n"
-        + "Mon métier : " + m.label + "\n"
-        + "Ma situation : " + s.label + "\n"
-        + "Mon prénom : \n\n"
-        + "Je veux le message adapté à mon entreprise.";
-      el("wa-brief").href = waLink(brief);
-
-      var capture = "Bonjour Hervé, je viens du site.\n\n"
-        + "Mon métier : " + m.label + "\n\n"
-        + "Je vous envoie la capture du message de mon client juste après. Pouvez-vous me préparer la réponse ?";
-      el("wa-capture").href = waLink(capture);
-
-      var sticky = el("sticky-link");
-      sticky.href = waLink(brief);
-      sticky.textContent = "Recevoir mon message adapté (gratuit) →";
-      sticky.setAttribute("data-track", "cta_whatsapp_brief");
+      refreshLinks();
 
       el("result").scrollIntoView({ behavior:"smooth", block:"start" });
 
@@ -315,19 +339,20 @@
       }
     }
 
-    el("sticky-link").addEventListener("click", function () {
-      if (state.metier && state.situation && window.hmTrack) {
-        window.hmTrack("cta_whatsapp_brief", { link_text: "sticky generateur" });
-      }
-    });
-
     (function preselect() {
-      var wanted = new URLSearchParams(location.search).get("metier");
-      if (wanted && metierButtons[wanted]) {
-        metierButtons[wanted].click();
+      var params = new URLSearchParams(location.search);
+      var wantedMetier = params.get("metier");
+      var wantedSituation = params.get("situation");
+      if (wantedSituation && situationButtons[wantedSituation]) {
+        pendingSituation = wantedSituation;
+      }
+      if (wantedMetier && metierButtons[wantedMetier]) {
+        metierButtons[wantedMetier].click();
       }
       booting = false;
     })();
+
+    el("precision").addEventListener("input", refreshLinks);
 
     el("copy-btn").addEventListener("click", function () {
       var text = el("result-text").textContent;

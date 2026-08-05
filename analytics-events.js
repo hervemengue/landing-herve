@@ -42,13 +42,18 @@
       }
     });
 
-    document.querySelectorAll('[data-track]').forEach(function (el) {
-      el.addEventListener('click', function () {
-        track(el.getAttribute('data-track'), {
-          link_url: el.href || '',
-          link_text: (el.textContent || '').trim().slice(0, 80)
-        });
-      });
+    document.addEventListener('click', function (ev) {
+      var el = ev.target;
+      while (el && el !== document) {
+        if (el.getAttribute && el.getAttribute('data-track')) {
+          track(el.getAttribute('data-track'), {
+            link_url: el.href || '',
+            link_text: (el.textContent || '').trim().slice(0, 80)
+          });
+          return;
+        }
+        el = el.parentNode;
+      }
     });
   });
 
