@@ -67,6 +67,7 @@
     .human-note { margin:0 0 14px; padding:12px 13px; font-size:0.88rem; line-height:1.6; color:#334155; background:#f8fafc; border-left:3px solid var(--green); border-radius:0 10px 10px 0; }
     .precision-label { display:block; margin:0 0 6px; font-size:0.88rem; font-weight:600; color:#334155; }
     .precision-input { display:block; width:100%; margin:0 0 12px; padding:12px 13px; font:inherit; font-size:0.95rem; color:var(--text); background:#fff; border:1px solid #cbd5e1; border-radius:10px; }
+    select.precision-input { appearance:auto; }
     .precision-input:focus { outline:none; border-color:var(--green); box-shadow:0 0 0 3px rgba(22,163,74,0.16); }
     .proof { margin:20px 0 0; font-size:0.86rem; color:var(--muted); text-align:center; line-height:1.6; }
     .foot { margin:26px 0 0; font-size:0.8rem; color:var(--muted); text-align:center; }
@@ -118,8 +119,18 @@
       <div class="bridge" id="bridge">
         <p><strong>Ceci est votre 1 essai gratuit :</strong> un modèle écrit à l'avance pour votre métier. Pas un outil à utiliser en boucle.</p>
         <p class="human-note">Pour un message vraiment adapté à votre entreprise (vos mots, vos habitudes), je vous en écris <strong>un seul gratuitement</strong> via WhatsApp. Au-delà, c'est le pack 49&nbsp;€. Rien n'est envoyé à votre client sans vous.</p>
-        <label class="precision-label" for="precision">Une précision sur votre situation (facultatif)</label>
-        <input class="precision-input" id="precision" type="text" maxlength="140" autocomplete="off" placeholder="Ex : client fidèle, chantier de 3 jours, je préfère un ton direct">
+        <label class="precision-label" for="entreprise">Nom de l'entreprise</label>
+        <input class="precision-input" id="entreprise" type="text" maxlength="80" autocomplete="organization" placeholder="Ex : Studio Mylène, Entreprise Dupont">
+        <label class="precision-label" for="ton">Ton du message</label>
+        <select class="precision-input" id="ton">
+          <option value="">Choisir…</option>
+          <option value="Vouvoiement, ton pro">Vouvoiement, ton pro</option>
+          <option value="Tutoiement, ton simple">Tutoiement, ton simple</option>
+          <option value="Direct et court">Direct et court</option>
+          <option value="Chaleureux">Chaleureux</option>
+        </select>
+        <label class="precision-label" for="precision">Une précision (facultatif)</label>
+        <input class="precision-input" id="precision" type="text" maxlength="140" autocomplete="off" placeholder="Ex : mariage, client fidèle, urgence demain">
         <a class="btn btn-wa" id="wa-brief" href="#" data-track="cta_whatsapp_brief">Recevoir mon 1 message adapté (gratuit) →</a>
         <p class="btn-sub">WhatsApp prérempli · une seule demande gratuite · réponse dans la journée.</p>
         <a class="btn btn-alt" id="wa-capture" href="#" data-track="cta_whatsapp_capture">Ou envoyez la capture du message de votre client</a>
@@ -136,7 +147,7 @@
 
     <p class="proof">Les 10 situations couvertes&nbsp;: répondre à une demande de devis, relancer un devis sans réponse, dire que vous n'êtes pas disponible, prévenir d'un retard, demander un avis Google, répondre à un client mécontent, répondre à «&nbsp;c'est trop cher&nbsp;», répondre à un avis Google positif, répondre à un avis Google négatif, répondre à un avis injuste ou faux.</p>
 
-    <p class="proof">Messages déjà écrits pour&nbsp;: plombier, électricien, menuisier, couvreur, coiffeur, traiteur, VTC, boucher, agent immobilier, restaurant, hôtel, garage.<br>
+    <p class="proof">Messages déjà écrits pour&nbsp;: plombier, électricien, menuisier, couvreur, coiffeur, traiteur, VTC, boucher, agent immobilier, restaurant, hôtel, garage, photographe.<br>
     Pack de 5 textes sur mesure pour votre entreprise&nbsp;: <a href="produit-pack-49.html?utm_source=generateur&utm_medium=proof" data-track="cta_stripe">49&nbsp;€, une fois</a>.</p>
 
     <p class="foot"><a href="index.html?utm_source=generateur&utm_medium=footer">Accueil</a> · <a href="a-propos.html">À propos</a> · <a href="mentions-legales.html">Mentions légales</a></p>
@@ -162,6 +173,7 @@
       { id:"restaurant", label:"Restaurant, café", sujet:"de votre réservation", etape:"vous confirmer une table", livrable:"la confirmation", fin:"votre repas", finDe:"de votre repas", raison:"le service précédent a débordé", prix:"aux produits frais, au travail en cuisine et au service" },
       { id:"hotel", label:"Hôtel, chambres d'hôtes", sujet:"de votre séjour", etape:"vérifier les disponibilités", livrable:"le tarif et la confirmation", fin:"votre séjour", finDe:"de votre séjour", raison:"la chambre n'est pas encore prête", prix:"à la chambre, à l'entretien et au service sur place" },
       { id:"garage", label:"Garage automobile", sujet:"de votre véhicule", etape:"prendre le véhicule pour un diagnostic", livrable:"le devis", fin:"la réparation", finDe:"de la réparation", raison:"une réparation avant la vôtre a pris plus de temps que prévu", prix:"aux pièces, au temps de main-d'œuvre et à la garantie" },
+      { id:"photographe", label:"Photographe", sujet:"de la séance photo", etape:"vous proposer un créneau pour en parler", livrable:"le devis détaillé", fin:"la séance", finDe:"de la séance", raison:"la séance précédente a un peu débordé", prix:"au temps de prise de vue, à la retouche et à la livraison des photos" },
       { id:"autre", label:"Autre métier", sujet:"de votre demande", etape:"faire le point avec vous", livrable:"le devis", fin:"la prestation", finDe:"de la prestation", raison:"le rendez-vous précédent a pris plus de temps que prévu", prix:"au temps passé et au matériel nécessaire" }
     ];
 
@@ -291,9 +303,11 @@
       el("next").hidden = true;
       var brief = "Bonjour Hervé, je viens du site.\n\n"
         + "J'ai déjà utilisé mon essai gratuit sur le générateur.\n"
+        + "Mon prénom : \n"
+        + "Nom de l'entreprise : \n"
         + "Mon métier : \n"
         + "Ma situation : \n"
-        + "Mon prénom : \n\n"
+        + "Ton souhaité : \n\n"
         + "Je veux mon 1 message adapté à mon entreprise (essai gratuit unique).";
       el("wa-apres-essai").href = waLink(brief);
       var sticky = el("sticky-link");
@@ -359,18 +373,25 @@
     function refreshLinks() {
       if (!state.metier || !state.situation) { return; }
       var m = state.metier, s = state.situation;
+      var entreprise = el("entreprise").value.trim();
+      var ton = el("ton").value.trim();
       var precision = el("precision").value.trim();
 
       var brief = "Bonjour Hervé, je viens du site.\n\n"
+        + "Mon prénom : \n"
+        + "Nom de l'entreprise : " + (entreprise || "") + "\n"
         + "Mon métier : " + m.label + "\n"
         + "Ma situation : " + s.label + "\n"
+        + "Ton souhaité : " + (ton || "") + "\n"
         + (precision ? "Ma précision : " + precision + "\n" : "")
-        + "Mon prénom : \n\n"
-        + "Je veux mon 1 message adapté à mon entreprise (essai gratuit unique).";
+        + "\nJe veux mon 1 message adapté à mon entreprise (essai gratuit unique).";
       el("wa-brief").href = waLink(brief);
 
       var capture = "Bonjour Hervé, je viens du site.\n\n"
+        + "Mon prénom : \n"
+        + "Nom de l'entreprise : " + (entreprise || "") + "\n"
         + "Mon métier : " + m.label + "\n"
+        + "Ton souhaité : " + (ton || "") + "\n"
         + (precision ? "Ma précision : " + precision + "\n" : "")
         + "\nJe vous envoie la capture du message de mon client juste après. Pouvez-vous me préparer la réponse ?";
       el("wa-capture").href = waLink(capture);
@@ -427,6 +448,8 @@
       booting = false;
     })();
 
+    el("entreprise").addEventListener("input", refreshLinks);
+    el("ton").addEventListener("change", refreshLinks);
     el("precision").addEventListener("input", refreshLinks);
 
     el("copy-btn").addEventListener("click", function () {
