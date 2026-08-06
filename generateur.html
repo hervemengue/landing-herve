@@ -73,6 +73,12 @@
     .foot a { color:#475569; }
     .sticky { position:fixed; bottom:0; left:0; right:0; z-index:50; padding:10px 14px calc(10px + env(safe-area-inset-bottom)); background:rgba(255,255,255,0.96); border-top:1px solid rgba(148,163,184,0.45); box-shadow:0 -8px 24px rgba(15,23,42,0.1); backdrop-filter:blur(8px); }
     .sticky a { display:block; max-width:520px; margin:0 auto; text-align:center; padding:14px; background:var(--green); color:#fff; font-weight:700; border-radius:12px; text-decoration:none; }
+    .limit-box { background:#fff7ed; border:2px solid #fdba74; border-radius:14px; padding:18px 16px; margin:0 0 16px; }
+    .limit-box h2 { margin:0 0 10px; font-size:1.15rem; color:#9a3412; }
+    .limit-box p { margin:0 0 12px; font-size:0.95rem; color:#7c2d12; line-height:1.55; }
+    .limit-box .btn-pack { display:block; text-align:center; text-decoration:none; margin-top:10px; }
+    .limit-box .btn-wa { display:block; text-align:center; text-decoration:none; }
+    .choices.is-locked .choice { opacity:0.45; pointer-events:none; }
     [hidden] { display:none !important; }
   </style>
 </head>
@@ -80,7 +86,16 @@
   <main>
     <h1>Votre message client, prêt en 5 secondes</h1>
     <p class="lead">Choisissez votre métier, puis la situation. Le message s'affiche tout de suite, vous le copiez, vous l'envoyez.</p>
-    <p class="reassure">Gratuit · sans inscription · sans donner votre numéro.</p>
+    <p class="reassure">1 essai gratuit · sans inscription · sans donner votre numéro.</p>
+
+    <section class="limit-box" id="essai-epuise" hidden>
+      <h2>Votre essai gratuit est déjà utilisé</h2>
+      <p>Sur ce téléphone ou cet ordinateur, le modèle gratuit a déjà été affiché une fois. Ce n'est pas un outil pour générer des messages en boucle.</p>
+      <p><strong>Suite possible :</strong> 1 message écrit pour votre entreprise (gratuit, une seule fois), ou le pack de 5 textes à 49&nbsp;€.</p>
+      <a class="btn btn-wa" id="wa-apres-essai" href="#" data-track="cta_whatsapp_brief">Recevoir mon 1 message adapté (gratuit) →</a>
+      <p class="btn-sub">WhatsApp · une seule demande gratuite · réponse dans la journée.</p>
+      <a class="btn btn-pack" href="produit-pack-49.html?utm_source=generateur&utm_medium=essai_epuise" data-track="cta_stripe">Voir le pack 49 € →</a>
+    </section>
 
     <section class="step">
       <span class="step-num">Étape 1</span>
@@ -101,12 +116,12 @@
       <p class="copy-note" id="copy-note">Collez-le dans WhatsApp, un SMS ou un mail.</p>
       <p class="brackets-note">Les passages entre [crochets] sont à remplacer par vos infos (jour, durée, lien).</p>
       <div class="bridge" id="bridge">
-        <p><strong>Ceci est un modèle.</strong> Pour le même message, écrit avec votre façon de parler et le détail de votre entreprise, je vous le prépare gratuitement. Réponse dans la journée.</p>
-        <p class="human-note">Le texte ci-dessus est écrit à l'avance, métier par métier. Ce n'est pas une machine qui improvise à votre place, et rien n'est envoyé à votre client sans vous. La version qui vous ressemble vraiment, avec vos mots et vos habitudes, c'est moi qui l'écris.</p>
+        <p><strong>Ceci est votre 1 essai gratuit :</strong> un modèle écrit à l'avance pour votre métier. Pas un outil à utiliser en boucle.</p>
+        <p class="human-note">Pour un message vraiment adapté à votre entreprise (vos mots, vos habitudes), je vous en écris <strong>un seul gratuitement</strong> via WhatsApp. Au-delà, c'est le pack 49&nbsp;€. Rien n'est envoyé à votre client sans vous.</p>
         <label class="precision-label" for="precision">Une précision sur votre situation (facultatif)</label>
         <input class="precision-input" id="precision" type="text" maxlength="140" autocomplete="off" placeholder="Ex : client fidèle, chantier de 3 jours, je préfère un ton direct">
-        <a class="btn btn-wa" id="wa-brief" href="#" data-track="cta_whatsapp_brief">Recevoir mon message adapté (gratuit) →</a>
-        <p class="btn-sub">WhatsApp déjà prérempli avec votre métier et votre situation.</p>
+        <a class="btn btn-wa" id="wa-brief" href="#" data-track="cta_whatsapp_brief">Recevoir mon 1 message adapté (gratuit) →</a>
+        <p class="btn-sub">WhatsApp prérempli · une seule demande gratuite · réponse dans la journée.</p>
         <a class="btn btn-alt" id="wa-capture" href="#" data-track="cta_whatsapp_capture">Ou envoyez la capture du message de votre client</a>
         <p class="btn-sub">Vous ne rédigez rien : la capture d'écran suffit.</p>
       </div>
@@ -238,8 +253,57 @@
     var state = { metier:null, situation:null };
     var booting = true;
     var pendingSituation = null;
+    var ESSAI_KEY = "hm_essai_generateur_v1";
 
     function el(id) { return document.getElementById(id); }
+
+    function essaiDejaUtilise() {
+      try {
+        return localStorage.getItem(ESSAI_KEY) === "1";
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function marquerEssaiUtilise() {
+      try {
+        localStorage.setItem(ESSAI_KEY, "1");
+      } catch (e) {}
+    }
+
+    function resetEssaiSiDemande() {
+      var params = new URLSearchParams(location.search);
+      if (params.get("reset_essai") === "1") {
+        try { localStorage.removeItem(ESSAI_KEY); } catch (e) {}
+      }
+    }
+
+    function waLink(text) {
+      return WA + "?text=" + encodeURIComponent(text);
+    }
+
+    function afficherEssaiEpuise() {
+      el("essai-epuise").hidden = false;
+      el("metiers").classList.add("is-locked");
+      el("situations").classList.add("is-locked");
+      el("step-situation").hidden = true;
+      el("result").hidden = true;
+      el("next").hidden = true;
+      var brief = "Bonjour Hervé, je viens du site.\n\n"
+        + "J'ai déjà utilisé mon essai gratuit sur le générateur.\n"
+        + "Mon métier : \n"
+        + "Ma situation : \n"
+        + "Mon prénom : \n\n"
+        + "Je veux mon 1 message adapté à mon entreprise (essai gratuit unique).";
+      el("wa-apres-essai").href = waLink(brief);
+      var sticky = el("sticky-link");
+      sticky.href = el("wa-apres-essai").href;
+      sticky.textContent = "Recevoir mon 1 message adapté (gratuit) →";
+      sticky.setAttribute("data-track", "cta_whatsapp_brief");
+      if (window.hmTrack) {
+        window.hmTrack("generateur_essai_epuise", {});
+      }
+    }
 
     function makeChoice(label, onClick) {
       var b = document.createElement("button");
@@ -292,10 +356,6 @@
       el("situations").appendChild(b);
     });
 
-    function waLink(text) {
-      return WA + "?text=" + encodeURIComponent(text);
-    }
-
     function refreshLinks() {
       if (!state.metier || !state.situation) { return; }
       var m = state.metier, s = state.situation;
@@ -306,7 +366,7 @@
         + "Ma situation : " + s.label + "\n"
         + (precision ? "Ma précision : " + precision + "\n" : "")
         + "Mon prénom : \n\n"
-        + "Je veux le message adapté à mon entreprise.";
+        + "Je veux mon 1 message adapté à mon entreprise (essai gratuit unique).";
       el("wa-brief").href = waLink(brief);
 
       var capture = "Bonjour Hervé, je viens du site.\n\n"
@@ -317,12 +377,16 @@
 
       var sticky = el("sticky-link");
       sticky.href = waLink(brief);
-      sticky.textContent = "Recevoir mon message adapté (gratuit) →";
+      sticky.textContent = "Recevoir mon 1 message adapté (gratuit) →";
       sticky.setAttribute("data-track", "cta_whatsapp_brief");
     }
 
     function render() {
       if (!state.metier || !state.situation) { return; }
+      if (essaiDejaUtilise()) {
+        afficherEssaiEpuise();
+        return;
+      }
       var m = state.metier, s = state.situation;
       var text = s.build(m);
 
@@ -333,6 +397,9 @@
       el("copy-btn").textContent = "Copier le message";
 
       refreshLinks();
+      marquerEssaiUtilise();
+      el("metiers").classList.add("is-locked");
+      el("situations").classList.add("is-locked");
 
       el("result").scrollIntoView({ behavior:"smooth", block:"start" });
 
@@ -342,6 +409,12 @@
     }
 
     (function preselect() {
+      resetEssaiSiDemande();
+      if (essaiDejaUtilise()) {
+        afficherEssaiEpuise();
+        booting = false;
+        return;
+      }
       var params = new URLSearchParams(location.search);
       var wantedMetier = params.get("metier");
       var wantedSituation = params.get("situation");
