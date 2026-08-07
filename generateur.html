@@ -115,7 +115,7 @@
       <div class="msg-text" id="result-text"></div>
       <button type="button" class="copy-btn" id="copy-btn">Copier le message</button>
       <p class="copy-note" id="copy-note">Collez-le dans WhatsApp, un SMS ou un mail.</p>
-      <p class="brackets-note">Les passages entre [crochets] sont à remplacer par vos infos (jour, durée, lien).</p>
+      <p class="brackets-note" id="brackets-note" hidden>Les passages entre [crochets] sont à remplacer par vos infos (jour, durée, lien).</p>
       <div class="bridge" id="bridge">
         <p><strong>Ceci est votre 1 essai gratuit :</strong> un modèle écrit à l'avance pour votre métier. Pas un outil à utiliser en boucle.</p>
         <p class="human-note">Pour un message vraiment adapté à votre entreprise (vos mots, vos habitudes), je vous en écris <strong>un seul gratuitement</strong> via WhatsApp. Au-delà, c'est le pack 49&nbsp;€. Rien n'est envoyé à votre client sans vous.</p>
@@ -416,6 +416,9 @@
       el("result").hidden = false;
       el("next").hidden = false;
       el("copy-btn").textContent = "Copier le message";
+      el("copy-note").textContent = "Collez-le dans WhatsApp, un SMS ou un mail.";
+      var hasBrackets = /\[[^\]]+\]/.test(text);
+      el("brackets-note").hidden = !hasBrackets;
 
       refreshLinks();
       marquerEssaiUtilise();
@@ -456,7 +459,10 @@
       var text = el("result-text").textContent;
       var done = function () {
         el("copy-btn").textContent = "Message copié ✓";
-        el("copy-note").textContent = "Copié. Relisez les [crochets], puis envoyez. Pour le même texte adapté à votre entreprise : bouton vert juste en dessous.";
+        var hasBrackets = /\[[^\]]+\]/.test(text);
+        el("copy-note").textContent = hasBrackets
+          ? "Copié. Relisez les [crochets], puis envoyez. Pour le même texte adapté à votre entreprise : bouton vert juste en dessous."
+          : "Copié. Relisez, puis envoyez. Pour le même texte adapté à votre entreprise : bouton vert juste en dessous.";
         el("bridge").scrollIntoView({ behavior:"smooth", block:"center" });
         if (window.hmTrack) {
           window.hmTrack("generateur_copie", {
