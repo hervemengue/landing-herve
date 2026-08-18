@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /archive-index-avant-v2.html
 
 Sitemap: https://hervemengue.github.io/landing-herve/sitemap.xml
