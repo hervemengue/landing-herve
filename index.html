@@ -84,7 +84,7 @@
     p, li, .tags, .fine, .prices-line, .keep, .quiet {
       overflow-wrap: break-word;
     }
-    #top, #solutions, #avant, #preuve, #philo, #tarifs, #contact {
+    #top, #solutions, #avant, #temps, #preuve, #accueil-tel, #philo, #tarifs, #contact {
       scroll-margin-top: 8px;
     }
     p { margin: 0 0 12px; }
@@ -97,7 +97,7 @@
       min-width: 0;
       overflow-x: hidden;
     }
-    .hero, .section, .cards, .card, .nav, .cta-row, .ba-grid, .journey, .philo, .final, .about, .chat {
+    .hero, .section, .cards, .card, .nav, .cta-row, .ba-grid, .journey, .philo, .final, .about, .chat, .calc {
       max-width: 100%;
       min-width: 0;
     }
@@ -504,6 +504,45 @@
     @media (max-width: 400px) {
       .section h2 { max-width: 22ch; }
     }
+    .calc-fields {
+      display: grid;
+      gap: 14px;
+      margin: 18px 0 8px;
+    }
+    .calc-field label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .calc-field input {
+      width: 100%;
+      min-height: 48px;
+      font-size: 16px;
+      font-family: inherit;
+      color: var(--text);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .calc-field input:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+    .calc-result {
+      margin: 18px 0 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+    .calc-result p {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .calc-result .fine { font-weight: 400; }
+    .calc-bridge { margin-top: 22px; }
+    .calc-bridge h3 { font-size: 1.15rem; margin-bottom: 10px; }
   </style>
 </head>
 <body>
@@ -589,6 +628,44 @@
       </div>
     </section>
 
+    <section class="section" id="temps" aria-labelledby="temps-title">
+      <h2 id="temps-title">Combien de temps vos appels vous prennent-ils&nbsp;?</h2>
+      <p>Faites le calcul avec vos propres chiffres.</p>
+      <p class="fine">Quelques minutes par appel peuvent représenter plusieurs heures sur un mois. Indiquez votre situation pour obtenir une estimation.</p>
+      <div class="card calc">
+        <div class="calc-fields">
+          <div class="calc-field">
+            <label for="calc-appels">Combien d’appels gérez-vous en moyenne par jour&nbsp;?</label>
+            <input id="calc-appels" type="number" inputmode="numeric" min="0" step="1" value="10">
+          </div>
+          <div class="calc-field">
+            <label for="calc-minutes">Combien de minutes vous prend un appel en moyenne&nbsp;?</label>
+            <input id="calc-minutes" type="number" inputmode="decimal" min="0" step="0.5" value="3">
+          </div>
+          <div class="calc-field">
+            <label for="calc-jours">Combien de jours travaillez-vous environ par mois&nbsp;?</label>
+            <input id="calc-jours" type="number" inputmode="numeric" min="1" max="31" step="1" value="20">
+          </div>
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <p id="calc-temps">Cela représente environ 10&nbsp;h par mois consacrées à vos appels.</p>
+        </div>
+        <div class="calc-field" style="margin-top:18px;">
+          <label for="calc-taux">Et votre temps, combien vaut-il&nbsp;? Valeur estimée d’une heure de votre temps</label>
+          <input id="calc-taux" type="number" inputmode="decimal" min="0" step="1" value="40" placeholder="40 €">
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <p id="calc-euros">À 40&nbsp;€/h, ces 10 heures représentent environ 400&nbsp;€ de votre temps chaque mois.</p>
+          <p class="fine">Cette estimation représente la valeur du temps mobilisé. Elle ne constitue pas une promesse d’économie ou de chiffre d’affaires supplémentaire.</p>
+        </div>
+        <div class="calc-bridge">
+          <h3>Et si une partie de ce temps pouvait être libérée&nbsp;?</h3>
+          <p>L’accueil téléphonique sur mesure peut prendre en charge les demandes définies avec vous lorsque vous n’êtes pas disponible, recueillir les informations utiles et vous les transmettre. Vous gardez la main sur ce qui nécessite réellement votre expertise.</p>
+          <a class="btn btn-primary" href="#accueil-tel">Découvrir l’accueil téléphonique</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="preuve" aria-labelledby="preuve-title">
       <h2 id="preuve-title">Voyez ce que vous obtenez</h2>
       <div class="chat" aria-label="Exemple de conversation">
@@ -602,7 +679,7 @@
       <p class="fine">Adapté à votre ton · Modifiable · Copier en 1 clic. Ce n’est pas le chiffrage de vos travaux.</p>
       <p><a class="btn btn-ok" href="generateur.html?utm_source=accueil&utm_medium=preuve" data-track="cta_test_gratuit">Tester gratuitement avec ma situation</a></p>
 
-      <h3 style="margin-top:32px;">Et pour les appels&nbsp;?</h3>
+      <h3 id="accueil-tel" style="margin-top:32px;">Et pour les appels&nbsp;?</h3>
       <ol class="journey" aria-label="Parcours d’un appel">
         <li>
           <span class="j-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
@@ -748,6 +825,78 @@
         if (target) target.scrollIntoView();
       }
       updateSticky();
+    })();
+  </script>
+  <script>
+    (function () {
+      var elAppels = document.getElementById("calc-appels");
+      var elMinutes = document.getElementById("calc-minutes");
+      var elJours = document.getElementById("calc-jours");
+      var elTaux = document.getElementById("calc-taux");
+      var outTemps = document.getElementById("calc-temps");
+      var outEuros = document.getElementById("calc-euros");
+      if (!elAppels || !elMinutes || !elJours || !elTaux || !outTemps || !outEuros) return;
+
+      function readNum(el, fallback, min, max) {
+        var raw = String(el.value || "").replace(",", ".").trim();
+        var v = parseFloat(raw);
+        if (!isFinite(v)) v = fallback;
+        if (v < min) v = min;
+        if (max != null && v > max) v = max;
+        return v;
+      }
+
+      function formatEuros(n) {
+        var r = Math.round(n);
+        if (!isFinite(r) || r < 0) r = 0;
+        return String(r).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0") + "\u00a0€";
+      }
+
+      function formatHeuresPhrase(totalMin) {
+        if (!isFinite(totalMin) || totalMin <= 0) {
+          return "Cela représente environ 0&nbsp;h par mois consacrées à vos appels.";
+        }
+        var h = Math.floor(totalMin / 60);
+        var m = Math.round(totalMin - h * 60);
+        if (m === 60) { h += 1; m = 0; }
+        if (m === 0) {
+          return "Cela représente environ " + h + "&nbsp;h par mois consacrées à vos appels.";
+        }
+        return "Cela représente environ " + h + "&nbsp;h " + m + "&nbsp;min par mois consacrées à vos appels.";
+      }
+
+      function heuresLibelle(totalMin) {
+        if (!isFinite(totalMin) || totalMin <= 0) return "0 heure";
+        var h = Math.floor(totalMin / 60);
+        var m = Math.round(totalMin - h * 60);
+        if (m === 60) { h += 1; m = 0; }
+        if (h === 0) return m + " min";
+        if (m === 0) return h === 1 ? "1 heure" : h + " heures";
+        return h + "&nbsp;h " + m + "&nbsp;min";
+      }
+
+      function update() {
+        var appels = readNum(elAppels, 0, 0, null);
+        var minutes = readNum(elMinutes, 0, 0, null);
+        var jours = readNum(elJours, 20, 1, 31);
+        var taux = readNum(elTaux, 0, 0, null);
+        var totalMin = appels * minutes * jours;
+        if (!isFinite(totalMin) || totalMin < 0) totalMin = 0;
+        var heuresExact = totalMin / 60;
+        if (!isFinite(heuresExact) || heuresExact < 0) heuresExact = 0;
+        var valeur = heuresExact * taux;
+        if (!isFinite(valeur) || valeur < 0) valeur = 0;
+        outTemps.innerHTML = formatHeuresPhrase(totalMin);
+        outEuros.innerHTML = "À " + formatEuros(taux).replace("\u00a0€", "&nbsp;€") + "/h, ces " + heuresLibelle(totalMin) + " représentent environ " + formatEuros(valeur).replace("\u00a0€", "&nbsp;€") + " de votre temps chaque mois.";
+      }
+
+      ["input", "change"].forEach(function (ev) {
+        elAppels.addEventListener(ev, update);
+        elMinutes.addEventListener(ev, update);
+        elJours.addEventListener(ev, update);
+        elTaux.addEventListener(ev, update);
+      });
+      update();
     })();
   </script>
   <script src="analytics-events.js"></script>
